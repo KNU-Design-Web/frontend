@@ -1,11 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import { RootLayout } from "./layouts/RootLayout/RootLayout";
-import HomePage from "./pages/home/HomePage";
-import AboutPage from "./pages/about/AboutPage";
-import ProjectPage from "./pages/project/ProjectPage";
-import ProfilePage from "./pages/profile/ProfilePage";
-import GuestPage from "./pages/guest/GuestPAge";
-import ArchivePage from "./pages/archive/ArchivePage";
+
+import { RootLayout } from "@/layouts/RootLayout/RootLayout";
+
+import AboutPage from "@/pages/about/AboutPage";
+import ArchivePage from "@/pages/archive/ArchivePage";
+import GuestPage from "@/pages/guest/GuestPage";
+import HomePage from "@/pages/home/HomePage";
+import ProfilePage from "@/pages/profile/ProfilePage";
+import ProjectPage from "@/pages/project/ProjectPage";
 
 export const Router = () => {
     return (
