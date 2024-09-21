@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 
-export const GlobalStyle = css`
+export const globalStyles = css`
     *,
     *::before,
     *::after {
@@ -18,5 +18,8 @@ export const GlobalStyle = css`
         --font-size-m: 24px;
         --font-size-s: 20px;
         --font-size-xs: 16px;
+
+        --color-purple: #9085ff;
+        --color-light-green: #bbff00;
     }
 `;
