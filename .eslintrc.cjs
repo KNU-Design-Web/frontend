@@ -11,7 +11,7 @@ module.exports = {
         "plugin:@tanstack/eslint-plugin-query/recommended",
         "plugin:prettier/recommended",
         "plugin:storybook/recommended",
-        "plugin:storybook/recommended"
+        "plugin:storybook/recommended",
     ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
