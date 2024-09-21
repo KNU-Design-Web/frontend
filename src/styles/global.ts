@@ -11,6 +11,10 @@ export const globalStyles = css`
         box-sizing: border-box;
     }
 
+    #root {
+        display: flex;
+    }
+
     :root {
         --font-size-2xl: 50px;
         --font-size-xl: 32px;
