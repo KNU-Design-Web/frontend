@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 import styled from "@emotion/styled";
 
-export const Wrapper = styled(NavLink)`
+export const Wrapper = styled(NavLink)<{ active: boolean }>`
     position: relative;
 
     display: flex;
@@ -16,6 +16,8 @@ export const Wrapper = styled(NavLink)`
 
     writing-mode: vertical-rl;
     text-decoration: none;
+
+    background-color: ${(props) => (props.active ? "var(--color-light-green)" : "transparent")};
 
     &::before {
         position: absolute;
