@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "start": "tsc && vite build && serve -l 5173 dist",
         "build": "tsc && vite build",
         "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "compile": "tsc --noEmit",
@@ -19,7 +20,7 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.26.2",
-        "react-transition-group": "^4.4.5"
+        "serve": "^14.2.3"
     },
     "devDependencies": {
         "@chromatic-com/storybook": "^1.9.0",
