@@ -31,19 +31,7 @@ export const Text = styled.span<TextProps>`
         }
     }};
 
-    font-weight: ${(props) => {
-        switch (props.weight) {
-            case 400:
-            case 500:
-            case 600:
-            case 700:
-            case 800:
-            case 900:
-                return props.weight;
-            case undefined:
-                return 500;
-        }
-    }};
+    font-weight: ${(props) => props.weight};
 
     font-family: ${(props) => {
         switch (props.family) {
