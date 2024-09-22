@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import * as NavItemStyles from "./NavItem.style";
@@ -8,7 +9,7 @@ export interface NavItemProps {
     children: React.ReactNode;
 }
 
-export const NavItem = (props: NavItemProps) => {
+export const NavItem = memo((props: NavItemProps) => {
     const [searchParams] = useSearchParams();
 
     return (
@@ -22,4 +23,4 @@ export const NavItem = (props: NavItemProps) => {
             </Text>
         </NavItemStyles.Wrapper>
     );
-};
+});

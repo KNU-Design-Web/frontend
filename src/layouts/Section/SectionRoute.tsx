@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import { NavItem } from "../NavBar/NavItem";
@@ -15,9 +16,12 @@ export const SectionRoute = (props: SectionRouteProps) => {
     return (
         <>
             <NavItem to={props.param}>{props.navContent}</NavItem>
-            <SectionRouteStyles.Wrapper active={searchParams.get("section") === props.param}>
-                <SectionRouteStyles.Container>{props.element}</SectionRouteStyles.Container>
-            </SectionRouteStyles.Wrapper>
+            <SectionWrapper active={searchParams.get("section") === props.param}>
+                <SectionContainer>{props.element}</SectionContainer>
+            </SectionWrapper>
         </>
     );
 };
+
+export const SectionWrapper = memo(SectionRouteStyles.Wrapper);
+export const SectionContainer = memo(SectionRouteStyles.Container);

@@ -6,11 +6,6 @@ import ProfilePage from "@/pages/profile/ProfilePage";
 import ProjectPage from "@/pages/project/ProjectPage";
 
 import { SectionRoute } from "./layouts/Section/SectionRoute";
-import styled from "@emotion/styled";
-
-export const RouterWrapper = styled.div`
-    flex: 1;
-`;
 
 export const SectionRouter = () => {
     return (
