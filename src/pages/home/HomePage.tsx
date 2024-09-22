@@ -1,3 +1,9 @@
+import { Title } from "@/fonts/Title";
+
 export default function HomePage() {
-    return <>home page</>;
+    return (
+        <>
+            <Title>HOME</Title>
+        </>
+    );
 }

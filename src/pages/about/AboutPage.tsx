@@ -1,3 +1,9 @@
+import { Title } from "@/fonts/Title";
+
 export default function AboutPage() {
-    return <>about page</>;
+    return (
+        <>
+            <Title>ABOUT</Title>
+        </>
+    );
 }

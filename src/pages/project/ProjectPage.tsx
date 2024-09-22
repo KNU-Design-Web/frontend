@@ -1,3 +1,9 @@
+import { Title } from "@/fonts/Title";
+
 export default function ProjectPage() {
-    return <>project page</>;
+    return (
+        <>
+            <Title>PROJECT</Title>
+        </>
+    );
 }
