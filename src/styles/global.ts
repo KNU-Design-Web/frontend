@@ -13,6 +13,7 @@ export const globalStyles = css`
 
     #root {
         display: flex;
+        height: 100vh;
     }
 
     :root {

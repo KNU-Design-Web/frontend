@@ -18,7 +18,7 @@ export const NavItem = memo((props: NavItemProps) => {
             to={`?section=${props.to}`}
             active={searchParams.get("section")?.includes(props.to) as boolean}
         >
-            <Text size="m" color="#000">
+            <Text size="m" color="#000" weight={700}>
                 {props.children}
             </Text>
         </NavItemStyles.Wrapper>

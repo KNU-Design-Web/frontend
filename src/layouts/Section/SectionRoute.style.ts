@@ -31,9 +31,16 @@ export const Wrapper = styled.div<{ active: boolean }>`
 
     overflow: hidden;
     white-space: nowrap;
+
+    overflow-y: scroll;
+    // 스크롤바 숨기기
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 `;
 
 export const Container = styled.div`
+    position: relative;
+
     min-height: 100vh;
 
     padding: 20px;
