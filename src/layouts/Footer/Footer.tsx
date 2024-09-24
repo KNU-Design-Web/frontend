@@ -36,7 +36,7 @@ export const Footer = () => {
                         장소
                     </Text>
                     <Text size="s" weight={500}>
-                        북구 대학로 80 경북대학교 대구캠퍼스 스페이스 나인
+                        <span>북구 대학로 80 경북대학교</span> <span>대구캠퍼스 스페이스 나인</span>
                     </Text>
                 </FooterStyles.InfoItem>
                 <FooterStyles.InfoItem>
@@ -44,7 +44,8 @@ export const Footer = () => {
                         일시
                     </Text>
                     <Text size="s" weight={500}>
-                        2024. 10. 28 MON - 2024.11.09 SUN
+                        <span>2024. 10. 28 MON - </span>
+                        <span>2024.11.09 SUN</span>
                     </Text>
                 </FooterStyles.InfoItem>
                 <FooterStyles.InfoItem>
