@@ -10,6 +10,12 @@ export interface TextProps extends React.ComponentProps<"span"> {
 }
 
 export const Text = styled.span<TextProps>`
+    pointer-events: none;
+
+    > * {
+        pointer-events: auto;
+    }
+
     font-size: ${(props) => {
         switch (props.size) {
             case "xs":

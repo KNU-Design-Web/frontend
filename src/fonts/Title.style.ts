@@ -6,4 +6,8 @@ export const Text = styled.h1`
 
     color: var(--color-purple);
     pointer-events: none;
+
+    > * {
+        pointer-events: auto;
+    }
 `;
