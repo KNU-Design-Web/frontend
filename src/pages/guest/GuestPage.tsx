@@ -1,3 +1,9 @@
+import { SamplePage } from "@/__mocks__/SamplePage";
+
 export default function GuestPage() {
-    return <>guest page</>;
+    return (
+        <>
+            <SamplePage color={"aliceblue"} text={"GUEST PAGE"} />
+        </>
+    );
 }
