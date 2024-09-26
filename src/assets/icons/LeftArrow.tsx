@@ -2,7 +2,7 @@ import { memo } from "react";
 
 import { SVGIconProps } from "./icon";
 
-export const Left = memo((props: SVGIconProps) => {
+export const LeftArrow = memo((props: SVGIconProps) => {
     return (
         <svg width={25} height={20} viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
             <path
