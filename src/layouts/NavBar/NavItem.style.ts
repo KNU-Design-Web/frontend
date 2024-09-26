@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 
+import { BREAKPOINT } from "@/styles/breakpoint";
+
 import styled from "@emotion/styled";
 
 export const Wrapper = styled(NavLink)<{ active: boolean }>`
@@ -38,5 +40,12 @@ export const Wrapper = styled(NavLink)<{ active: boolean }>`
     &:hover::before {
         transform: scaleY(1);
         transition: transform 0.3s linear;
+    }
+
+    ${BREAKPOINT.TABLET} {
+        display: none;
+    }
+    ${BREAKPOINT.MOBILE} {
+        display: none;
     }
 `;
