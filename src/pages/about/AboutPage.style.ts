@@ -24,9 +24,10 @@ export const GridWrapper = styled.div`
     right: 0;
     bottom: 0;
     z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(26, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     pointer-events: none;
     > * {
         pointer-events: auto;
@@ -38,8 +39,8 @@ export const GridButton = styled.button`
     border: none;
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
+    width: 60px;
+    height: 60px;
     background-color: transparent;
     transition: background-color 0.1s ease;
     pointer-events: auto;
