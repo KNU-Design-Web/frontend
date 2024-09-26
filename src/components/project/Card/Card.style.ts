@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     position: relative;
 
     width: 100%;
-    min-width: 200px;
+    min-width: 150px;
     aspect-ratio: 1/1;
 `;
 
