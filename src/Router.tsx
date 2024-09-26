@@ -5,11 +5,13 @@ import HomePage from "@/pages/home/HomePage";
 import ProfilePage from "@/pages/profile/ProfilePage";
 import ProjectPage from "@/pages/project/ProjectPage";
 
+import { NavTop } from "./layouts/NavBar/NavTop";
 import { SectionRoute } from "./layouts/Section/SectionRoute";
 
 export const SectionRouter = () => {
     return (
         <>
+            <NavTop />
             <SectionRoute param="home" navContent="2024 KNUD GRADUATION EXHIBITION" element={<HomePage />} />
             <SectionRoute param="about" navContent="ABOUT" element={<AboutPage />} />
             <SectionRoute param="project" navContent="PROJECT" element={<ProjectPage />} />
