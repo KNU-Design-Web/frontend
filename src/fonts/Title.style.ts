@@ -5,4 +5,5 @@ export const Text = styled.h1`
     top: 20px;
 
     color: var(--color-purple);
+    pointer-events: none;
 `;

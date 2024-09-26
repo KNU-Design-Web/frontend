@@ -9,9 +9,15 @@ export const PageWrapper = styled.div`
 
 export const ContentWrapper = styled.div`
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     height: 100%;
+
+    pointer-events: none;
+
+    > * {
+        pointer-events: auto;
+    }
 `;
 
 export const GridWrapper = styled.div`
@@ -20,10 +26,11 @@ export const GridWrapper = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1000;
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(26, 1fr);
     grid-template-rows: repeat(16, 1fr);
+    pointer-events: auto;
 `;
 
 export const GridButton = styled.button`
@@ -35,6 +42,7 @@ export const GridButton = styled.button`
     height: 100%;
     background-color: transparent;
     transition: background-color 0.3s ease;
+    /* pointer-events: auto; */
 
     &:hover {
         background-color: var(--color-light-green);
@@ -42,4 +50,7 @@ export const GridButton = styled.button`
     &:not(:hover) {
         transition-delay: 0.3s;
     }
+    /* > * {
+        pointer-events: auto;
+    } */
 `;
