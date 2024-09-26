@@ -43,6 +43,6 @@ export const Container = styled.div`
 
     min-height: 100vh;
 
-    padding: 20px;
+    /* padding: 20px; */
     border-right: 1px solid #000;
 `;
