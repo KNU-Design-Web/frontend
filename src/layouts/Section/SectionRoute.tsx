@@ -2,6 +2,7 @@ import { memo } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import { Footer } from "../Footer/Footer";
+import { Grid } from "../Grid/Grid";
 import { NavItem } from "../NavBar/NavItem";
 import * as SectionRouteStyles from "./SectionRoute.style";
 
@@ -18,7 +19,10 @@ export const SectionRoute = (props: SectionRouteProps) => {
         <>
             <NavItem to={props.param}>{props.navContent}</NavItem>
             <SectionWrapper active={searchParams.get("section") === props.param}>
-                <SectionContainer>{props.element}</SectionContainer>
+                <SectionContainer>
+                    {props.element}
+                    <Grid rows={28} cols={18} />
+                </SectionContainer>
                 <Footer />
             </SectionWrapper>
         </>
