@@ -5,7 +5,7 @@ import fs from "fs/promises";
 async function GeneratePreRenderedHTML() {
     try {
         console.log("[PRE-RENDER] Reading HTML Template...");
-        const HTMLtemplate = await fs.readFile(path.resolve("index.html"), "utf-8");
+        const HTMLtemplate = await fs.readFile(path.resolve("dist/index.html"), "utf-8");
 
         console.log("[PRE-RENDER] Pre-Rendering ...");
         const preRender = (await import("./server/entry.server.js")).preRender;
