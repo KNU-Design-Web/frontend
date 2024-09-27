@@ -5,9 +5,9 @@
     "type": "module",
     "scripts": {
         "dev": "vite --host",
-        "start": "tsc && vite build && serve -l 5173 dist",
-        "prerender": "ts-node --project tsconfig.json src/entry.server.ts",
+        "start": "serve -l 5173 dist",
         "build": "tsc && vite build",
+        "build:prerender": "tsc && vite build --ssr src/entry.server.tsx --outDir scripts/server && node scripts/pre-render.js",
         "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "compile": "tsc --noEmit",
         "preview": "vite preview",

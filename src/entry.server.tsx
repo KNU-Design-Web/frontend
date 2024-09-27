@@ -3,10 +3,11 @@ import { StaticRouter } from "react-router-dom/server";
 
 import App from "./App";
 
-export const preRender = ({ path }: { path: string }) => {
-    return renderToString(
+export async function preRender({ path }: { path: string }) {
+    const html = renderToString(
         <StaticRouter location={path}>
             <App />
         </StaticRouter>,
     );
-};
+    return { html };
+}

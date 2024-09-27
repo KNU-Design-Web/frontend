@@ -1,23 +1,25 @@
-import fs from "fs";
 import path from "path";
-import { createServer } from "vite";
+
+import fs from "fs/promises";
 
 async function GeneratePreRenderedHTML() {
-    const server = await createServer({
-        server: { middlewareMode: true },
-        appType: "custom",
-    });
+    try {
+        console.log("[PRE-RENDER] Reading HTML Template...");
+        const HTMLtemplate = await fs.readFile(path.resolve("index.html"), "utf-8");
 
-    let HTMLtemplate = fs.readFileSync(path.resolve("../index.html"), "utf-8");
-    HTMLtemplate = await server.transformIndexHtml("/", HTMLtemplate);
+        console.log("[PRE-RENDER] Pre-Rendering ...");
+        const preRender = (await import("./server/entry.server.js")).preRender;
+        const preRenderedDOM = await preRender("/");
 
-    const preRender = (await server.ssrLoadModule("../src/entry.server.tsx")).render;
-    const preRenderedDOM = await preRender("/", undefined);
+        const preRenderedHTML = HTMLtemplate.replace("<!-- pre-render -->", preRenderedDOM.html);
 
-    const preRenderedHTML = HTMLtemplate.replace("<!-- pre-render -->", preRenderedDOM);
-    fs.writeFileSync(path.resolve("./index.html"), preRenderedHTML, "utf-8");
+        console.log("[PRE-RENDER] Writing Pre-Rendered HTML ...");
+        await fs.writeFile(path.resolve("dist/index.html"), preRenderedHTML);
 
-    await server.close();
+        console.log("[PRE-RENDER] Generate Pre-Rendered HTML Successfully");
+    } catch (e) {
+        console.error("[PRE-RENDER] Generate Pre-Rendered HTML Failed : ", e);
+    }
 }
 
 GeneratePreRenderedHTML();

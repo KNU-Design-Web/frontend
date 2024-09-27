@@ -1,5 +1,3 @@
-import { BrowserRouter } from "react-router-dom";
-
 import { SectionRouter } from "./Router";
 import { Banner } from "./layouts/Banner/Banner";
 import { fontStyles } from "./styles/fonts";
@@ -10,9 +8,7 @@ export default function App() {
     return (
         <>
             <Global styles={[globalStyles, fontStyles]} />
-            <BrowserRouter>
-                <SectionRouter />
-            </BrowserRouter>
+            <SectionRouter />
             <Banner />
         </>
     );
