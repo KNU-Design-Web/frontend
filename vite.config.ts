@@ -19,7 +19,7 @@ export default defineConfig({
 
         visualizer({
             filename: "bundle.html",
-            open: true,
+            open: false,
         }),
     ],
 });
