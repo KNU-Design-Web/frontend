@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "vite --host",
         "start": "tsc && vite build && serve -l 5173 dist",
+        "prerender": "ts-node --project tsconfig.json src/entry.server.ts",
         "build": "tsc && vite build",
         "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "compile": "tsc --noEmit",
@@ -35,7 +36,7 @@
         "@storybook/test": "^8.3.2",
         "@tanstack/eslint-plugin-query": "^5.57.1",
         "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-        "@types/node": "^22.5.5",
+        "@types/node": "^22.7.2",
         "@types/react": "^18.2.14",
         "@types/react-dom": "^18.2.6",
         "@types/react-transition-group": "^4.4.11",
@@ -49,6 +50,7 @@
         "eslint-plugin-storybook": "^0.8.0",
         "rollup-plugin-visualizer": "^5.12.0",
         "storybook": "^8.3.2",
+        "ts-node": "^10.9.2",
         "typescript": "^5.0.2",
         "vite": "^4.4.0"
     }

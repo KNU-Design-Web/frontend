@@ -28,5 +28,6 @@
         "jsxImportSource": "@emotion/react"
     },
     "include": ["src"],
+    "exclude": ["scripts/pre-render.js"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
