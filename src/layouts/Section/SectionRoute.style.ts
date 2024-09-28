@@ -40,7 +40,9 @@ export const Wrapper = styled.div<{ active: boolean }>`
 
 export const Container = styled.div`
     position: relative;
+    z-index: 1;
 
+    width: 100%;
     min-height: 100vh;
 
     /* padding: 20px; */
