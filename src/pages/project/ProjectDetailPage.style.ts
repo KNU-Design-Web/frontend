@@ -141,6 +141,13 @@ export const HashTags = styled.div`
     flex-wrap: wrap;
 
     width: 50%;
+
+    ${BREAKPOINT.MOBILE} {
+        width: 100%;
+    }
+    ${BREAKPOINT.TABLET} {
+        width: 100%;
+    }
 `;
 
 export const Content = styled.div`
