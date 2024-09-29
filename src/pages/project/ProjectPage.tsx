@@ -1,26 +1,11 @@
-import { ProjectCard } from "@/components/project/Card/Card";
-import { ProjectCardContainer } from "@/components/project/CardContainer/CardContainer";
+import { useSearchParams } from "react-router-dom";
 
-import { Title } from "@/fonts/Title";
+import ProjectDetailPage from "./ProjectDetailPage";
+import ProjectListPage from "./ProjectListPage";
 
 export default function ProjectPage() {
-    return (
-        <>
-            <Title>PROJECT</Title>
+    const [searchParams] = useSearchParams();
 
-            <ProjectCardContainer>
-                {Array.from({ length: 15 }).map((_, index) => {
-                    return (
-                        <ProjectCard
-                            key={index}
-                            id={index}
-                            imgSrc="https://placehold.co/320x320"
-                            title="프로젝트 제목"
-                            author="홍길동"
-                        />
-                    );
-                })}
-            </ProjectCardContainer>
-        </>
-    );
+    if (!!searchParams.get("id")) return <ProjectDetailPage />;
+    else return <ProjectListPage />;
 }
