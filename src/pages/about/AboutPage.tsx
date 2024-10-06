@@ -368,10 +368,11 @@ const BodyContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 80px;
 `;
 
 const Section = styled.div`
+    margin-top: 80px;
+    margin-bottom: 80px;
     width: 980px;
     display: flex;
     flex-direction: row;
