@@ -1,3 +1,5 @@
+import map from "@/assets/img/Map.svg";
+
 import { HorizontalLine } from "./HorizontalLine";
 import { Title } from "@/fonts/Title";
 import styled from "@emotion/styled";
@@ -67,18 +69,111 @@ export default function AboutPage() {
                     <HorizontalLine />
                     <Section>
                         <SectionTitle>예술대학장 인사말</SectionTitle>
-                        <SectionContent></SectionContent>
+                        <SectionContent>
+                            결실의 계절입니다. 만물이 한 해 동안 노력으로 경주했던 결 실을 맞이하는 시기입니다. 올해도
+                            우리 예술대학의 디자인학 과 예비 졸업생들이 그들의 열정과 에너지, 전문적 역량을 쏟 아부어
+                            졸업전시회를 준비하였습니다.
+                            <br />
+                            <br />
+                            새내기 때 풋풋하고 수줍어하던 모습들은 이제 의젓하고 세련되어졌고, 해맑던 얼굴에는 노련미와
+                            자신감이 충만합니다.
+                            <br />
+                            <br />
+                            우리 디자인학과 예비 졸업생들은 단순 오퍼레이터가 아닌, 21세기를 대변하는 통합솔루션
+                            디자이너이자 기획자, 디자인 전문 디렉터로서의 역량을 갖추고자 열심히 준비하고 성장해 온
+                            친구들입니다.
+                            <br />
+                            <br />
+                            정성을 다한 작업 속에서 묻어나는 그들의 뛰어난 콘셉트와 사 고, 이에 따른 문제해결을 위한
+                            숙련된 기술과 역량을 관심있 게 지켜봐 주시고 아낌없는 격려를 부탁드립니다.
+                            <InfoSection>
+                                <InfoTitle>예술대학 학과장</InfoTitle>
+                                <InfoContent>조철희</InfoContent>
+                                <InfoDate>2004년 10월</InfoDate>
+                            </InfoSection>
+                        </SectionContent>
                     </Section>
                     <Section>
                         <SectionTitle>학과장 인사말</SectionTitle>
-                        <SectionContent></SectionContent>
+                        <SectionContent>
+                            결실의 계절입니다. 만물이 한 해 동안 노력으로 경주했던 결 실을 맞이하는 시기입니다. 올해도
+                            우리 예술대학의 디자인학 과 예비 졸업생들이 그들의 열정과 에너지, 전문적 역량을 쏟 아부어
+                            졸업전시회를 준비하였습니다.
+                            <br />
+                            <br />
+                            새내기 때 풋풋하고 수줍어하던 모습들은 이제 의젓하고 세련되어졌고, 해맑던 얼굴에는 노련미와
+                            자신감이 충만합니다.
+                            <br />
+                            <br />
+                            우리 디자인학과 예비 졸업생들은 단순 오퍼레이터가 아닌, 21세기를 대변하는 통합솔루션
+                            디자이너이자 기획자, 디자인 전문 디렉터로서의 역량을 갖추고자 열심히 준비하고 성장해 온
+                            친구들입니다.
+                            <br />
+                            <br />
+                            정성을 다한 작업 속에서 묻어나는 그들의 뛰어난 콘셉트와 사 고, 이에 따른 문제해결을 위한
+                            숙련된 기술과 역량을 관심있 게 지켜봐 주시고 아낌없는 격려를 부탁드립니다.
+                            <InfoSection>
+                                <InfoTitle>디자인학과 학과장</InfoTitle>
+                                <InfoContent>이재민</InfoContent>
+                                <InfoDate>2004년 10월</InfoDate>
+                            </InfoSection>
+                        </SectionContent>
                     </Section>
                     <Section>
                         <SectionTitle>지도교수</SectionTitle>
                         <SectionContent></SectionContent>
                     </Section>
+
+                    <Section>
+                        <SectionTitle>교수진</SectionTitle>
+                        <SectionContent></SectionContent>
+                    </Section>
                     <HorizontalLine />
+                    <Section>
+                        <SectionTitle>졸업준비위원회 대표인사말</SectionTitle>
+                        <SectionContent>
+                            결실의 계절입니다. 만물이 한 해 동안 노력으로 경주했던 결 실을 맞이하는 시기입니다. 올해도
+                            우리 예술대학의 디자인학 과 예비 졸업생들이 그들의 열정과 에너지, 전문적 역량을 쏟 아부어
+                            졸업전시회를 준비하였습니다.
+                            <br />
+                            <br />
+                            새내기 때 풋풋하고 수줍어하던 모습들은 이제 의젓하고 세련되어졌고, 해맑던 얼굴에는 노련미와
+                            자신감이 충만합니다.
+                            <br />
+                            <br />
+                            우리 디자인학과 예비 졸업생들은 단순 오퍼레이터가 아닌, 21세기를 대변하는 통합솔루션
+                            디자이너이자 기획자, 디자인 전문 디렉터로서의 역량을 갖추고자 열심히 준비하고 성장해 온
+                            친구들입니다.
+                            <br />
+                            <br />
+                            정성을 다한 작업 속에서 묻어나는 그들의 뛰어난 콘셉트와 사 고, 이에 따른 문제해결을 위한
+                            숙련된 기술과 역량을 관심있 게 지켜봐 주시고 아낌없는 격려를 부탁드립니다.
+                            <InfoSection>
+                                <InfoTitle>
+                                    졸업준비위원회 <br />
+                                    위원장
+                                </InfoTitle>
+                                <InfoContent>구지원</InfoContent>
+                                <InfoDate>2004년 10월</InfoDate>
+                            </InfoSection>
+                        </SectionContent>
+                    </Section>
+                    <Section>
+                        <SectionTitle>졸업구성원</SectionTitle>
+                        <SectionContent></SectionContent>
+                    </Section>
+                    <Section>
+                        <SectionTitle>졸업구성원</SectionTitle>
+                        <SectionContent></SectionContent>
+                    </Section>
                     <HorizontalLine />
+                    <Section>
+                        <SectionTitle>Offline Exhibtion</SectionTitle>
+                        <SectionContent></SectionContent>
+                    </Section>
+                    <Section>
+                        <SectionImg src={map} />
+                    </Section>
                 </BodyContent>
             </ContentWrapper>
         </>
@@ -134,4 +229,31 @@ const SectionContent = styled.div`
     width: 50%;
     box-sizing: border-box;
     white-space: pre-wrap;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+`;
+
+const SectionImg = styled.img``;
+
+const InfoSection = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    align-items: left;
+`;
+
+const InfoTitle = styled.p`
+    font-size: 20px;
+    font-weight: 400;
+`;
+
+const InfoContent = styled.p`
+    font-size: 20px;
+    font-weight: bold;
+`;
+
+const InfoDate = styled.p`
+    font-size: 20px;
+    font-weight: 400;
 `;
