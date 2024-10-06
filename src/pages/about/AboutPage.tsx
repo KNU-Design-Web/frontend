@@ -119,14 +119,61 @@ export default function AboutPage() {
                             </InfoSection>
                         </SectionContent>
                     </Section>
+                    <HorizontalLine />
                     <Section>
                         <SectionTitle>지도교수</SectionTitle>
-                        <SectionContent></SectionContent>
+                        <SectionContent>
+                            <GridContent>
+                                <GridItem>
+                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
+                                    <ItemName>조철희</ItemName>
+                                </GridItem>
+                                <GridItem>
+                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
+                                    <ItemName>김성년</ItemName>
+                                </GridItem>
+                                <GridItem>
+                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
+                                    <ItemName>이경용</ItemName>
+                                </GridItem>
+                                <GridItem>
+                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
+                                    <ItemName>안지선</ItemName>
+                                </GridItem>
+                                <GridItem>
+                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
+                                    <ItemName>이재민</ItemName>
+                                </GridItem>
+                            </GridContent>
+                        </SectionContent>
                     </Section>
 
                     <Section>
                         <SectionTitle>교수진</SectionTitle>
-                        <SectionContent></SectionContent>
+                        <SectionContent>
+                            <GridContent>
+                                <GridItem>
+                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
+                                    <ItemName>조철희</ItemName>
+                                </GridItem>
+                                <GridItem>
+                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
+                                    <ItemName>김성년</ItemName>
+                                </GridItem>
+                                <GridItem>
+                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
+                                    <ItemName>이경용</ItemName>
+                                </GridItem>
+                                <GridItem>
+                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
+                                    <ItemName>안지선</ItemName>
+                                </GridItem>
+                                <GridItem>
+                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
+                                    <ItemName>이재민</ItemName>
+                                </GridItem>
+                            </GridContent>
+                        </SectionContent>
                     </Section>
                     <HorizontalLine />
                     <Section>
@@ -160,10 +207,32 @@ export default function AboutPage() {
                     </Section>
                     <Section>
                         <SectionTitle>졸업구성원</SectionTitle>
-                        <SectionContent></SectionContent>
+                        <SectionContent>
+                            <ChartContent>
+                                <ChartItem>
+                                    <ChartTitle>기획팀</ChartTitle>
+                                    <Memebers>구지원 황수정 문예림 정유정 김은정 손희주</Memebers>
+                                </ChartItem>
+                                <ChartItem>
+                                    <ChartTitle>그래픽 A팀</ChartTitle>
+                                    <Memebers>문예림 김도연 오연수 원민주 최장익 심유진</Memebers>
+                                </ChartItem>
+                                <ChartItem>
+                                    <ChartTitle>그래픽 B팀</ChartTitle>
+                                    <Memebers>정유정 허연주 유다빈 이시훈 한영욱 </Memebers>
+                                </ChartItem>
+                                <ChartItem>
+                                    <ChartTitle>편집팀</ChartTitle>
+                                    <Memebers>김정은 김현민 전하연 전유나 한지원 </Memebers>
+                                </ChartItem>
+                                <ChartItem>
+                                    <ChartTitle>웹팀</ChartTitle>
+                                    <Memebers>손희주 김경민 김수린 최민지 </Memebers>
+                                </ChartItem>
+                            </ChartContent>
+                        </SectionContent>
                     </Section>
                     <Section>
-                        <SectionTitle>졸업구성원</SectionTitle>
                         <SectionContent></SectionContent>
                     </Section>
                     <HorizontalLine />
@@ -256,4 +325,51 @@ const InfoContent = styled.p`
 const InfoDate = styled.p`
     font-size: 20px;
     font-weight: 400;
+`;
+
+const GridContent = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 30px;
+`;
+
+const GridItem = styled.div`
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+`;
+const ItmeTitle = styled.p`
+    font-size: 16px;
+`;
+const ItemName = styled.p`
+    font-size: 20px;
+    font-weight: bold;
+`;
+
+const ChartContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+`;
+
+const ChartItem = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+`;
+
+const ChartTitle = styled.p`
+    font-size: 20px;
+    font-weight: bold;
+    width: 140px;
+`;
+
+const Memebers = styled.p`
+    font-size: 20px;
+    font-weight: 400;
+    white-space: pre-wrap;
+    width: 340px;
 `;
