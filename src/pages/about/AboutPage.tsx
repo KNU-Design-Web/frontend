@@ -1,3 +1,5 @@
+import React, { useState, useRef } from "react";
+
 import map from "@/assets/img/Map.svg";
 
 import { HorizontalLine } from "./HorizontalLine";
@@ -5,6 +7,34 @@ import { Title } from "@/fonts/Title";
 import styled from "@emotion/styled";
 
 export default function AboutPage() {
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    const handleMouseDown = (e: React.MouseEvent) => {
+        setIsDragging(true);
+        setStartX(e.pageX - (scrollContainerRef.current?.offsetLeft || 0));
+        setScrollLeft(scrollContainerRef.current?.scrollLeft || 0);
+    };
+
+    const handleMouseLeave = () => {
+        setIsDragging(false);
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - (scrollContainerRef.current?.offsetLeft || 0);
+        const walk = (x - startX) * 2;
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+        }
+    };
     return (
         <>
             <Title>ABOUT</Title>
@@ -219,21 +249,65 @@ export default function AboutPage() {
                                 </ChartItem>
                                 <ChartItem>
                                     <ChartTitle>그래픽 B팀</ChartTitle>
-                                    <Memebers>정유정 허연주 유다빈 이시훈 한영욱 </Memebers>
+                                    <Memebers>정유정 허연주 유다빈 이시훈 한영욱</Memebers>
                                 </ChartItem>
                                 <ChartItem>
                                     <ChartTitle>편집팀</ChartTitle>
-                                    <Memebers>김정은 김현민 전하연 전유나 한지원 </Memebers>
+                                    <Memebers>김정은 김현민 전하연 전유나 한지원</Memebers>
                                 </ChartItem>
                                 <ChartItem>
                                     <ChartTitle>웹팀</ChartTitle>
-                                    <Memebers>손희주 김경민 김수린 최민지 </Memebers>
+                                    <Memebers>손희주 김경민 김수린 최민지</Memebers>
                                 </ChartItem>
                             </ChartContent>
                         </SectionContent>
                     </Section>
                     <Section>
-                        <SectionContent></SectionContent>
+                        <ScrollableContainer
+                            ref={scrollContainerRef}
+                            onMouseDown={handleMouseDown}
+                            onMouseLeave={handleMouseLeave}
+                            onMouseUp={handleMouseUp}
+                            onMouseMove={handleMouseMove}
+                        >
+                            <ScrollableContent>
+                                <TeamCard>
+                                    <TeamImg />
+                                    <TeamInfo>
+                                        <TeamInfoTitle>기획팀</TeamInfoTitle>
+                                        <TeamInfoMemeber>구지원 황수정 문예림 정유정 김은정 손희주</TeamInfoMemeber>
+                                    </TeamInfo>
+                                </TeamCard>
+                                <TeamCard>
+                                    <TeamImg />
+                                    <TeamInfo>
+                                        <TeamInfoTitle>그래픽 A팀</TeamInfoTitle>
+                                        <TeamInfoMemeber>문예림 김도연 오연수 원민주 최장익 심유진</TeamInfoMemeber>
+                                    </TeamInfo>
+                                </TeamCard>
+                                <TeamCard>
+                                    <TeamImg />
+                                    <TeamInfo>
+                                        <TeamInfoTitle>그래픽 B팀</TeamInfoTitle>
+                                        <TeamInfoMemeber>정유정 허연주 유다빈 이시훈 한영욱</TeamInfoMemeber>
+                                    </TeamInfo>
+                                </TeamCard>
+                                <TeamCard>
+                                    <TeamImg />
+                                    <TeamInfo>
+                                        <TeamInfoTitle>편집팀</TeamInfoTitle>
+                                        <TeamInfoMemeber>김정은 김현민 전하연 전유나 한지원</TeamInfoMemeber>
+                                    </TeamInfo>
+                                </TeamCard>
+                                <TeamCard>
+                                    <TeamImg />
+                                    <TeamInfo>
+                                        <TeamInfoTitle>웹팀</TeamInfoTitle>
+                                        <TeamInfoMemeber>손희주 김경민 김수린 최민지</TeamInfoMemeber>
+                                    </TeamInfo>
+                                </TeamCard>
+                            </ScrollableContent>
+                        </ScrollableContainer>
                     </Section>
                     <HorizontalLine />
                     <Section>
@@ -280,7 +354,6 @@ const HeaderContent = styled.h1`
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 0 230px; */
 `;
 const Slog = styled.h1`
     width: 980px;
@@ -403,3 +476,46 @@ const ChartItemMemebers = styled.p`
     white-space: pre-wrap;
     width: 420px;
 `;
+
+const ScrollableContainer = styled.div`
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+`;
+
+const ScrollableContent = styled.div`
+    display: flex;
+    gap: 50px;
+    padding: 20px 0;
+`;
+
+const TeamCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 17px;
+`;
+
+const TeamImg = styled.img`
+    width: 408px;
+    height: 270px;
+`;
+
+const TeamInfo = styled.div`
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+`;
+
+const TeamInfoTitle = styled.p``;
+
+const TeamInfoMemeber = styled.p``;
