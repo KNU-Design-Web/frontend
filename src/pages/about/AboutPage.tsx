@@ -238,7 +238,24 @@ export default function AboutPage() {
                     <HorizontalLine />
                     <Section>
                         <SectionTitle>Offline Exhibtion</SectionTitle>
-                        <SectionContent></SectionContent>
+                        <SectionContent>
+                            <ChartContent>
+                                <ChartItem>
+                                    <ChartItemTitle>장소</ChartItemTitle>
+                                    <ChartItemMemebers>
+                                        북구 대학로 80 경북대학교 대구캠퍼스 스페이스 나인
+                                    </ChartItemMemebers>
+                                </ChartItem>
+                                <ChartItem>
+                                    <ChartItemTitle>일시</ChartItemTitle>
+                                    <ChartItemMemebers>2024. 10. 28 MON -2024. 11. 09 SUN</ChartItemMemebers>
+                                </ChartItem>
+                                <ChartItem>
+                                    <ChartItemTitle>오프닝</ChartItemTitle>
+                                    <ChartItemMemebers>2024. 10. 31 THU</ChartItemMemebers>
+                                </ChartItem>
+                            </ChartContent>
+                        </SectionContent>
                     </Section>
                     <Section>
                         <SectionImg src={map} />
@@ -372,4 +389,17 @@ const Memebers = styled.p`
     font-weight: 400;
     white-space: pre-wrap;
     width: 340px;
+`;
+
+const ChartItemTitle = styled.p`
+    font-size: 20px;
+    font-weight: bold;
+    width: 60px;
+`;
+
+const ChartItemMemebers = styled.p`
+    font-size: 20px;
+    font-weight: 400;
+    white-space: pre-wrap;
+    width: 420px;
 `;
