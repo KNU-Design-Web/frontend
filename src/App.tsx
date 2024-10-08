@@ -1,5 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
 
+import "@/styles/Profile.transition.css";
+import "@/styles/Section.transition.css";
+
 import { SectionRouter } from "./Router";
 import { Banner } from "./layouts/Banner/Banner";
 import { fontStyles } from "./styles/fonts";
