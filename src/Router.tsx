@@ -1,3 +1,6 @@
+import { Fragment } from "react";
+import { TransitionGroup } from "react-transition-group";
+
 import AboutPage from "@/pages/about/AboutPage";
 import ArchivePage from "@/pages/archive/ArchivePage";
 import GuestPage from "@/pages/guest/GuestPage";
@@ -10,7 +13,7 @@ import { SectionRoute } from "./layouts/Section/SectionRoute";
 
 export const SectionRouter = () => {
     return (
-        <>
+        <TransitionGroup component={Fragment}>
             <NavTop />
             <SectionRoute param="home" navContent="2024 KNUD GRADUATION EXHIBITION" element={<HomePage />} />
             <SectionRoute param="about" navContent="ABOUT" element={<AboutPage />} />
@@ -18,6 +21,6 @@ export const SectionRouter = () => {
             <SectionRoute param="profile" navContent="PROFILE" element={<ProfilePage />} />
             <SectionRoute param="guest" navContent="GUEST BOOK" element={<GuestPage />} />
             <SectionRoute param="archive" navContent="ARCHIVE" element={<ArchivePage />} />
-        </>
+        </TransitionGroup>
     );
 };

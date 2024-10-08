@@ -1,5 +1,3 @@
-import { useCallback, useEffect, useRef } from "react";
-
 import * as ProfileDetailStyles from "./ProfileDetail.style";
 import { ProfileItemProps } from "./ProfileItem";
 
