@@ -10,6 +10,7 @@ import { Title } from "@/fonts/Title";
 import styled from "@emotion/styled";
 
 export default function AboutPage() {
+    const underTablet = useMediaQuery("(max-width: 1024px)");
     const TableToMobile = useMediaQuery("(max-width: 640px) and (min-width: 430px)");
     const isMobile = useMediaQuery("(max-width: 430px)");
     const [isDragging, setIsDragging] = useState(false);
@@ -42,7 +43,7 @@ export default function AboutPage() {
     };
     return (
         <>
-            <Title>ABOUT</Title>
+            {underTablet ? <></> : <Title>ABOUT</Title>}
             <ContentWrapper>
                 <HeaderContent>
                     {TableToMobile ? (
@@ -459,6 +460,8 @@ const Section = styled.div`
     @media (max-width: 430px) {
         flex-direction: column;
         gap: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 `;
 
