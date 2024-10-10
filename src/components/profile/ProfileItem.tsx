@@ -17,7 +17,7 @@ export interface ProfileItemProps {
     projectImg: string;
 
     projectId: string;
-    projectTitle: string;
+    projectTitle: string[];
 }
 
 export const ProfileItem = (props: ProfileItemProps) => {
@@ -29,14 +29,14 @@ export const ProfileItem = (props: ProfileItemProps) => {
 
     return (
         <TransitionGroup>
-            <ProfileItemStyles.Wrapper onClick={handleToggle}>
+            <ProfileItemStyles.Wrapper active={isOpen} onClick={handleToggle}>
                 <ProfileItemStyles.Container>
                     <Text size="s">{props.koName}</Text>
                     <Text size="s">{props.enName}</Text>
                 </ProfileItemStyles.Container>
             </ProfileItemStyles.Wrapper>
             {isOpen && (
-                <CSSTransition timeout={500} classNames="profile">
+                <CSSTransition timeout={250} classNames="profile">
                     <ProfileDetail {...props} />
                 </CSSTransition>
             )}
