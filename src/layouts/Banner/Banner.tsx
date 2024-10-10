@@ -8,10 +8,10 @@ export const Banner = () => {
     return (
         <BannerStyles.Wrapper>
             <BannerStyles.Container>
-                <Text size="xl" weight={900} color="lightgreen">
+                <Text size="xl" weight={700} color="lightgreen">
                     {bannerText}
                 </Text>
-                <Text size="xl" weight={900} color="lightgreen">
+                <Text size="xl" weight={700} color="lightgreen">
                     {bannerText}
                 </Text>
             </BannerStyles.Container>

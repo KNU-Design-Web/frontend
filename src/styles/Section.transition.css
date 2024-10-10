@@ -1,0 +1,21 @@
+.section-enter {
+    max-width: 0;
+}
+
+.section-enter-active {
+    max-width: 100%;
+}
+
+.section-exit {
+    max-width: 100%;
+}
+
+.section-exit-active {
+    max-width: 0;
+}
+
+.section-enter-active,
+.section-exit-active {
+    will-change: max-width;
+    transition: max-width 300ms ease-in-out;
+}

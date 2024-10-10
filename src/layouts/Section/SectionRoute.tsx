@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { useSearchParams } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
 
 import { Footer } from "../Footer/Footer";
 import { Grid } from "../Grid/Grid";
@@ -14,17 +15,21 @@ export interface SectionRouteProps {
 
 export const SectionRoute = (props: SectionRouteProps) => {
     const [searchParams] = useSearchParams();
+    const isActive = searchParams.get("section") === props.param;
 
     return (
         <>
             <NavItem to={props.param}>{props.navContent}</NavItem>
-            <SectionWrapper active={searchParams.get("section") === props.param}>
-                <SectionContainer>
-                    {props.element}
-                    <Grid rows={28} cols={18} />
-                </SectionContainer>
-                <Footer />
-            </SectionWrapper>
+
+            <CSSTransition in={isActive} timeout={300} classNames="section" unmountOnExit>
+                <SectionWrapper>
+                    <SectionContainer>
+                        {props.element}
+                        <Grid rows={28} cols={18} />
+                    </SectionContainer>
+                    <Footer />
+                </SectionWrapper>
+            </CSSTransition>
         </>
     );
 };
