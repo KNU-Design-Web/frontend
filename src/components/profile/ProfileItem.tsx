@@ -6,6 +6,8 @@ import * as ProfileItemStyles from "./ProfileItem.style";
 import { Text } from "@/fonts/Text";
 
 export interface ProfileItemProps {
+    projectId: number;
+
     koName: string;
     enName: string;
 
@@ -16,7 +18,6 @@ export interface ProfileItemProps {
     profileImg: string;
     projectImg: string;
 
-    projectId: string;
     projectTitle: string[];
 }
 
