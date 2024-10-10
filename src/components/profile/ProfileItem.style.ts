@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Wrapper = styled.li`
+export const Wrapper = styled.li<{ active: boolean }>`
     position: relative;
 
     height: 60px;
@@ -8,7 +8,7 @@ export const Wrapper = styled.li`
     border: 1px solid #000;
     border-top: 0;
 
-    background-color: #fff;
+    background-color: ${(props) => (props.active ? "var(--color-light-green)" : "#fff")};
 
     list-style: none;
 

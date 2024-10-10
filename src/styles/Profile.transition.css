@@ -4,7 +4,7 @@
 
 .profile-enter-active {
     max-height: 540px;
-    transition: max-height 500ms ease-in-out;
+    transition: max-height 300ms ease-in-out;
 }
 
 .profile-exit {
@@ -13,5 +13,5 @@
 
 .profile-exit-active {
     max-height: 0;
-    transition: max-height 500ms ease-in-out;
+    transition: max-height 300ms ease-in-out;
 }
