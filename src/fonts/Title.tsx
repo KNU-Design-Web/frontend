@@ -8,7 +8,7 @@ export interface TitleProps {
 export const Title = (props: TitleProps) => {
     return (
         <TitleStyles.Text>
-            <Text size={"140px"} weight={900} color="var(--color-purple)">
+            <Text size={"140px"} weight={700} color="var(--color-purple)">
                 {props.children}
             </Text>
         </TitleStyles.Text>
