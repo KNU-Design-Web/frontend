@@ -1,12 +1,18 @@
 import React, { useState, useRef } from "react";
 
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+
 import map from "@/assets/img/Map.svg";
 
 import { HorizontalLine } from "./HorizontalLine";
+import { Text } from "@/fonts/Text";
 import { Title } from "@/fonts/Title";
 import styled from "@emotion/styled";
 
 export default function AboutPage() {
+    const underTablet = useMediaQuery("(max-width: 1024px)");
+    const TableToMobile = useMediaQuery("(max-width: 640px) and (min-width: 430px)");
+    const isMobile = useMediaQuery("(max-width: 430px)");
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
@@ -37,13 +43,21 @@ export default function AboutPage() {
     };
     return (
         <>
-            <Title>ABOUT</Title>
+            {underTablet ? <></> : <Title>ABOUT</Title>}
             <ContentWrapper>
                 <HeaderContent>
-                    <Slog>
-                        2024 KNUD <br /> GRADUATION EXHIBITION <br />
-                        :합니다 디자인
-                    </Slog>
+                    {TableToMobile ? (
+                        <Slog>
+                            2024 KNUD <br /> GRADUATION <br />
+                            EXHIBITION <br />
+                            :합니다 디자인
+                        </Slog>
+                    ) : (
+                        <Slog>
+                            2024 KNUD <br /> GRADUATION EXHIBITION <br />
+                            :합니다 디자인
+                        </Slog>
+                    )}
                 </HeaderContent>
                 <BodyContent>
                     <Section>
@@ -67,7 +81,15 @@ export default function AboutPage() {
 
                     <HorizontalLine />
                     <Section>
-                        <SectionTitle>Visual identity</SectionTitle>
+                        {TableToMobile ? (
+                            <SectionTitle>
+                                Visual
+                                <br />
+                                identity
+                            </SectionTitle>
+                        ) : (
+                            <SectionTitle>Visual identity</SectionTitle>
+                        )}
                         <SectionContent>
                             비주얼 아이덴티티는 직관적이고 기하학적인 형태를 통해 졸업 전시회의 핵심 주제인 '합'을
                             효과적으로 전달하고자 하였습니다.
@@ -207,7 +229,15 @@ export default function AboutPage() {
                     </Section>
                     <HorizontalLine />
                     <Section>
-                        <SectionTitle>졸업준비위원회 대표인사말</SectionTitle>
+                        {TableToMobile ? (
+                            <SectionTitle>
+                                졸업준비위원회
+                                <br />
+                                대표인사말
+                            </SectionTitle>
+                        ) : (
+                            <SectionTitle>졸업준비위원회 대표인사말</SectionTitle>
+                        )}
                         <SectionContent>
                             결실의 계절입니다. 만물이 한 해 동안 노력으로 경주했던 결 실을 맞이하는 시기입니다. 올해도
                             우리 예술대학의 디자인학 과 예비 졸업생들이 그들의 열정과 에너지, 전문적 역량을 쏟 아부어
@@ -263,13 +293,7 @@ export default function AboutPage() {
                         </SectionContent>
                     </Section>
                     <Section>
-                        <ScrollableContainer
-                            ref={scrollContainerRef}
-                            onMouseDown={handleMouseDown}
-                            onMouseLeave={handleMouseLeave}
-                            onMouseUp={handleMouseUp}
-                            onMouseMove={handleMouseMove}
-                        >
+                        {isMobile ? (
                             <ScrollableContent>
                                 <TeamCard>
                                     <TeamImg />
@@ -307,7 +331,53 @@ export default function AboutPage() {
                                     </TeamInfo>
                                 </TeamCard>
                             </ScrollableContent>
-                        </ScrollableContainer>
+                        ) : (
+                            <ScrollableContainer
+                                ref={scrollContainerRef}
+                                onMouseDown={handleMouseDown}
+                                onMouseLeave={handleMouseLeave}
+                                onMouseUp={handleMouseUp}
+                                onMouseMove={handleMouseMove}
+                            >
+                                <ScrollableContent>
+                                    <TeamCard>
+                                        <TeamImg />
+                                        <TeamInfo>
+                                            <TeamInfoTitle>기획팀</TeamInfoTitle>
+                                            <TeamInfoMemeber>구지원 황수정 문예림 정유정 김은정 손희주</TeamInfoMemeber>
+                                        </TeamInfo>
+                                    </TeamCard>
+                                    <TeamCard>
+                                        <TeamImg />
+                                        <TeamInfo>
+                                            <TeamInfoTitle>그래픽 A팀</TeamInfoTitle>
+                                            <TeamInfoMemeber>문예림 김도연 오연수 원민주 최장익 심유진</TeamInfoMemeber>
+                                        </TeamInfo>
+                                    </TeamCard>
+                                    <TeamCard>
+                                        <TeamImg />
+                                        <TeamInfo>
+                                            <TeamInfoTitle>그래픽 B팀</TeamInfoTitle>
+                                            <TeamInfoMemeber>정유정 허연주 유다빈 이시훈 한영욱</TeamInfoMemeber>
+                                        </TeamInfo>
+                                    </TeamCard>
+                                    <TeamCard>
+                                        <TeamImg />
+                                        <TeamInfo>
+                                            <TeamInfoTitle>편집팀</TeamInfoTitle>
+                                            <TeamInfoMemeber>김정은 김현민 전하연 전유나 한지원</TeamInfoMemeber>
+                                        </TeamInfo>
+                                    </TeamCard>
+                                    <TeamCard>
+                                        <TeamImg />
+                                        <TeamInfo>
+                                            <TeamInfoTitle>웹팀</TeamInfoTitle>
+                                            <TeamInfoMemeber>손희주 김경민 김수린 최민지</TeamInfoMemeber>
+                                        </TeamInfo>
+                                    </TeamCard>
+                                </ScrollableContent>
+                            </ScrollableContainer>
+                        )}
                     </Section>
                     <HorizontalLine />
                     <Section>
@@ -360,6 +430,11 @@ const Slog = styled.h1`
     text-align: right;
     font-size: 50px;
     margin-top: 120px;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        padding: 0 10px;
+    }
 `;
 
 const BodyContent = styled.div`
@@ -376,22 +451,48 @@ const Section = styled.div`
     width: 980px;
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    @media (max-width: 430px) {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 `;
 
-const SectionTitle = styled.div`
-    font-size: 32px;
+const SectionTitle = styled(Text)`
     width: 50%;
     box-sizing: border-box;
+    white-space: pre-wrap;
+
+    @media (max-width: 640px) {
+        width: 25%;
+    }
+
+    @media (max-width: 430px) {
+        width: 100%;
+    }
 `;
 
-const SectionContent = styled.div`
-    font-size: 16px;
+const SectionContent = styled(Text)`
     width: 50%;
     box-sizing: border-box;
     white-space: pre-wrap;
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @media (max-width: 640px) {
+        width: 75%;
+    }
+    @media (max-width: 430px) {
+        width: 100%;
+    }
 `;
 
 const SectionImg = styled.img``;
@@ -403,26 +504,26 @@ const InfoSection = styled.div`
     align-items: left;
 `;
 
-const InfoTitle = styled.p`
+const InfoTitle = styled(Text)`
     font-size: 20px;
     font-weight: 400;
 `;
 
-const InfoContent = styled.p`
-    font-size: 20px;
-    font-weight: bold;
-`;
+const InfoContent = styled(Text)``;
 
-const InfoDate = styled.p`
-    font-size: 20px;
-    font-weight: 400;
-`;
+const InfoDate = styled(Text)``;
 
 const GridContent = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     gap: 30px;
+
+    @media (max-width: 430px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 `;
 
 const GridItem = styled.div`
@@ -431,13 +532,8 @@ const GridItem = styled.div`
     flex-direction: column;
     gap: 6px;
 `;
-const ItmeTitle = styled.p`
-    font-size: 16px;
-`;
-const ItemName = styled.p`
-    font-size: 20px;
-    font-weight: bold;
-`;
+const ItmeTitle = styled(Text)``;
+const ItemName = styled(Text)``;
 
 const ChartContent = styled.div`
     display: flex;
@@ -450,28 +546,33 @@ const ChartItem = styled.div`
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
+
+    @media (max-width: 430px) {
+        flex-direction: column;
+        gap: 6px;
+    }
 `;
 
-const ChartTitle = styled.p`
+const ChartTitle = styled(Text)`
     font-size: 20px;
     font-weight: bold;
     width: 140px;
 `;
 
-const Memebers = styled.p`
+const Memebers = styled(Text)`
     font-size: 20px;
     font-weight: 400;
     white-space: pre-wrap;
     width: 340px;
 `;
 
-const ChartItemTitle = styled.p`
+const ChartItemTitle = styled(Text)`
     font-size: 20px;
     font-weight: bold;
     width: 60px;
 `;
 
-const ChartItemMemebers = styled.p`
+const ChartItemMemebers = styled(Text)`
     font-size: 20px;
     font-weight: 400;
     white-space: pre-wrap;
@@ -495,6 +596,11 @@ const ScrollableContent = styled.div`
     display: flex;
     gap: 50px;
     padding: 20px 0;
+
+    @media (max-width: 430px) {
+        flex-direction: column;
+        gap: 100px;
+    }
 `;
 
 const TeamCard = styled.div`
@@ -517,6 +623,6 @@ const TeamInfo = styled.div`
     gap: 6px;
 `;
 
-const TeamInfoTitle = styled.p``;
+const TeamInfoTitle = styled(Text)``;
 
-const TeamInfoMemeber = styled.p``;
+const TeamInfoMemeber = styled(Text)``;
