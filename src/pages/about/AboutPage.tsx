@@ -411,12 +411,12 @@ export default function AboutPage() {
 }
 
 const ContentWrapper = styled.div`
-    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    pointer-events: none;
 `;
 
 const HeaderContent = styled.h1`
@@ -583,6 +583,7 @@ const ScrollableContainer = styled.div`
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    pointer-events: auto;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
