@@ -7,7 +7,7 @@ export const Container = styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 
-    margin: 20px 0px;
+    margin: 0px 0px;
 
     ${BREAKPOINT.MOBILE} {
         grid-template-columns: repeat(2, 1fr);

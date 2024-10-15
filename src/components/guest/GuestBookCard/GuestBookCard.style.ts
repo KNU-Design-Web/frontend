@@ -5,6 +5,11 @@ import styled from "@emotion/styled";
 export const Container = styled.div`
     width: 100%;
     aspect-ratio: 1/1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
 
     &:nth-child(6n + 1),
     &:nth-child(6n + 2),
