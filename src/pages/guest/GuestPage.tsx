@@ -8,15 +8,18 @@ import { GuestBookTextArea } from "@/components/guest/GuestBookTextArea/GuestBoo
 import styled from "@emotion/styled";
 
 export default function GuestPage() {
+    const handleOnSubmit = () => {
+        console.log("submit");
+    };
     return (
         <>
             <GuestBookContainer>
                 <GuestBookForm>
-                    <GuestBookInput name="receiver" label="TO." width="300px" placeholder="받는사람" />
+                    <GuestBookInput name="receiver" label="TO." width="100px" placeholder="받는사람" />
                     <GuestBookTextArea placeholder="경북대학교 디자인학과 학생들에게 따뜻한 응원의 한마디를 남겨주세요:)" />
-                    <GuestBookInput name="receiver" label="FROM." width="300px" placeholder="보내는사람" />
+                    <GuestBookInput name="receiver" label="FROM." width="105px" placeholder="보내는사람" />
                 </GuestBookForm>
-                <AddButton>메시지 전송</AddButton>
+                <AddButton onClick={handleOnSubmit}>메시지 전송</AddButton>
                 <GuestBookCardContainer>
                     <GuestBookCard to={"test"} from={"test"} content={"qwerqwreqreqwerqwr"} />
                 </GuestBookCardContainer>

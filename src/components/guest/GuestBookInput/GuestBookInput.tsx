@@ -10,12 +10,14 @@ export interface GuestBookInputProps extends React.ComponentProps<"input"> {
 }
 
 export const GuestBookInput = ({ name, label, ...rest }: GuestBookInputProps) => {
+    const ContainerComponent = label === "TO." ? GuestBookInputStyles.Container : GuestBookInputStyles.FromContainer;
+
     return (
-        <GuestBookInputStyles.Container>
+        <ContainerComponent>
             <GuestBookInputStyles.Label htmlFor={name}>
                 <Text size="m">{label}</Text>
             </GuestBookInputStyles.Label>
             <GuestBookInputStyles.Input type="text" {...rest} name={name} />
-        </GuestBookInputStyles.Container>
+        </ContainerComponent>
     );
 };
