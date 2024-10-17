@@ -52,10 +52,10 @@ export default function GuestPage() {
         }
     };
 
-    useEffect(() => {
-        fetchMessages();
-    }, []);
-
+    /*
+    input 값이 비어있는지 확인하고 api 호출
+    메시지 전송과 별개로 프론트에서 우선적으로 메시지를 보여주기 위해서 setMessages를 사용
+    */
     const handleSubmit = async () => {
         if (!API_URL) {
             console.log("url error");
@@ -94,6 +94,10 @@ export default function GuestPage() {
             console.error("메시지 전송에 실패했습니다:", error);
         }
     };
+
+    useEffect(() => {
+        fetchMessages();
+    }, []);
 
     return (
         <>
