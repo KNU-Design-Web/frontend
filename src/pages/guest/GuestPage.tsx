@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 
 import axios from "axios";
 
@@ -23,6 +23,7 @@ interface GuestBookResponse {
     items: GuestBookMessage[];
     last_uuid: string;
 }
+
 const API_URL = import.meta.env.VITE_API_URL as string;
 
 export default function GuestPage() {
@@ -32,12 +33,29 @@ export default function GuestPage() {
     const [content, setContent] = useState("");
     const [lastUuid, setLastUuid] = useState<string | null>(null);
     const [hasMore, setHasMore] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
+
+    const observer = useRef<IntersectionObserver | null>(null);
+    const lastMessageElementRef = useCallback(
+        (node: HTMLDivElement | null) => {
+            if (isLoading) return;
+            if (observer.current) observer.current.disconnect();
+            observer.current = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && hasMore) {
+                    fetchMessages();
+                }
+            });
+            if (node) observer.current.observe(node);
+        },
+        [isLoading, hasMore],
+    );
 
     const fetchMessages = async () => {
-        if (!hasMore || !API_URL) return;
+        if (!hasMore || !API_URL || isLoading) return;
 
+        setIsLoading(true);
         try {
-            const response = await axios.get<GuestBookResponse>(`${API_URL}/messages`, {
+            const response = await axios.get<GuestBookResponse>(`${API_URL}`, {
                 params: {
                     last_uuid: lastUuid,
                     take: 10,
@@ -49,13 +67,11 @@ export default function GuestPage() {
             setHasMore(newMessages.length === 10);
         } catch (error) {
             console.error("메시지를 불러오는 데 실패했습니다:", error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
-    /*
-    input 값이 비어있는지 확인하고 api 호출
-    메시지 전송과 별개로 프론트에서 우선적으로 메시지를 보여주기 위해서 setMessages를 사용
-    */
     const handleSubmit = async () => {
         if (!API_URL) {
             console.log("url error");
@@ -65,7 +81,6 @@ export default function GuestPage() {
             alert("받는 사람을 입력해주세요.");
             return;
         }
-
         if (!from.trim()) {
             alert("보내는 사람을 입력해주세요.");
             return;
@@ -127,10 +142,13 @@ export default function GuestPage() {
                 </GuestBookForm>
                 <AddButton onClick={handleSubmit}>메시지 전송</AddButton>
                 <GuestBookCardContainer>
-                    {messages.map((message) => (
-                        <GuestBookCard key={message.id} to={message.to} from={message.from} content={message.content} />
+                    {messages.map((message, index) => (
+                        <div key={message.id} ref={index === messages.length - 1 ? lastMessageElementRef : null}>
+                            <GuestBookCard to={message.to} from={message.from} content={message.content} />
+                        </div>
                     ))}
                 </GuestBookCardContainer>
+                {isLoading && <LoadingMessage>메시지를 불러오는 중...</LoadingMessage>}
             </GuestBookContainer>
         </>
     );
@@ -140,8 +158,14 @@ const AddButton = styled.button`
     width: 100%;
     height: 72px;
     background-color: #9085ff;
-
     font-size: 24px;
     color: white;
     font-weight: bold;
+`;
+
+const LoadingMessage = styled.div`
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #666;
 `;
