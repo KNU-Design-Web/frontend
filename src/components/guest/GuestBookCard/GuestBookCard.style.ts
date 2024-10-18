@@ -3,7 +3,6 @@ import { BREAKPOINT } from "@/styles/breakpoint";
 import styled from "@emotion/styled";
 
 export const Container = styled.div`
-    width: 100%;
     aspect-ratio: 1/1;
     padding: 30px;
     display: flex;

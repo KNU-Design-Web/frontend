@@ -1,6 +1,4 @@
-import { useEffect, useState, useCallback, useRef } from "react";
-
-import axios from "axios";
+import { useEffect, useCallback, useRef } from "react";
 
 import { GuestBookCard } from "@/components/guest/GuestBookCard/GuestBookCard";
 import { GuestBookCardContainer } from "@/components/guest/GuestBookCard/GuestBookCardContainer";
@@ -9,31 +7,16 @@ import { GuestBookForm } from "@/components/guest/GuestBookForm/GuestBookForm";
 import { GuestBookInput } from "@/components/guest/GuestBookInput/GuestBookInput";
 import { GuestBookTextArea } from "@/components/guest/GuestBookTextArea/GuestBookTextArea";
 
+import { useFetchMessages } from "@/hooks/useFetchMessages";
+import { useSubmitMessage } from "@/hooks/useSubmitMessage";
+
 import styled from "@emotion/styled";
-
-interface GuestBookMessage {
-    id: string;
-    to: string;
-    from: string;
-    content: string;
-    createdAt: string;
-}
-
-interface GuestBookResponse {
-    items: GuestBookMessage[];
-    last_uuid: string;
-}
 
 const API_URL = import.meta.env.VITE_API_URL as string;
 
 export default function GuestPage() {
-    const [messages, setMessages] = useState<GuestBookMessage[]>([]);
-    const [to, setTo] = useState("");
-    const [from, setFrom] = useState("");
-    const [content, setContent] = useState("");
-    const [lastUuid, setLastUuid] = useState<string | null>(null);
-    const [hasMore, setHasMore] = useState(true);
-    const [isLoading, setIsLoading] = useState(false);
+    const { messages, isLoading, hasMore, fetchMessages, setMessages } = useFetchMessages(API_URL);
+    const { to, setTo, from, setFrom, content, setContent, handleSubmit } = useSubmitMessage(API_URL);
 
     const observer = useRef<IntersectionObserver | null>(null);
     const lastMessageElementRef = useCallback(
@@ -47,72 +30,20 @@ export default function GuestPage() {
             });
             if (node) observer.current.observe(node);
         },
-        [isLoading, hasMore],
+        [isLoading, hasMore, fetchMessages],
     );
 
-    const fetchMessages = async () => {
-        if (!hasMore || !API_URL || isLoading) return;
-
-        setIsLoading(true);
-        try {
-            const response = await axios.get<GuestBookResponse>(`${API_URL}`, {
-                params: {
-                    last_uuid: lastUuid,
-                    take: 10,
-                },
-            });
-            const newMessages = response.data.items;
-            setMessages((prevMessages) => [...prevMessages, ...newMessages]);
-            setLastUuid(response.data.last_uuid);
-            setHasMore(newMessages.length === 10);
-        } catch (error) {
-            console.error("메시지를 불러오는 데 실패했습니다:", error);
-        } finally {
-            setIsLoading(false);
-        }
-    };
-
-    const handleSubmit = async () => {
-        if (!API_URL) {
-            console.log("url error");
-            return;
-        }
-        if (!to.trim()) {
-            alert("받는 사람을 입력해주세요.");
-            return;
-        }
-        if (!from.trim()) {
-            alert("보내는 사람을 입력해주세요.");
-            return;
-        }
-        if (!content.trim()) {
-            alert("내용을 입력해주세요.");
-            return;
-        }
-
-        try {
-            const response = await axios.post<GuestBookMessage>(`${API_URL}`, {
-                to,
-                from,
-                content,
-            });
-
-            console.log("메시지가 성공적으로 전송되었습니다.");
-
-            setTo("");
-            setFrom("");
-            setContent("");
-
-            const newMessage = response.data;
+    const onSubmit = async () => {
+        const newMessage = await handleSubmit();
+        if (newMessage) {
             setMessages((prevMessages) => [newMessage, ...prevMessages]);
-        } catch (error) {
-            console.error("메시지 전송에 실패했습니다:", error);
         }
     };
 
     useEffect(() => {
         fetchMessages();
-    }, []);
+    }, [fetchMessages]);
+    console.log("messages", messages);
 
     return (
         <>
@@ -140,12 +71,16 @@ export default function GuestPage() {
                         onChange={(e) => setFrom(e.target.value)}
                     />
                 </GuestBookForm>
-                <AddButton onClick={handleSubmit}>메시지 전송</AddButton>
+                <AddButton onClick={onSubmit}>메시지 전송</AddButton>
                 <GuestBookCardContainer>
                     {messages.map((message, index) => (
-                        <div key={message.id} ref={index === messages.length - 1 ? lastMessageElementRef : null}>
-                            <GuestBookCard to={message.to} from={message.from} content={message.content} />
-                        </div>
+                        <GuestBookCard
+                            key={index}
+                            ref={index === messages.length - 1 ? lastMessageElementRef : null}
+                            to={message.to}
+                            from={message.from}
+                            content={message.content}
+                        />
                     ))}
                 </GuestBookCardContainer>
                 {isLoading && <LoadingMessage>메시지를 불러오는 중...</LoadingMessage>}
