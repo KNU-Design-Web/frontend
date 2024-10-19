@@ -3,6 +3,11 @@ import React, { useState, useRef } from "react";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 import map from "@/assets/img/Map.svg";
+import editor from "@/assets/img/editor.webp";
+import gA from "@/assets/img/gA.webp";
+import gB from "@/assets/img/gB.webp";
+import manage from "@/assets/img/manage.webp";
+import web from "@/assets/img/web.webp";
 
 import { HorizontalLine } from "./HorizontalLine";
 import { Text } from "@/fonts/Text";
@@ -199,34 +204,6 @@ export default function AboutPage() {
                             </GridContent>
                         </SectionContent>
                     </Section>
-
-                    <Section>
-                        <SectionTitle>교수진</SectionTitle>
-                        <SectionContent>
-                            <GridContent>
-                                <GridItem>
-                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
-                                    <ItemName>조철희</ItemName>
-                                </GridItem>
-                                <GridItem>
-                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
-                                    <ItemName>김성년</ItemName>
-                                </GridItem>
-                                <GridItem>
-                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
-                                    <ItemName>이경용</ItemName>
-                                </GridItem>
-                                <GridItem>
-                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
-                                    <ItemName>안지선</ItemName>
-                                </GridItem>
-                                <GridItem>
-                                    <ItmeTitle>경북대학교 디자인학과 교수</ItmeTitle>
-                                    <ItemName>이재민</ItemName>
-                                </GridItem>
-                            </GridContent>
-                        </SectionContent>
-                    </Section>
                     <HorizontalLine />
                     <Section>
                         {TableToMobile ? (
@@ -296,35 +273,35 @@ export default function AboutPage() {
                         {isMobile ? (
                             <ScrollableContent>
                                 <TeamCard>
-                                    <TeamImg />
+                                    <TeamImg src={manage} />
                                     <TeamInfo>
                                         <TeamInfoTitle>기획팀</TeamInfoTitle>
                                         <TeamInfoMemeber>구지원 황수정 문예림 정유정 김은정 손희주</TeamInfoMemeber>
                                     </TeamInfo>
                                 </TeamCard>
                                 <TeamCard>
-                                    <TeamImg />
+                                    <TeamImg src={gA} />
                                     <TeamInfo>
                                         <TeamInfoTitle>그래픽 A팀</TeamInfoTitle>
                                         <TeamInfoMemeber>문예림 김도연 오연수 원민주 최장익 심유진</TeamInfoMemeber>
                                     </TeamInfo>
                                 </TeamCard>
                                 <TeamCard>
-                                    <TeamImg />
+                                    <TeamImg src={gB} />
                                     <TeamInfo>
                                         <TeamInfoTitle>그래픽 B팀</TeamInfoTitle>
                                         <TeamInfoMemeber>정유정 허연주 유다빈 이시훈 한영욱</TeamInfoMemeber>
                                     </TeamInfo>
                                 </TeamCard>
                                 <TeamCard>
-                                    <TeamImg />
+                                    <TeamImg src={editor} />
                                     <TeamInfo>
                                         <TeamInfoTitle>편집팀</TeamInfoTitle>
                                         <TeamInfoMemeber>김정은 김현민 전하연 전유나 한지원</TeamInfoMemeber>
                                     </TeamInfo>
                                 </TeamCard>
                                 <TeamCard>
-                                    <TeamImg />
+                                    <TeamImg src={web} />
                                     <TeamInfo>
                                         <TeamInfoTitle>웹팀</TeamInfoTitle>
                                         <TeamInfoMemeber>손희주 김경민 김수린 최민지</TeamInfoMemeber>
@@ -341,35 +318,35 @@ export default function AboutPage() {
                             >
                                 <ScrollableContent>
                                     <TeamCard>
-                                        <TeamImg />
+                                        <TeamImg src={manage} />
                                         <TeamInfo>
                                             <TeamInfoTitle>기획팀</TeamInfoTitle>
                                             <TeamInfoMemeber>구지원 황수정 문예림 정유정 김은정 손희주</TeamInfoMemeber>
                                         </TeamInfo>
                                     </TeamCard>
                                     <TeamCard>
-                                        <TeamImg />
+                                        <TeamImg src={gA} />
                                         <TeamInfo>
                                             <TeamInfoTitle>그래픽 A팀</TeamInfoTitle>
                                             <TeamInfoMemeber>문예림 김도연 오연수 원민주 최장익 심유진</TeamInfoMemeber>
                                         </TeamInfo>
                                     </TeamCard>
                                     <TeamCard>
-                                        <TeamImg />
+                                        <TeamImg src={gB} />
                                         <TeamInfo>
                                             <TeamInfoTitle>그래픽 B팀</TeamInfoTitle>
                                             <TeamInfoMemeber>정유정 허연주 유다빈 이시훈 한영욱</TeamInfoMemeber>
                                         </TeamInfo>
                                     </TeamCard>
                                     <TeamCard>
-                                        <TeamImg />
+                                        <TeamImg src={editor} />
                                         <TeamInfo>
                                             <TeamInfoTitle>편집팀</TeamInfoTitle>
                                             <TeamInfoMemeber>김정은 김현민 전하연 전유나 한지원</TeamInfoMemeber>
                                         </TeamInfo>
                                     </TeamCard>
                                     <TeamCard>
-                                        <TeamImg />
+                                        <TeamImg src={web} />
                                         <TeamInfo>
                                             <TeamInfoTitle>웹팀</TeamInfoTitle>
                                             <TeamInfoMemeber>손희주 김경민 김수린 최민지</TeamInfoMemeber>
@@ -583,6 +560,7 @@ const ScrollableContainer = styled.div`
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    user-select: none;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -613,6 +591,13 @@ const TeamCard = styled.div`
 const TeamImg = styled.img`
     width: 408px;
     height: 270px;
+
+    pointer-events: none; // 이미지 드래그 방지
+    user-select: none; // 이미지 선택 방지
+    -webkit-user-drag: none; // Webkit 브라우저에서 드래그 방지
+    -khtml-user-drag: none; // 구형 브라우저 지원
+    -moz-user-drag: none; // Firefox에서 드래그 방지
+    -o-user-drag: none; // Opera에서 드래그 방지
 `;
 
 const TeamInfo = styled.div`
