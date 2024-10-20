@@ -396,10 +396,15 @@ const Slog = styled.h1`
     text-align: right;
     font-size: 50px;
     margin-top: 120px;
+    line-height: 1.5;
 
     @media (max-width: 1024px) {
         width: 100%;
         padding: 0 10px;
+    }
+
+    @media (max-width: 640px) {
+        font-size: 28px;
     }
 `;
 
@@ -435,9 +440,12 @@ const SectionTitle = styled(Text)`
     width: 50%;
     box-sizing: border-box;
     white-space: pre-wrap;
+    font-size: 30px;
+    line-height: 1.5;
 
     @media (max-width: 640px) {
         width: 25%;
+        font-size: 20px;
     }
 
     @media (max-width: 430px) {
@@ -452,6 +460,8 @@ const SectionContent = styled(Text)`
     display: flex;
     flex-direction: column;
     gap: 30px;
+    font-size: 16px;
+    line-height: 1.5;
 
     @media (max-width: 640px) {
         width: 75%;
@@ -473,11 +483,19 @@ const InfoSection = styled.div`
 const InfoTitle = styled(Text)`
     font-size: 20px;
     font-weight: 400;
+    line-height: 1.5;
 `;
 
-const InfoContent = styled(Text)``;
+const InfoContent = styled(Text)`
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+`;
 
-const InfoDate = styled(Text)``;
+const InfoDate = styled(Text)`
+    font-size: 20px;
+    line-height: 1.5;
+`;
 
 const GridContent = styled.div`
     display: grid;
@@ -498,8 +516,15 @@ const GridItem = styled.div`
     flex-direction: column;
     gap: 6px;
 `;
-const ItmeTitle = styled(Text)``;
-const ItemName = styled(Text)``;
+const ItmeTitle = styled(Text)`
+    font-size: 20px;
+    line-height: 1.5;
+`;
+const ItemName = styled(Text)`
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+`;
 
 const ChartContent = styled.div`
     display: flex;
@@ -523,6 +548,7 @@ const ChartTitle = styled(Text)`
     font-size: 20px;
     font-weight: bold;
     width: 140px;
+    line-height: 1.5;
 `;
 
 const Memebers = styled(Text)`
@@ -530,12 +556,14 @@ const Memebers = styled(Text)`
     font-weight: 400;
     white-space: pre-wrap;
     width: 340px;
+    line-height: 1.5;
 `;
 
 const ChartItemTitle = styled(Text)`
     font-size: 20px;
     font-weight: bold;
     width: 60px;
+    line-height: 1.5;
 `;
 
 const ChartItemMemebers = styled(Text)`
@@ -543,6 +571,7 @@ const ChartItemMemebers = styled(Text)`
     font-weight: 400;
     white-space: pre-wrap;
     width: 420px;
+    line-height: 1.5;
 `;
 
 const ScrollableContainer = styled.div`
@@ -597,6 +626,12 @@ const TeamInfo = styled.div`
     gap: 6px;
 `;
 
-const TeamInfoTitle = styled(Text)``;
+const TeamInfoTitle = styled(Text)`
+    font-size: 16px;
+    line-height: 1.5;
+`;
 
-const TeamInfoMemeber = styled(Text)``;
+const TeamInfoMemeber = styled(Text)`
+    font-size: 16px;
+    line-height: 1.5;
+`;
