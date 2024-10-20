@@ -22,7 +22,7 @@ export const SectionRouter = () => {
             <SectionRoute param="profile" navContent="PROFILE" element={<ProfilePage />} />
             <SectionRoute param="guest" navContent="GUEST BOOK" element={<GuestPage />} />
             <SectionRoute param="archive" navContent="ARCHIVE" element={<ArchivePage />} />
-            <SectionRoute param="loading" navContent="loading" element={<Loading />} />
+            {/* <SectionRoute param="loading" navContent="loading" element={<Loading />} /> */}
         </TransitionGroup>
     );
 };

@@ -5,7 +5,7 @@ export const Loading = () => {
     return (
         <LoadingWrapper>
             {[...Array(10).keys()].map((index) => (
-                <Circle key={index} delay={`${index * 0.2}s`} />
+                <Circle key={index} delay={`${index * 0.3}s`} />
             ))}
         </LoadingWrapper>
     );
