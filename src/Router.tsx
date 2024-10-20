@@ -10,6 +10,7 @@ import ProjectPage from "@/pages/project/ProjectPage";
 
 import { NavTop } from "./layouts/NavBar/NavTop";
 import { SectionRoute } from "./layouts/Section/SectionRoute";
+import { Loading } from "./pages/loading/Loading";
 
 export const SectionRouter = () => {
     return (
@@ -21,6 +22,7 @@ export const SectionRouter = () => {
             <SectionRoute param="profile" navContent="PROFILE" element={<ProfilePage />} />
             <SectionRoute param="guest" navContent="GUEST BOOK" element={<GuestPage />} />
             <SectionRoute param="archive" navContent="ARCHIVE" element={<ArchivePage />} />
+            <SectionRoute param="loading" navContent="loading" element={<Loading />} />
         </TransitionGroup>
     );
 };
