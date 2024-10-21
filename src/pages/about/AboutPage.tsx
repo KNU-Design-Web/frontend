@@ -383,6 +383,7 @@ const ContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    pointer-events: none;
 `;
 
 const HeaderContent = styled.h1`
@@ -471,7 +472,9 @@ const SectionContent = styled(Text)`
     }
 `;
 
-const SectionImg = styled.img``;
+const SectionImg = styled.img`
+    width: 100%;
+`;
 
 const InfoSection = styled.div`
     display: flex;
@@ -579,7 +582,7 @@ const ScrollableContainer = styled.div`
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     user-select: none;
-
+    pointer-events: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
     &::-webkit-scrollbar {
