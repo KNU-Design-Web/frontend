@@ -1,9 +1,15 @@
-import mainVideo from "@/assets/video/mainVideo_test.mp4";
+import { MAIN_DATA } from "@/apps/data";
 
 export default function HomePage() {
     return (
         <>
-            <video src={mainVideo} autoPlay loop muted style={{ width: "100%", height: "100vh", objectFit: "cover" }} />
+            <video
+                src={MAIN_DATA.VIDEO_URL}
+                style={{ width: "100%", height: "100vh", objectFit: "cover" }}
+                autoPlay
+                loop
+                muted
+            />
         </>
     );
 }

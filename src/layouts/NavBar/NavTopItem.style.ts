@@ -1,5 +1,4 @@
-import { navItems } from "@/constants/navItems";
-
+import { navItems } from "@/apps/constants/navItems";
 import styled from "@emotion/styled";
 
 export const Item = styled.li<{ index: number; active: boolean }>`

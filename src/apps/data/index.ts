@@ -1,3 +1,7 @@
+export const MAIN_DATA = {
+    VIDEO_URL: "https://s3.ap-northeast-2.amazonaws.com/images.knud2024.com/main/main-origin.webm",
+};
+
 export const data = [
     {
         id: 1,
