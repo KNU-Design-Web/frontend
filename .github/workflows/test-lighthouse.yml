@@ -1,4 +1,4 @@
-name: Run lighthouse CI When Push
+name: Run Lighthouse CI
 
 on:
     workflow_dispatch:
