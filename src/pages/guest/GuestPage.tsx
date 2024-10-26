@@ -11,7 +11,6 @@ import styled from "@emotion/styled";
 
 export default function GuestPage() {
     const {
-        isLoading,
         isLastPage,
         guestBookData,
         targetRef,
