@@ -6,6 +6,9 @@ on:
         branches: ["release"]
         types: ["closed"]
 
+env:
+    API_BASE_URL: https://api.knud2024.com/
+
 jobs:
     deploy:
         runs-on: ubuntu-latest
@@ -27,6 +30,8 @@ jobs:
 
             - name: Build Production
               run: pnpm run build
+              env:
+                  VITE_API_BASE_URL: ${{env.API_BASE_URL}}
 
             - name: Configure AWS Credentials
               uses: aws-actions/configure-aws-credentials@v4
