@@ -37,7 +37,7 @@ export const ProfileItem = (props: ProfileItemProps) => {
                 </ProfileItemStyles.Container>
             </ProfileItemStyles.Wrapper>
             {isOpen && (
-                <CSSTransition timeout={250} classNames="profile">
+                <CSSTransition timeout={200} classNames="profile">
                     <ProfileDetail {...props} />
                 </CSSTransition>
             )}
