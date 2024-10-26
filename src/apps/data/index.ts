@@ -459,12 +459,12 @@ export const data: DataItem[] = [
             contents: [
                 "https://images.knud2024.com/project-individual/Sihun-Lee/project1.webp",
                 "https://images.knud2024.com/project-individual/Sihun-Lee/project2.webm",
-                "https://images.knud2024.com/project-individual/Sihun-Lee/project3.webm",
+                "https://images.knud2024.com/project-individual/Sihun-Lee/project3.webp",
                 "https://images.knud2024.com/project-individual/Sihun-Lee/project4.webp",
                 "https://images.knud2024.com/project-individual/Sihun-Lee/project5.webp",
                 "https://images.knud2024.com/project-individual/Sihun-Lee/project6.webp",
                 "https://images.knud2024.com/project-individual/Sihun-Lee/project7.webm",
-                "https://images.knud2024.com/project-individual/Sihun-Lee/project8.webm",
+                "https://images.knud2024.com/project-individual/Sihun-Lee/project8.webp",
                 "https://images.knud2024.com/project-individual/Sihun-Lee/project9.webp",
                 "https://images.knud2024.com/project-individual/Sihun-Lee/project10.webp",
                 "https://images.knud2024.com/project-individual/Sihun-Lee/project11.webp",
@@ -497,7 +497,7 @@ export const data: DataItem[] = [
             contents: [
                 "https://images.knud2024.com/project-individual/Yuna-Jeon/project1.webp",
                 "https://images.knud2024.com/project-individual/Yuna-Jeon/project2.webp",
-                "https://images.knud2024.com/project-individual/Yuna-Jeon/project3.webp",
+                //TODO: "https://images.knud2024.com/project-individual/Yuna-Jeon/project3.webp",
                 "https://images.knud2024.com/project-individual/Yuna-Jeon/project4.webp",
                 "https://images.knud2024.com/project-individual/Yuna-Jeon/project5.webm",
                 "https://images.knud2024.com/project-individual/Yuna-Jeon/project6.webp",
