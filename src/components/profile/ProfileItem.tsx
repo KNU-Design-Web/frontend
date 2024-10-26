@@ -33,7 +33,7 @@ export const ProfileItem = (props: ProfileItemProps) => {
             <ProfileItemStyles.Wrapper active={isOpen} onClick={handleToggle}>
                 <ProfileItemStyles.Container>
                     <Text size="s">{props.koName}</Text>
-                    <Text size="s">{props.enName}</Text>
+                    <Text size="s">{props.enName.toUpperCase()}</Text>
                 </ProfileItemStyles.Container>
             </ProfileItemStyles.Wrapper>
             {isOpen && (
