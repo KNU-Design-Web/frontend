@@ -91,6 +91,14 @@ export const Image = styled.img`
     width: 100%;
 `;
 
+export const Video = styled.video`
+    display: block;
+    margin: 0px auto;
+    border: 0;
+    padding: 0;
+    width: 100%;
+`;
+
 export const ContentWrapper = styled.div`
     display: flex;
     width: 100%;
@@ -141,6 +149,10 @@ export const HashTags = styled.div`
 
     width: 50%;
 
+    span {
+        margin: 0px 2px;
+    }
+
     ${BREAKPOINT.MOBILE} {
         width: 100%;
     }
@@ -151,5 +163,10 @@ export const HashTags = styled.div`
 
 export const Content = styled.div`
     width: 100%;
-    white-space: wrap;
+    white-space: pre-wrap;
+    word-break: keep-all;
+
+    span {
+        margin: 0px 2px;
+    }
 `;

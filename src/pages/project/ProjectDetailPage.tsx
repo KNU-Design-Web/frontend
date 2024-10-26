@@ -1,13 +1,29 @@
-import { memo } from "react";
+import { memo, useEffect, useLayoutEffect } from "react";
+import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { useProjectId } from "@/hooks/useProjectId";
 
 import { LeftArrow } from "@/assets/icons/LeftArrow";
 
 import * as ProjectDetailStyles from "./ProjectDetailPage.style";
+import { data } from "@/apps/data";
 import { Text } from "@/fonts/Text";
 
 export default memo(function ProjectDetailPage() {
     const navigate = useNavigate();
+    const projectId = useProjectId();
+
+    const project = useMemo(() => {
+        return {
+            title: data[projectId - 1].project.title,
+            thumbnail: data[projectId - 1].project.thumbnail,
+            author: data[projectId - 1].author,
+            hashtags: data[projectId - 1].project.hashtags,
+            descriptions: data[projectId - 1].project.description,
+            contents: data[projectId - 1].project.contents,
+        };
+    }, [projectId]);
 
     return (
         <>
@@ -18,83 +34,63 @@ export default memo(function ProjectDetailPage() {
 
                 <ProjectDetailStyles.Title>
                     <Text weight={700} color="#fff">
-                        복합 애견 문화 공간, Goldenhill
+                        {project.title}
                     </Text>
                     <Text weight={400} color="#fff">
-                        한0욱 Youngwook Han
+                        {project.author.name.ko} {project.author.name.en}
                     </Text>
                 </ProjectDetailStyles.Title>
             </ProjectDetailStyles.Header>
 
             <ProjectDetailStyles.Body>
-                <ProjectDetailStyles.Image src="https://placehold.co/980x500" />
+                <ProjectDetailStyles.Image src={project.thumbnail} />
 
                 <ProjectDetailStyles.ContentWrapper>
                     <ProjectDetailStyles.ContentContainer>
                         <Text size="xl" weight={600}>
-                            복합 애견 문화 공간, Goldenhill
+                            {project.title}
                         </Text>
 
                         <ProjectDetailStyles.HashTags>
-                            <Text size="xs" color="purple">
-                                # 브랜딩
-                            </Text>
-                            <Text size="xs" color="purple">
-                                # 브랜딩
-                            </Text>
-                            <Text size="xs" color="purple">
-                                # 브랜딩
-                            </Text>
-                            <Text size="xs" color="purple">
-                                # 브랜딩
-                            </Text>
-                            <Text size="xs" color="purple">
-                                # 브랜딩
-                            </Text>
-                            <Text size="xs" color="purple">
-                                # 브랜딩
-                            </Text>
-                            <Text size="xs" color="purple">
-                                # 브랜딩
-                            </Text>
-                            <Text size="xs" color="purple">
-                                # 브랜딩
-                            </Text>
+                            {project.hashtags.map((tag) => (
+                                <Text size="xs" color="purple">
+                                    {tag}
+                                </Text>
+                            ))}
                         </ProjectDetailStyles.HashTags>
 
                         <ProjectDetailStyles.Content>
-                            <Text size="xs">'합'은 다양한 의미를 담고 있습니다</Text>
-                            <Text size="xs">
-                                먼저, '+' 기호로 상징되는 '합'은 서로 다른 요소들이 모여 새로우 형태, 결과를 이루는 것을
-                                나타냅니다. 우리가 정의하는 '합'은 개인의 개성과 창의적인 아이디어가 모여 하나의
-                                전시회를 완성하는 과정을 뜻합니다
-                            </Text>
-                            <Text size="xs">
-                                또한, 기합의 소리인 '합'은 졸업 전시 참여자들의 사고가 모여 이루는 결단과 의지를
-                                상징합니다
-                            </Text>
+                            {project.descriptions.map((description) => (
+                                <Text size="xs">{description}</Text>
+                            ))}
                         </ProjectDetailStyles.Content>
                     </ProjectDetailStyles.ContentContainer>
 
                     <ProjectDetailStyles.AuthorContainer>
                         <ProjectDetailStyles.Author>
                             <Text size="xs" weight={600}>
-                                한0욱 Youngwook Han
+                                {project.author.name.ko} {project.author.name.en}
                             </Text>
                             <Text size="xs" color="#7C7C7C">
-                                hyeonmin0824@gmail.com
+                                {project.author.email}
                             </Text>
                             <Text size="xs" color="#7C7C7C">
-                                @zzinppang
+                                {project.author.instagram}
                             </Text>
                             <Text size="xs" color="#7C7C7C">
-                                behance.net/123134
+                                <a href={project.author.link} target="_blank">
+                                    {project.author.link}
+                                </a>
                             </Text>
                         </ProjectDetailStyles.Author>
                     </ProjectDetailStyles.AuthorContainer>
                 </ProjectDetailStyles.ContentWrapper>
 
-                <ProjectDetailStyles.Image src="https://placehold.co/980x500" />
+                {project.contents.map((src) => {
+                    if (src.match(/\.(webp|gif)$/)) return <ProjectDetailStyles.Image src={src} />;
+                    else if (src.match(/\.(webm|mp4)$/))
+                        return <ProjectDetailStyles.Video src={src} autoPlay loop muted />;
+                })}
             </ProjectDetailStyles.Body>
         </>
     );
