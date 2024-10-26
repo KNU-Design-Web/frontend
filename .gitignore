@@ -30,4 +30,4 @@ bundle.html
 
 # lighthouse
 .lighthouseci
-lighthouse-report
+reports

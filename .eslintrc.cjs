@@ -37,5 +37,15 @@ module.exports = {
         ],
     },
 
-    ignorePatterns: [".eslintrc.cjs", "__mocks__", "__test__", "*.config.ts", "*.config.js", "*.config.mjs"],
+    ignorePatterns: [
+        ".eslintrc.cjs",
+        "__mocks__",
+        "__test__",
+        "*.config.ts",
+        "*.config.js",
+        "*.config.mjs",
+        "lighthouse-analysis.mjs",
+        "*.js",
+        "*.mjs",
+    ],
 };

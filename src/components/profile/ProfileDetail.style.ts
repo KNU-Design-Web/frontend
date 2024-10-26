@@ -61,6 +61,9 @@ export const Project = styled.div`
 
 export const ProjectImgContianer = styled.div`
     position: relative;
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 export const ProjectImg = styled.img`

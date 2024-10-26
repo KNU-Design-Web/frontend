@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import { RightArrow } from "@/assets/icons/RightArrow";
 
 import * as ProfileDetailStyles from "./ProfileDetail.style";
@@ -7,6 +9,8 @@ import { Text } from "@/fonts/Text";
 export type ProfileDetailProps = ProfileItemProps;
 
 export const ProfileDetail = (props: ProfileDetailProps) => {
+    const navigate = useNavigate();
+
     return (
         <ProfileDetailStyles.Wrapper>
             <ProfileDetailStyles.Info>
@@ -33,7 +37,9 @@ export const ProfileDetail = (props: ProfileDetailProps) => {
                 </ProfileDetailStyles.Author>
 
                 <ProfileDetailStyles.Project>
-                    <ProfileDetailStyles.ProjectImgContianer>
+                    <ProfileDetailStyles.ProjectImgContianer
+                        onClick={() => navigate(`/?section=project&id=${props.projectId - 1}`)}
+                    >
                         <ProfileDetailStyles.ProjectImg src={props.projectImg} />
                         <ProfileDetailStyles.ProjectLink>
                             <RightArrow color="#fff" />
