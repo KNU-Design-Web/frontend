@@ -29,7 +29,7 @@ export default memo(function ProjectListPage() {
                         <ProjectCard
                             key={project.id}
                             id={project.id}
-                            imgSrc={`https://images.knud2024.com/project-card-thumbnail/thumbnail${project.id}_980x980.webp`}
+                            imgSrc={`https://images.knud2024.com/project-card-thumbnail/thumbnail${project.id}_350x350.webp`}
                             title={project.title}
                             author={project.koName}
                         />
@@ -39,3 +39,5 @@ export default memo(function ProjectListPage() {
         </>
     );
 });
+
+// `https://images.knud2024.com/project-card-thumbnail/thumbnail${project.id}_980x980.webp`

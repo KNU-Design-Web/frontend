@@ -19,7 +19,7 @@ export default function ProfilePage() {
                             email={item.author.email}
                             instagram={item.author.instagram}
                             link={item.author.link}
-                            profileImg={`https://images.knud2024.com/profile-jpg/${item.id}.jpg`}
+                            profileImg={`https://images.knud2024.com/profile-webp-resized/${item.id}_780x1000.webp`}
                             projectImg={`https://images.knud2024.com/project-card-thumbnail/thumbnail${item.id}_980x980.webp`}
                             projectTitle={item.project.title}
                         />
