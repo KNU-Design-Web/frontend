@@ -1,15 +1,9 @@
-import { MAIN_DATA } from "@/apps/data";
+import * as HomePageStyles from "./HomePage.style";
 
 export default function HomePage() {
     return (
-        <>
-            <video
-                src={MAIN_DATA.VIDEO_URL}
-                style={{ width: "100%", height: "100vh", objectFit: "cover" }}
-                autoPlay
-                loop
-                muted
-            />
-        </>
+        <HomePageStyles.VideoContainer>
+            <HomePageStyles.Video src="https://images.knud2024.com/main/main-origin.webm" autoPlay loop muted />
+        </HomePageStyles.VideoContainer>
     );
 }

@@ -1,7 +1,3 @@
-export const MAIN_DATA = {
-    VIDEO_URL: "https://images.knud2024.com/main/main-origin.webm",
-};
-
 type DataItem = {
     id: number;
     author: {
