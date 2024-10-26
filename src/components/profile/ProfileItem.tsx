@@ -12,8 +12,8 @@ export interface ProfileItemProps {
     enName: string;
 
     email: string;
-    instagram: string;
-    link: string;
+    instagram: string | null;
+    link: string | null;
 
     profileImg: string;
     projectImg: string;
