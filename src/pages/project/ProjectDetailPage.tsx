@@ -2,13 +2,13 @@ import { memo } from "react";
 import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { useProjectId } from "@/hooks/useProjectId";
+import { useProjectId } from "@/hooks/ProjectPage/useProjectId";
 
 import { LeftArrow } from "@/assets/icons/LeftArrow";
 
 import * as ProjectDetailStyles from "./ProjectDetailPage.style";
 import { data } from "@/apps/data";
-import { Text } from "@/fonts/Text";
+import { Text } from "@/common/components/Text/Text";
 
 export default memo(function ProjectDetailPage() {
     const navigate = useNavigate();

@@ -1,8 +1,8 @@
-import { ProfileItem } from "@/components/profile/ProfileItem";
-import { ProfileList } from "@/components/profile/ProfileList";
+import { ProfileItem } from "@/components/ProfilePage/ProfileItem/ProfileItem";
+import { ProfileList } from "@/components/ProfilePage/ProfileList/ProfileList";
 
 import { data } from "@/apps/data";
-import { Title } from "@/fonts/Title";
+import { Title } from "@/common/components/Title/Title";
 
 export default function ProfilePage() {
     return (
