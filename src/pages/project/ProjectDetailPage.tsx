@@ -16,12 +16,12 @@ export default memo(function ProjectDetailPage() {
 
     const project = useMemo(() => {
         return {
-            title: data[projectId - 1].project.title,
-            thumbnail: data[projectId - 1].project.thumbnail,
-            author: data[projectId - 1].author,
-            hashtags: data[projectId - 1].project.hashtags,
-            descriptions: data[projectId - 1].project.description,
-            contents: data[projectId - 1].project.contents,
+            title: data[projectId + 1].project.title,
+            thumbnail: data[projectId + 1].project.thumbnail,
+            author: data[projectId + 1].author,
+            hashtags: data[projectId + 1].project.hashtags,
+            descriptions: data[projectId + 1].project.description,
+            contents: data[projectId + 1].project.contents,
         };
     }, [projectId]);
 

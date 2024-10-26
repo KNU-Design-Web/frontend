@@ -14,7 +14,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
     const navigate = useNavigate();
 
     return (
-        <CardStyles.Wrapper onClick={() => navigate(`?section=project&id=${props.id}`)}>
+        <CardStyles.Wrapper onClick={() => navigate(`?section=project&id=${props.id - 1}`)}>
             <CardStyles.Image src={props.imgSrc} />
 
             <CardStyles.Container>
