@@ -2,11 +2,11 @@ import React, { useState, useRef } from "react";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
+import manage from "@/assets/img/Manage.webp";
 import map from "@/assets/img/Map.svg";
 import editor from "@/assets/img/editor.webp";
 import gA from "@/assets/img/gA.webp";
 import gB from "@/assets/img/gB.webp";
-import manage from "@/assets/img/manage.webp";
 import web from "@/assets/img/web.webp";
 
 import { HorizontalLine } from "./HorizontalLine";
