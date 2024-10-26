@@ -6,16 +6,18 @@
     "scripts": {
         "dev": "vite --host",
         "start": "tsc && vite build && serve -l 5173 dist",
-        "build": "tsc && vite build",
         "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "build": "tsc && vite build",
         "compile": "tsc --noEmit",
         "preview": "vite preview",
         "storybook": "storybook dev -p 6006",
-        "build-storybook": "storybook build"
+        "build-storybook": "storybook build",
+        "lighthouse": "lhci autorun"
     },
     "dependencies": {
         "@emotion/react": "^11.13.3",
         "@emotion/styled": "^11.13.0",
+        "@lhci/cli": "^0.14.0",
         "axios": "^1.7.7",
         "dotenv": "^16.4.5",
         "jotai": "^2.9.3",
