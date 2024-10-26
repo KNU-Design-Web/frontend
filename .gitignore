@@ -31,3 +31,5 @@ bundle.html
 # lighthouse
 .lighthouseci
 reports
+
+temp
