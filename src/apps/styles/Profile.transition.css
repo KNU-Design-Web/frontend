@@ -1,5 +1,6 @@
 .profile-enter {
     max-height: 0;
+    will-change: max-height;
 }
 
 .profile-enter-active {
@@ -9,6 +10,7 @@
 
 .profile-exit {
     max-height: 540px;
+    will-change: max-height;
 }
 
 .profile-exit-active {

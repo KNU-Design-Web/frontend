@@ -1,6 +1,7 @@
 import { ProfileItem } from "@/components/profile/ProfileItem";
 import { ProfileList } from "@/components/profile/ProfileList";
 
+import { data } from "@/apps/data";
 import { Title } from "@/fonts/Title";
 
 export default function ProfilePage() {
@@ -9,18 +10,18 @@ export default function ProfilePage() {
             <Title>PROFILE</Title>
 
             <ProfileList>
-                {new Array(10).fill(undefined).map((_, index) => {
+                {data.map((item) => {
                     return (
                         <ProfileItem
-                            projectId={index + 1}
-                            koName="구지원"
-                            enName="JIWON KOO"
-                            email={"test@gmail.com"}
-                            instagram={"@instagram"}
-                            link={"@externalLink"}
-                            profileImg={"/example/profile.png"}
-                            projectImg={"/example/project-small.png"}
-                            projectTitle={["복합 애견 문화 공간", "Goldenhill"]}
+                            projectId={item.id}
+                            koName={item.author.name.ko}
+                            enName={item.author.name.en}
+                            email={item.author.email}
+                            instagram={item.author.instagram}
+                            link={item.author.link}
+                            profileImg={`https://images.knud2024.com/profile-jpg/${item.id}.jpg`}
+                            projectImg={`https://images.knud2024.com/project-card-thumbnail/thumbnail${item.id}_980x980.webp`}
+                            projectTitle={item.project.title}
                         />
                     );
                 })}
