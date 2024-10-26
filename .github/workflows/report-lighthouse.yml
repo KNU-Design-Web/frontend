@@ -22,6 +22,9 @@ jobs:
             - name: Install dependencies
               run: pnpm install
 
+            - name: Build Production
+              run: pnpm run build
+
             - name: Create Lighthouse Report
               run: pnpm run lighthouse
 
