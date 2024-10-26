@@ -1,4 +1,4 @@
-import { memo, useEffect, useLayoutEffect } from "react";
+import { memo } from "react";
 import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -78,9 +78,11 @@ export default memo(function ProjectDetailPage() {
                                 {project.author.instagram}
                             </Text>
                             <Text size="xs" color="#7C7C7C">
-                                <a href={project.author.link} target="_blank">
-                                    {project.author.link}
-                                </a>
+                                {project.author.link && (
+                                    <a href={project.author.link} target="_blank">
+                                        {project.author.link}
+                                    </a>
+                                )}
                             </Text>
                         </ProjectDetailStyles.Author>
                     </ProjectDetailStyles.AuthorContainer>

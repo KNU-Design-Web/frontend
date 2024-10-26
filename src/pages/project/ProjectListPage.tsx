@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { ProjectCard } from "@/components/project/Card/Card";
 import { ProjectCardContainer } from "@/components/project/CardContainer/CardContainer";
 
-import { data, PROJECT_CARD_THUMBNAIL_FACTORY } from "@/apps/data";
+import { data } from "@/apps/data";
 import { Title } from "@/fonts/Title";
 
 export default memo(function ProjectListPage() {
