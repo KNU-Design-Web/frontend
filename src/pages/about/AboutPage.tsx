@@ -1,7 +1,5 @@
 import React, { useState, useRef } from "react";
 
-import { useMediaQuery } from "@/hooks/useMediaQuery";
-
 import manage from "@/assets/img/Manage.webp";
 import map from "@/assets/img/Map.svg";
 import editor from "@/assets/img/editor.webp";
@@ -10,8 +8,9 @@ import gB from "@/assets/img/gB.webp";
 import web from "@/assets/img/web.webp";
 
 import { HorizontalLine } from "./HorizontalLine";
-import { Text } from "@/fonts/Text";
-import { Title } from "@/fonts/Title";
+import { Text } from "@/common/components/Text/Text";
+import { Title } from "@/common/components/Title/Title";
+import { useMediaQuery } from "@/common/hooks/useMediaQuery";
 import styled from "@emotion/styled";
 
 export default function AboutPage() {

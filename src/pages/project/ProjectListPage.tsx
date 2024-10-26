@@ -1,11 +1,11 @@
 import { memo } from "react";
 import { useMemo } from "react";
 
-import { ProjectCard } from "@/components/project/Card/Card";
-import { ProjectCardContainer } from "@/components/project/CardContainer/CardContainer";
+import { ProjectCard } from "@/components/ProjectPage/ProjectCard/ProjectCard";
+import { ProjectCardContainer } from "@/components/ProjectPage/ProjectCardContainer/ProjectCardContainer";
 
 import { data } from "@/apps/data";
-import { Title } from "@/fonts/Title";
+import { Title } from "@/common/components/Title/Title";
 
 export default memo(function ProjectListPage() {
     const projects = useMemo(() => {

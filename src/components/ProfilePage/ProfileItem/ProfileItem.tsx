@@ -1,0 +1,46 @@
+import { useCallback, useState } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
+import { ProfileDetail } from "../ProfileDetail/ProfileDetail";
+import * as ProfileItemStyles from "./ProfileItem.style";
+import { Text } from "@/common/components/Text/Text";
+
+export interface ProfileItemProps {
+    projectId: number;
+
+    koName: string;
+    enName: string;
+
+    email: string;
+    instagram: string | null;
+    link: string | null;
+
+    profileImg: string;
+    projectImg: string;
+
+    projectTitle: string[];
+}
+
+export const ProfileItem = (props: ProfileItemProps) => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    const handleToggle = useCallback(() => {
+        setIsOpen((isOpen) => !isOpen);
+    }, []);
+
+    return (
+        <TransitionGroup>
+            <ProfileItemStyles.Wrapper active={isOpen} onClick={handleToggle}>
+                <ProfileItemStyles.Container>
+                    <Text size="s">{props.koName}</Text>
+                    <Text size="s">{props.enName.toUpperCase()}</Text>
+                </ProfileItemStyles.Container>
+            </ProfileItemStyles.Wrapper>
+            {isOpen && (
+                <CSSTransition timeout={200} classNames="profile">
+                    <ProfileDetail {...props} />
+                </CSSTransition>
+            )}
+        </TransitionGroup>
+    );
+};
