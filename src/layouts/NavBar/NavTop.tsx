@@ -2,10 +2,9 @@ import { useState } from "react";
 
 import { RightArrow } from "@/assets/icons/RightArrow";
 
-import { navItems } from "@/constants/navItems";
-
 import * as NavTopStyles from "./NavTop.style";
 import { NavTopItem } from "./NavTopItem";
+import { navItems } from "@/apps/constants/navItems";
 import { Text } from "@/fonts/Text";
 import { css } from "@emotion/react";
 

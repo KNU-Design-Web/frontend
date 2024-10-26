@@ -1,6 +1,5 @@
-import { SizeProp } from "@/styles";
-
 import * as GuestBookInputStyles from "./GuestBookInput.style";
+import { SizeProp } from "@/apps/styles";
 import { Text } from "@/fonts/Text";
 
 export interface GuestBookInputProps extends React.ComponentProps<"input"> {

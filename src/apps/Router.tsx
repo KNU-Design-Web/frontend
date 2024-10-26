@@ -2,15 +2,15 @@ import { Fragment, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { TransitionGroup } from "react-transition-group";
 
+import { NavTop } from "@/layouts/NavBar/NavTop";
+import { SectionRoute } from "@/layouts/Section/SectionRoute";
+
 import AboutPage from "@/pages/about/AboutPage";
 import ArchivePage from "@/pages/archive/ArchivePage";
 import GuestPage from "@/pages/guest/GuestPage";
 import HomePage from "@/pages/home/HomePage";
 import ProfilePage from "@/pages/profile/ProfilePage";
 import ProjectPage from "@/pages/project/ProjectPage";
-
-import { NavTop } from "./layouts/NavBar/NavTop";
-import { SectionRoute } from "./layouts/Section/SectionRoute";
 
 export const SectionRouter = () => {
     const navigate = useNavigate();

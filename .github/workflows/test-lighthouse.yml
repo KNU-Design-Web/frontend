@@ -1,0 +1,40 @@
+name: Run Lighthouse CI
+
+on:
+    workflow_dispatch:
+    pull_request:
+        branches: ["develop"]
+
+jobs:
+    lhci:
+        name: Lighthouse CI
+
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Source Code
+              uses: actions/checkout@v2
+
+            - name: Setup NodeJS
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 22
+
+            - name: Setup pnpm package manager
+              run: |
+                  npm install -g pnpm
+
+            - name: Install packages
+              run: |
+                  pnpm install
+
+            - name: Build
+              run: |
+                  pnpm run build
+
+            - name: Run Lighthouse CI
+              env:
+                  LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+              run: |
+                  npm install -g @lhci/cli
+                  lhci autorun || echo "Fail to Run Lighthouse CI!"

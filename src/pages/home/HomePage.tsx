@@ -1,9 +1,9 @@
-import mainVideo from "@/assets/video/mainVideo_test.mp4";
+import * as HomePageStyles from "./HomePage.style";
 
 export default function HomePage() {
     return (
-        <>
-            <video src={mainVideo} autoPlay loop muted style={{ width: "100%", height: "100vh", objectFit: "cover" }} />
-        </>
+        <HomePageStyles.VideoContainer>
+            <HomePageStyles.Video src="https://images.knud2024.com/main/main-origin.webm" autoPlay loop muted />
+        </HomePageStyles.VideoContainer>
     );
 }

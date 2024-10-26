@@ -1,5 +1,4 @@
-import { SizeProp } from "@/styles";
-
+import { SizeProp } from "@/apps/styles";
 import styled from "@emotion/styled";
 
 export interface TextProps extends React.ComponentProps<"span"> {
