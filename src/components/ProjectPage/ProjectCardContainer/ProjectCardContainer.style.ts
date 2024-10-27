@@ -17,9 +17,11 @@ export const Wrapper = styled.div`
 
     ${BREAKPOINT.TABLET} {
         width: 100%;
+        margin-top: 60px;
     }
     ${BREAKPOINT.MOBILE} {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
+        margin-top: 60px;
     }
 `;

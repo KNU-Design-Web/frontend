@@ -35,7 +35,10 @@ export const NavTop = () => {
                         to={navItem.to}
                         label={navItem.label}
                         active={isOpen}
-                        onClick={() => setSelectedItem(navItem.index)}
+                        onClick={() => {
+                            setIsOpen(false);
+                            setSelectedItem(navItem.index);
+                        }}
                     />
                 );
             })}
