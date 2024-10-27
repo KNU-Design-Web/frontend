@@ -6,7 +6,7 @@ import { Text } from "@/common/components/Text/Text";
 export interface ProjectCardProps {
     id: number;
     imgSrc: string;
-    title: string;
+    thumbnailTitle: string;
     author: string;
 }
 
@@ -20,7 +20,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
             <CardStyles.Container>
                 <CardStyles.Description>
                     <Text size="20px" weight={600}>
-                        {props.title}
+                        {props.thumbnailTitle}
                     </Text>
                     <Text size="14px">{props.author}</Text>
                 </CardStyles.Description>
