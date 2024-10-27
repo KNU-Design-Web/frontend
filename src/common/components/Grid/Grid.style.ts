@@ -6,7 +6,6 @@ export const GridContainer = styled.div<{ rows: number; cols: number }>`
     inset: 0;
 
     width: 100%;
-    height: 100%;
 
     display: grid;
     grid-template-rows: repeat(${(props) => props.rows}, 1fr);

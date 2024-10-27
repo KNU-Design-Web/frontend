@@ -40,6 +40,7 @@ export const Item = styled.div`
     display: flex;
     flex-direction: column;
     gap: 6px;
+    width: 100%;
 
     span {
         display: block;

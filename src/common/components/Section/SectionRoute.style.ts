@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 export const Wrapper = styled.div`
     flex: 1;
     width: 100%;
-
     overflow: hidden;
     white-space: nowrap;
 
