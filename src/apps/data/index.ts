@@ -579,8 +579,8 @@ export const data: DataItem[] = [
                 "고즈넉하고 엔틱한 다방 분위기를 연출하면서 동시에 차분한 난색 컬러, 아이덴티티에 맞는 일러스트를 이용해 그래픽 요소를 설정하였다.",
             ],
             contents: [
+                "https://images.knud2024.com/project-individual/Yujung-Jung/project1.webp",
                 "https://images.knud2024.com/project-individual/Yujung-Jung/project1.webm",
-                "https://images.knud2024.com/project-individual/Yujung-Jung/project2.webp",
                 "https://images.knud2024.com/project-individual/Yujung-Jung/project3.webp",
                 "https://images.knud2024.com/project-individual/Yujung-Jung/project4.webp",
             ],
