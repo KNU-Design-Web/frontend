@@ -65,7 +65,7 @@ export default function AboutPage() {
                 </HeaderContent>
                 <BodyContent>
                     <Section>
-                        <SectionTitle>‘합’니다. 디자인</SectionTitle>
+                        <SectionTitle>‘합’니다 디자인</SectionTitle>
                         <SectionContent>
                             ‘합’은 다양한 의미를 담고 있습니다. 먼저, ‘+’ 기호로 상징되는 ‘합’은 서로 다른 요소들이 모여
                             새로운 형태, 결과를 이루는 것을 나타냅니다. 우리가 정의하는 ‘합’은 개인의 개성과 창의적인
@@ -73,8 +73,7 @@ export default function AboutPage() {
                             전시 참여자들의 사고가 모여 이루는 결단과 의지를 상징합니다.
                             <br />
                             <br />
-                            이러한 의미를 담고 있는 [합니다디자인]의 ‘합’은 단순히 디자인 작업을 ‘하는’ 것에 그치지
-                            않고,
+                            이러한 의미를 담고 있는 [합니다디자인]의 ‘합’은 단순히 디자인 작업을 ‘하는’ 것에 그치지않고,
                             <br />
                             <br />
                             22명의 디자인 전공 학생들이 모여 창출한 시너지를 통해 디자인의 새로운 가능성을 열어가겠다는
@@ -132,7 +131,7 @@ export default function AboutPage() {
                             <InfoSection>
                                 <InfoTitle>예술대학 학과장</InfoTitle>
                                 <InfoContent>조철희</InfoContent>
-                                <InfoDate>2004년 10월</InfoDate>
+                                <InfoDate>2024년 10월</InfoDate>
                             </InfoSection>
                         </SectionContent>
                     </Section>
@@ -236,7 +235,7 @@ export default function AboutPage() {
                             <ChartContent>
                                 <ChartItem>
                                     <ChartTitle>기획팀</ChartTitle>
-                                    <Memebers>구지원 황수정 문예림 정유정 김은정 손희주</Memebers>
+                                    <Memebers>구지원 황수정 문예림 정유정 김정은 손희주</Memebers>
                                 </ChartItem>
                                 <ChartItem>
                                     <ChartTitle>그래픽 A팀</ChartTitle>
@@ -357,7 +356,7 @@ export default function AboutPage() {
                                 </ChartItem>
                                 <ChartItem>
                                     <ChartItemTitle>일시</ChartItemTitle>
-                                    <ChartItemMemebers>2024. 10. 28 MON -2024. 11. 09 SUN</ChartItemMemebers>
+                                    <ChartItemMemebers>2024. 10. 29 THU -2024. 11. 08 SAT</ChartItemMemebers>
                                 </ChartItem>
                                 <ChartItem>
                                     <ChartItemTitle>오프닝</ChartItemTitle>
