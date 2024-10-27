@@ -45,8 +45,8 @@ export const Footer = () => {
                         일시
                     </Stext>
                     <Stext size="s" weight={500}>
-                        <span>2024. 10. 28 MON - </span>
-                        <span>2024.11.09 SUN</span>
+                        <span>2024. 10. 29 TUE - </span>
+                        <span>2024.11.08 SAT</span>
                     </Stext>
                 </FooterStyles.InfoItem>
                 <FooterStyles.InfoItem>
@@ -54,7 +54,7 @@ export const Footer = () => {
                         오프닝
                     </Stext>
                     <Stext size="s" weight={500}>
-                        2024. 10. 31 THU
+                        2024. 10. 29 TUE
                     </Stext>
                 </FooterStyles.InfoItem>
             </FooterStyles.InfoContainer>

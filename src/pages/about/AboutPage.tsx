@@ -356,11 +356,11 @@ export default function AboutPage() {
                                 </ChartItem>
                                 <ChartItem>
                                     <ChartItemTitle>일시</ChartItemTitle>
-                                    <ChartItemMemebers>2024. 10. 29 THU -2024. 11. 08 SAT</ChartItemMemebers>
+                                    <ChartItemMemebers>2024. 10. 29 TUE -2024. 11. 08 SAT</ChartItemMemebers>
                                 </ChartItem>
                                 <ChartItem>
                                     <ChartItemTitle>오프닝</ChartItemTitle>
-                                    <ChartItemMemebers>2024. 10. 28 MON</ChartItemMemebers>
+                                    <ChartItemMemebers>2024. 10. 29 TUE</ChartItemMemebers>
                                 </ChartItem>
                             </ChartContent>
                         </SectionContent>
