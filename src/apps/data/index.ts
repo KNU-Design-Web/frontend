@@ -97,7 +97,7 @@ export const data: DataItem[] = [
         },
         project: {
             thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Doyeon-Kim_980x500.webp",
-            title: ["한글 지도 브랜드,", "한글일지도"],
+            title: ["한글일지도", "한글 지도 브랜드,"],
             hashtags: ["#UXUI디자인", "#브랜딩", "#프로덕트디자인", "#키즈", "#한글", "#학습"],
             description: [
                 "공부를 하는 행위가 아닌, 즐겁게 낙서하고 놀며 한글학습 및 다중지능 학습까지 유도하는 브랜드.",
@@ -180,9 +180,8 @@ export const data: DataItem[] = [
                 "https://images.knud2024.com/project-individual/Jungeun-Kim/project3.webp",
                 "https://images.knud2024.com/project-individual/Jungeun-Kim/project4.webp",
                 "https://images.knud2024.com/project-individual/Jungeun-Kim/project5.webp",
-                "https://images.knud2024.com/project-individual/Jungeun-Kim/project6.webm",
                 "https://images.knud2024.com/project-individual/Jungeun-Kim/project7.webp",
-                "https://images.knud2024.com/project-individual/Jungeun-Kim/project8.webp",
+                "https://images.knud2024.com/project-individual/Jungeun-Kim/project8.webm",
                 "https://images.knud2024.com/project-individual/Jungeun-Kim/project9.webp",
                 "https://images.knud2024.com/project-individual/Jungeun-Kim/project10.webp",
                 "https://images.knud2024.com/project-individual/Jungeun-Kim/project11.webp",
@@ -248,7 +247,7 @@ export const data: DataItem[] = [
             title: ["別書別酒"],
             hashtags: ["#Branding", "#Package Design", "#Motion Graphic"],
             description: [
-                "서(유언장)와 이별 주(술)를 통해 사람들에게 자신의 삶을 돌아보고 정리하는 경험을 선사한다.",
+                "문서(유언장)와 이별 주(술)를 통해 사람들에게 자신의 삶을 돌아보고 정리하는 경험을 선사한다.",
                 "죽음을 인식하고 삶의 유한성을 깨닫게 함으로써, 죽음에 대비하고 죽음에 대한 두려움을 부드럽게 해소할 수 있도록 돕는다.",
             ],
             contents: [
@@ -497,7 +496,7 @@ export const data: DataItem[] = [
             contents: [
                 "https://images.knud2024.com/project-individual/Yuna-Jeon/project1.webp",
                 "https://images.knud2024.com/project-individual/Yuna-Jeon/project2.webp",
-                //TODO: "https://images.knud2024.com/project-individual/Yuna-Jeon/project3.webp",
+                "https://images.knud2024.com/project-individual/Yuna-Jeon/project3.webm",
                 "https://images.knud2024.com/project-individual/Yuna-Jeon/project4.webp",
                 "https://images.knud2024.com/project-individual/Yuna-Jeon/project5.webm",
                 "https://images.knud2024.com/project-individual/Yuna-Jeon/project6.webp",
