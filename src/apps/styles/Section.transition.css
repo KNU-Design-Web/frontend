@@ -17,5 +17,5 @@
 .section-enter-active,
 .section-exit-active {
     will-change: max-width;
-    transition: max-width 300ms ease-in-out;
+    transition: max-width 300ms cubic-bezier(0.5, 0, 0, 1);
 }
