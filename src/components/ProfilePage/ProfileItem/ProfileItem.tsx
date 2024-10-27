@@ -1,11 +1,12 @@
-import { useCallback, useState } from "react";
+import { useCallback, useMemo } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import { ProfileDetail } from "../ProfileDetail/ProfileDetail";
-import * as ProfileItemStyles from "./ProfileItem.style";
-import { Text } from "@/common/components/Text/Text";
+import { ProfileItemHeader } from "../ProfileItemHeader/ProfileItemHeader";
+import { useProfileToggle } from "@/contexts/useProfileToggle";
 
 export interface ProfileItemProps {
+    id: number;
     projectId: number;
 
     koName: string;
@@ -22,20 +23,25 @@ export interface ProfileItemProps {
 }
 
 export const ProfileItem = (props: ProfileItemProps) => {
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const profileToggle = useProfileToggle();
 
     const handleToggle = useCallback(() => {
-        setIsOpen((isOpen) => !isOpen);
-    }, []);
+        if (profileToggle.openId === props.id) profileToggle.setOpenId(null);
+        else profileToggle.setOpenId(props.id);
+    }, [props.id, profileToggle]);
+
+    const isOpen = useMemo(() => {
+        return profileToggle.openId === props.id;
+    }, [profileToggle.openId, props.id]);
 
     return (
         <TransitionGroup>
-            <ProfileItemStyles.Wrapper active={isOpen} onClick={handleToggle}>
-                <ProfileItemStyles.Container>
-                    <Text size="s">{props.koName}</Text>
-                    <Text size="s">{props.enName.toUpperCase()}</Text>
-                </ProfileItemStyles.Container>
-            </ProfileItemStyles.Wrapper>
+            <ProfileItemHeader
+                koName={props.koName}
+                enName={props.enName}
+                isOpen={isOpen}
+                handleToggle={handleToggle}
+            />
             {isOpen && (
                 <CSSTransition timeout={200} classNames="profile">
                     <ProfileDetail {...props} />

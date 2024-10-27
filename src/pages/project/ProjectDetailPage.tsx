@@ -85,7 +85,7 @@ export default memo(function ProjectDetailPage() {
                 {data[projectId].project.contents.map((src) => {
                     if (src.match(/\.(webp|gif)$/)) return <ProjectDetailStyles.Image src={src} />;
                     else if (src.match(/\.(webm|mp4)$/))
-                        return <ProjectDetailStyles.Video src={src} autoPlay loop muted />;
+                        return <ProjectDetailStyles.Video src={src} autoPlay loop muted playsInline />;
                 })}
             </ProjectDetailStyles.Body>
         </ProjectDetailStyles.PageWrapper>
