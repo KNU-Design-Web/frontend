@@ -1,6 +1,10 @@
 import { BREAKPOINT } from "@/apps/styles/breakpoint";
 import styled from "@emotion/styled";
 
+export const PageWrapper = styled.div`
+    width: 100%;
+`;
+
 export const Header = styled.div`
     position: sticky;
     top: 0px;

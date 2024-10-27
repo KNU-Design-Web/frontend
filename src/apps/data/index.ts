@@ -33,7 +33,7 @@ export const data: DataItem[] = [
             link: "https://www.behance.net/koojiwon",
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Jiwon-Koo_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Jiwon-Koo_1960x1000.webp",
             title: ["sceeent", " : see your sceeent"],
             hashtags: ["#브랜딩", "#제품디자인", "#UXUI", "#데이터비주얼라이징", "#후각의 시각화"],
             description: [
@@ -61,7 +61,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Kyoungmin-Kim_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Kyoungmin-Kim_1960x1000.webp",
             title: ["PerLens"],
             hashtags: ["#UXUI디자인", "#카메라", "#렌즈", "#모임", "#공유", "#커뮤니케이션"],
             description: [
@@ -96,8 +96,8 @@ export const data: DataItem[] = [
             link: "https://www.behance.net/rlaehdus11a58b",
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Doyeon-Kim_980x500.webp",
-            title: ["한글일지도", "한글 지도 브랜드,"],
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Doyeon-Kim_1960x1000.webp",
+            title: ["한글 지도 브랜드,", "한글일지도"],
             hashtags: ["#UXUI디자인", "#브랜딩", "#프로덕트디자인", "#키즈", "#한글", "#학습"],
             description: [
                 "공부를 하는 행위가 아닌, 즐겁게 낙서하고 놀며 한글학습 및 다중지능 학습까지 유도하는 브랜드.",
@@ -134,7 +134,7 @@ export const data: DataItem[] = [
             link: "https://www.behance.net/sorahiyo77398",
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Surin-Kim_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Surin-Kim_1960x1000.webp",
             title: ["MEALDANG"],
             hashtags: ["#UXUI", "#서비스디자인", "#혈당스파이크", "#게이미피케이션"],
             description: [
@@ -166,7 +166,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Jungeun-Kim_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Jungeun-Kim_1960x1000.webp",
             title: ["PINGER."],
             hashtags: ["#UXUI", "#디지털디톡스"],
             description: [
@@ -204,7 +204,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Hyeonmin-Kim_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Hyeonmin-Kim_1960x1000.webp",
             title: ["hiDD"],
             hashtags: ["#UXUI 디자인", "#아이덴티티 디자인", "#픽셀아트", "#디지털 디톡스", "#사용자의 자율성 보장"],
             description: [
@@ -243,7 +243,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Yerim-Moon_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Yerim-Moon_1960x1000.webp",
             title: ["別書別酒"],
             hashtags: ["#Branding", "#Package Design", "#Motion Graphic"],
             description: [
@@ -279,7 +279,7 @@ export const data: DataItem[] = [
             link: "behance.net/64528efd",
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Heeju-Son_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Heeju-Son_1960x1000.webp",
             title: ["Escape the Earth"],
             hashtags: ["#브랜딩", "#패키지디자인", "#UI", "#우주", "#여행"],
             description: [
@@ -309,7 +309,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Yujin-Sim_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Yujin-Sim_1960x1000.webp",
             title: ["숲속양 대소동"],
             hashtags: ["#어린이", "#보드게임", "#ADHD", "#UXUI디자인", "#놀이치료"],
             description: [
@@ -341,7 +341,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Yeonsu-Oh_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Yeonsu-Oh_1960x1000.webp",
             title: ["햄☆스타 대모험"],
             hashtags: ["#동화책", "#반려동물", "#어린이", "#모험"],
             description: [
@@ -374,7 +374,7 @@ export const data: DataItem[] = [
             link: "miryutats",
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Minju-Won_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Minju-Won_1960x1000.webp",
             title: ["MIRYU tats"],
             hashtags: ["#아트프로젝트", "#브랜딩", "#tattoo"],
             description: [
@@ -415,7 +415,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Dabin-Yu_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Dabin-Yu_1960x1000.webp",
             title: ["4 ICE CUBES"],
             hashtags: ["#패키지디자인", "#헤어케어", "#쿨링", "#탈모완화"],
             description: [
@@ -447,7 +447,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Sihun-Lee_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Sihun-Lee_1960x1000.webp",
             title: ["OPERATION LEVEL: CHAOS"],
             hashtags: ["#게임기획디자인", "#FPS", "#PVPVE", "#군사", "#전술", "#협동", "#좀비", "#현대전"],
             description: [
@@ -486,7 +486,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Yuna-Jeon_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Yuna-Jeon_1960x1000.webp",
             title: ["PROJECT. DE:CORAL"],
             hashtags: ["#디자인프로젝트", "#웹디자인", "#데이터비주얼라이징", "#산호", "#백화현상"],
             description: [
@@ -517,7 +517,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Hayeon-Jeon_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Hayeon-Jeon_1960x1000.webp",
             title: ["MOVEMENT"],
             hashtags: ["#패키지디자인", "#브랜딩", "#씨앗", "#환경문제", "#꽃"],
             description: [
@@ -554,7 +554,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Yujung-Jung_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Yujung-Jung_1960x1000.webp",
             title: ["MOHO COFFEE"],
             hashtags: ["#카페브랜드", "#브랜딩", "#커피", "#패키지디자인"],
             description: [
@@ -582,7 +582,7 @@ export const data: DataItem[] = [
             link: "https://www.behance.net/kiwiapple5098a",
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Minji-Choi_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Minji-Choi_1960x1000.webp",
             title: ["Cub(eX)"],
             hashtags: ["#브랜딩", "#모션그래픽", "#영상"],
             description: [
@@ -615,7 +615,7 @@ export const data: DataItem[] = [
             link: "https://www.behance.net/31c5c920",
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Jangik-Choi_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Jangik-Choi_1960x1000.webp",
             title: ["DMZ"],
             hashtags: ["#브랜딩", "#패키지디자인", "#자연", "#환경", "#DMZ"],
             description: [
@@ -658,7 +658,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Youngwook-Han_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Youngwook-Han_1960x1000.webp",
             title: ["Goldenhill"],
             hashtags: ["#패키지디자인", "#브랜딩"],
             description: [
@@ -681,7 +681,7 @@ export const data: DataItem[] = [
             link: null,
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Jiwon-Han_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Jiwon-Han_1960x1000.webp",
             title: ["주파수연구소 FM"],
             hashtags: ["#웹디자인", "#가족", "#소통유형", "#테스트", "#모바일"],
             description: [
@@ -715,7 +715,7 @@ export const data: DataItem[] = [
             link: "https://www.behance.net/5cfcd2b8",
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Yeonju-Heo_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Yeonju-Heo_1960x1000.webp",
             title: ["無形無産"],
             hashtags: ["#캠페인", "#브랜딩", "#무형유산", "#전통", "#한국"],
             description: [
@@ -752,7 +752,7 @@ export const data: DataItem[] = [
             link: "https://be.net/hwangsusu",
         },
         project: {
-            thumbnail: "https://images.knud2024.com/project-horizontal-thumbnail/Sujung-Hwang_980x500.webp",
+            thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Sujung-Hwang_1960x1000.webp",
             title: ["Workin_"],
             hashtags: ["#브랜딩 #워케이션 #워라벨 #휴가 #일"],
             description: [

@@ -1,5 +1,4 @@
-import { memo } from "react";
-import { useMemo } from "react";
+import { memo, useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { useProjectId } from "@/hooks/ProjectPage/useProjectId";
@@ -14,19 +13,14 @@ export default memo(function ProjectDetailPage() {
     const navigate = useNavigate();
     const projectId = useProjectId();
 
-    const project = useMemo(() => {
-        return {
-            title: data[projectId + 1].project.title,
-            thumbnail: data[projectId + 1].project.thumbnail,
-            author: data[projectId + 1].author,
-            hashtags: data[projectId + 1].project.hashtags,
-            descriptions: data[projectId + 1].project.description,
-            contents: data[projectId + 1].project.contents,
-        };
-    }, [projectId]);
+    const pageRef = useRef<HTMLDivElement>(null);
+
+    useLayoutEffect(() => {
+        pageRef.current?.scrollIntoView({ behavior: "auto" });
+    }, []);
 
     return (
-        <>
+        <ProjectDetailStyles.PageWrapper ref={pageRef}>
             <ProjectDetailStyles.Header>
                 <ProjectDetailStyles.PrevButton onClick={() => navigate("?section=project")}>
                     <LeftArrow color="#fff" />
@@ -34,25 +28,25 @@ export default memo(function ProjectDetailPage() {
 
                 <ProjectDetailStyles.Title>
                     <Text weight={700} color="#fff">
-                        {project.title}
+                        {data[projectId].project.title}
                     </Text>
                     <Text weight={400} color="#fff">
-                        {project.author.name.ko} {project.author.name.en}
+                        {data[projectId].author.name.ko} {data[projectId].author.name.en}
                     </Text>
                 </ProjectDetailStyles.Title>
             </ProjectDetailStyles.Header>
 
             <ProjectDetailStyles.Body>
-                <ProjectDetailStyles.Image src={project.thumbnail} />
+                <ProjectDetailStyles.Image src={data[projectId].project.thumbnail} />
 
                 <ProjectDetailStyles.ContentWrapper>
                     <ProjectDetailStyles.ContentContainer>
                         <Text size="xl" weight={600}>
-                            {project.title}
+                            {data[projectId].project.title}
                         </Text>
 
                         <ProjectDetailStyles.HashTags>
-                            {project.hashtags.map((tag) => (
+                            {data[projectId].project.hashtags.map((tag) => (
                                 <Text size="xs" color="purple">
                                     {tag}
                                 </Text>
@@ -60,7 +54,7 @@ export default memo(function ProjectDetailPage() {
                         </ProjectDetailStyles.HashTags>
 
                         <ProjectDetailStyles.Content>
-                            {project.descriptions.map((description) => (
+                            {data[projectId].project.description.map((description) => (
                                 <Text size="xs">{description}</Text>
                             ))}
                         </ProjectDetailStyles.Content>
@@ -69,18 +63,18 @@ export default memo(function ProjectDetailPage() {
                     <ProjectDetailStyles.AuthorContainer>
                         <ProjectDetailStyles.Author>
                             <Text size="xs" weight={600}>
-                                {project.author.name.ko} {project.author.name.en}
+                                {data[projectId].author.name.ko} {data[projectId].author.name.en}
                             </Text>
                             <Text size="xs" color="#7C7C7C">
-                                {project.author.email}
+                                {data[projectId].author.email}
                             </Text>
                             <Text size="xs" color="#7C7C7C">
-                                {project.author.instagram}
+                                {data[projectId].author.instagram}
                             </Text>
                             <Text size="xs" color="#7C7C7C">
-                                {project.author.link && (
-                                    <a href={project.author.link} target="_blank">
-                                        {project.author.link}
+                                {data[projectId].author.link && (
+                                    <a href={data[projectId].author.link} target="_blank">
+                                        {data[projectId].author.link}
                                     </a>
                                 )}
                             </Text>
@@ -88,12 +82,12 @@ export default memo(function ProjectDetailPage() {
                     </ProjectDetailStyles.AuthorContainer>
                 </ProjectDetailStyles.ContentWrapper>
 
-                {project.contents.map((src) => {
+                {data[projectId].project.contents.map((src) => {
                     if (src.match(/\.(webp|gif)$/)) return <ProjectDetailStyles.Image src={src} />;
                     else if (src.match(/\.(webm|mp4)$/))
                         return <ProjectDetailStyles.Video src={src} autoPlay loop muted playsInline />;
                 })}
             </ProjectDetailStyles.Body>
-        </>
+        </ProjectDetailStyles.PageWrapper>
     );
 });
