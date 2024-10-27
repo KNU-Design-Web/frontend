@@ -31,3 +31,19 @@ export const Container = styled.div`
         }
     }
 `;
+
+export const CardTo = styled.p`
+    display: flex;
+    align-items: center;
+    height: 30px;
+`;
+export const CardContent = styled.p`
+    max-height: 120px;
+`;
+export const CardFrom = styled.p`
+    display: flex;
+
+    align-items: center;
+    justify-content: right;
+    height: 30px;
+`;
