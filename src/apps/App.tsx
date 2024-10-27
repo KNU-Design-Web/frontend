@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import ReactGA from "react-ga4";
-import { BrowserRouter } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { SectionRouter } from "./Router";
 import { fontStyles } from "./styles/fonts";
@@ -13,12 +14,17 @@ import { Global } from "@emotion/react";
 ReactGA.initialize("G-89YSQNPKY1");
 
 export default function App() {
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (location.search === "") navigate("/?section=home");
+    }, [location, navigate]);
+
     return (
         <>
             <Global styles={[globalStyles, fontStyles]} />
-            <BrowserRouter>
-                <SectionRouter />
-            </BrowserRouter>
+            <SectionRouter />
             <Banner />
         </>
     );
