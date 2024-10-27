@@ -2,6 +2,9 @@ import { BREAKPOINT } from "@/apps/styles/breakpoint";
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.footer`
+    position: relative;
+    z-index: 100;
+
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -24,6 +27,8 @@ export const Wrapper = styled.footer`
 export const Container = styled.div`
     display: flex;
     justify-content: space-between;
+
+    background-color: #fff;
 
     ${BREAKPOINT.MOBILE} {
         flex-direction: column;
