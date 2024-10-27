@@ -4,9 +4,9 @@ import styled from "@emotion/styled";
 export const Container = styled.div`
     aspect-ratio: 1/1;
     padding: 30px;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 20px;
 
     &:nth-child(6n + 1),
@@ -35,15 +35,27 @@ export const Container = styled.div`
 export const CardTo = styled.p`
     display: flex;
     align-items: center;
-    height: 30px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 `;
 export const CardContent = styled.p`
-    max-height: 120px;
+    width: 100%;
+    flex: 1;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+    -webkit-line-clamp: 3;
 `;
 export const CardFrom = styled.p`
     display: flex;
 
     align-items: center;
     justify-content: right;
-    height: 30px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 `;

@@ -1,7 +1,6 @@
 import React from "react";
 
 import * as GuestBookCardStyles from "./GuestBookCard.style";
-import styled from "@emotion/styled";
 
 export interface GuestBookCardProps {
     to: string;
