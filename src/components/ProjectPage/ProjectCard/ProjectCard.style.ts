@@ -18,6 +18,10 @@ export const Image = styled.img`
 `;
 
 export const Description = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     position: absolute;
     bottom: 0;
     z-index: 1;
@@ -25,8 +29,6 @@ export const Description = styled.div`
     width: 100%;
     max-width: 0;
     height: 60px;
-
-    padding: 5px 0px;
 
     background-color: var(--color-light-green);
 
@@ -40,6 +42,9 @@ export const Description = styled.div`
     span {
         display: block;
         margin: 0px 35px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     ${BREAKPOINT.MOBILE} {
