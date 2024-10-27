@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 
+import map from "@/assets/img/MainMap.webp";
 import manage from "@/assets/img/Manage.webp";
-import map from "@/assets/img/Map.svg";
 import editor from "@/assets/img/editor.webp";
 import gA from "@/assets/img/gA.webp";
 import gB from "@/assets/img/gB.webp";
@@ -617,6 +617,11 @@ const TeamImg = styled.img`
     -khtml-user-drag: none; // 구형 브라우저 지원
     -moz-user-drag: none; // Firefox에서 드래그 방지
     -o-user-drag: none; // Opera에서 드래그 방지
+
+    @media (max-width: 430px) {
+        width: 100%;
+        height: 270px;
+    }
 `;
 
 const TeamInfo = styled.div`
