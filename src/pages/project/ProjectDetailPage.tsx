@@ -69,11 +69,19 @@ export default memo(function ProjectDetailPage() {
                                 {data[projectId].author.email}
                             </Text>
                             <Text size="xs" color="#7C7C7C">
-                                {data[projectId].author.instagram}
+                                {data[projectId].author.instagram && (
+                                    <a
+                                        href={`https://www.instagram.com/${data[projectId].author.instagram}/`}
+                                        target="_blank"
+                                        style={{ color: "#7C7C7C" }}
+                                    >
+                                        @{data[projectId].author.instagram}
+                                    </a>
+                                )}
                             </Text>
                             <Text size="xs" color="#7C7C7C">
                                 {data[projectId].author.link && (
-                                    <a href={data[projectId].author.link} target="_blank">
+                                    <a href={data[projectId].author.link} target="_blank" style={{ color: "#7C7C7C" }}>
                                         {data[projectId].author.link}
                                     </a>
                                 )}
