@@ -1,3 +1,4 @@
+import ReactGA from "react-ga4";
 import { BrowserRouter } from "react-router-dom";
 
 import { SectionRouter } from "./Router";
@@ -8,6 +9,8 @@ import "@/apps/styles/Profile.transition.css";
 import "@/apps/styles/Section.transition.css";
 import { Banner } from "@/common/components/Banner/Banner";
 import { Global } from "@emotion/react";
+
+ReactGA.initialize("G-89YSQNPKY1");
 
 export default function App() {
     return (
