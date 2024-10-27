@@ -44,10 +44,16 @@ export const CardContent = styled.p`
     width: 100%;
     flex: 1;
 
-    overflow: hidden;
+    overflow-y: scroll;
     text-overflow: ellipsis;
     white-space: pre-line;
     -webkit-line-clamp: 3;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `;
 export const CardFrom = styled.p`
     display: flex;
