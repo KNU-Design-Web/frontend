@@ -40,6 +40,17 @@ export const Author = styled.div`
         display: block;
         margin: 2px 0px;
     }
+    ${BREAKPOINT.MOBILE} {
+        h1 span {
+            font-size: 24px;
+        }
+        h3 span {
+            font-size: 16px;
+        }
+        p span {
+            font-size: 12px;
+        }
+    }
 `;
 
 export const Project = styled.div`

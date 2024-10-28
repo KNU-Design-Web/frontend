@@ -28,10 +28,22 @@ export const ProfileDetail = (props: ProfileDetailProps) => {
                             {props.email}
                         </Text>
                         <Text size="xs" weight={200} color="purple">
-                            {props.instagram}
+                            {props.instagram && (
+                                <a
+                                    href={`https://www.instagram.com/${props.instagram}`}
+                                    target="_blank"
+                                    style={{ color: "var(--color-purple)" }}
+                                >
+                                    @{props.instagram}
+                                </a>
+                            )}
                         </Text>
                         <Text size="xs" weight={200} color="purple">
-                            {props.link}
+                            {props.link && (
+                                <a href={props.link} target="_blank" style={{ color: "var(--color-purple)" }}>
+                                    {props.link?.split("/").at(-1)}
+                                </a>
+                            )}
                         </Text>
                     </p>
                 </ProfileDetailStyles.Author>
