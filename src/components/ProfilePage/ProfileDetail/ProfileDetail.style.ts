@@ -129,10 +129,19 @@ export const ProjectTitle = styled.div`
     margin: 0px 10px;
 
     ${BREAKPOINT.TABLET} {
-        margin: 10px;
+        margin: 10px 0px;
+        h2 {
+            width: 100px;
+        }
+
+        h2 span {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
     }
     ${BREAKPOINT.MOBILE} {
-        margin: 10px;
+        margin: 10px 0px;
         display: none;
     }
 `;
@@ -145,9 +154,8 @@ export const Profile = styled.img`
     object-fit: cover;
     height: 500px;
 
-    margin-top: 20px;
-
     ${BREAKPOINT.MOBILE} {
+        margin-top: 20px;
         max-width: 100%;
     }
 `;
