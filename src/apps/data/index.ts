@@ -284,7 +284,7 @@ export const data: DataItem[] = [
             },
             email: "sonheeju2014@naver.com",
             instagram: "zooya._.design",
-            link: "behance.net/64528efd",
+            link: "https://www.behance.net/64528efd",
         },
         project: {
             thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Heeju-Son_1960x1000.webp",
@@ -382,7 +382,7 @@ export const data: DataItem[] = [
             },
             email: "won051781ohj@naver.com",
             instagram: "0nemnn",
-            link: "miryutats",
+            link: "https://www.behance.net/miryutats",
         },
         project: {
             thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Minju-Won_1960x1000.webp",
@@ -771,7 +771,7 @@ export const data: DataItem[] = [
             },
             email: "sujung0155@gmail.com",
             instagram: "d_bysjh",
-            link: "https://be.net/hwangsusu",
+            link: "https://www.behance.net/hwangsusu",
         },
         project: {
             thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Sujung-Hwang_1960x1000.webp",

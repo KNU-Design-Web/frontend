@@ -5,7 +5,7 @@ export const Wrapper = styled.nav`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 4;
+    z-index: 50;
 
     width: 100%;
     height: 60px;
@@ -20,6 +20,9 @@ export const Wrapper = styled.nav`
 `;
 
 export const Item = styled.li<{ active: boolean }>`
+    position: relative;
+    z-index: 50;
+
     display: flex;
     width: 100%;
     height: 100%;

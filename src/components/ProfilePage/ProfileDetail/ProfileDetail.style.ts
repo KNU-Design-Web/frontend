@@ -35,10 +35,44 @@ export const Info = styled.div`
     }
 `;
 
+export const AuthorContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 50%;
+`;
+
 export const Author = styled.div`
     p span {
         display: block;
         margin: 2px 0px;
+    }
+
+    ${BREAKPOINT.MOBILE} {
+        h1 span {
+            font-size: 24px;
+        }
+        h3 span {
+            font-size: 16px;
+        }
+        p span {
+            font-size: 12px;
+        }
+    }
+`;
+
+export const MobileProjectTitle = styled.div`
+    display: none;
+
+    ${BREAKPOINT.MOBILE} {
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        span {
+        }
     }
 `;
 
@@ -95,10 +129,19 @@ export const ProjectTitle = styled.div`
     margin: 0px 10px;
 
     ${BREAKPOINT.TABLET} {
-        margin: 10px;
+        margin: 10px 0px;
+        h2 {
+            width: 100px;
+        }
+
+        h2 span {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
     }
     ${BREAKPOINT.MOBILE} {
-        margin: 10px;
+        margin: 10px 0px;
         display: none;
     }
 `;
@@ -112,6 +155,7 @@ export const Profile = styled.img`
     height: 500px;
 
     ${BREAKPOINT.MOBILE} {
+        margin-top: 20px;
         max-width: 100%;
     }
 `;

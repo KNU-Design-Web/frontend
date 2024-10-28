@@ -14,27 +14,47 @@ export const ProfileDetail = (props: ProfileDetailProps) => {
     return (
         <ProfileDetailStyles.Wrapper>
             <ProfileDetailStyles.Info>
-                <ProfileDetailStyles.Author>
-                    <h1>
-                        <Text size="xl">{props.koName}</Text>
-                    </h1>
-                    <h3>
-                        <Text size="s" weight={400}>
-                            {props.enName}
+                <ProfileDetailStyles.AuthorContainer>
+                    <ProfileDetailStyles.Author>
+                        <h1>
+                            <Text size="xl">{props.koName}</Text>
+                        </h1>
+                        <h3>
+                            <Text size="s" weight={400}>
+                                {props.enName}
+                            </Text>
+                        </h3>
+                        <p>
+                            <Text size="xs" weight={200} color="purple">
+                                {props.email}
+                            </Text>
+                            <Text size="xs" weight={200} color="purple">
+                                {props.instagram && (
+                                    <a
+                                        href={`https://www.instagram.com/${props.instagram}`}
+                                        target="_blank"
+                                        style={{ color: "var(--color-purple)" }}
+                                    >
+                                        @{props.instagram}
+                                    </a>
+                                )}
+                            </Text>
+                            <Text size="xs" weight={200} color="purple">
+                                {props.link && (
+                                    <a href={props.link} target="_blank" style={{ color: "var(--color-purple)" }}>
+                                        {props.link?.split("/").at(-1)}
+                                    </a>
+                                )}
+                            </Text>
+                        </p>
+                    </ProfileDetailStyles.Author>
+
+                    <ProfileDetailStyles.MobileProjectTitle>
+                        <Text size="s" weight={600}>
+                            {props.projectThumbnailTitle}
                         </Text>
-                    </h3>
-                    <p>
-                        <Text size="xs" weight={200} color="purple">
-                            {props.email}
-                        </Text>
-                        <Text size="xs" weight={200} color="purple">
-                            {props.instagram}
-                        </Text>
-                        <Text size="xs" weight={200} color="purple">
-                            {props.link}
-                        </Text>
-                    </p>
-                </ProfileDetailStyles.Author>
+                    </ProfileDetailStyles.MobileProjectTitle>
+                </ProfileDetailStyles.AuthorContainer>
 
                 <ProfileDetailStyles.Project>
                     <ProfileDetailStyles.ProjectImgContianer
@@ -47,15 +67,11 @@ export const ProfileDetail = (props: ProfileDetailProps) => {
                     </ProfileDetailStyles.ProjectImgContianer>
 
                     <ProfileDetailStyles.ProjectTitle>
-                        {props.projectTitle.map((title) => {
-                            return (
-                                <h2>
-                                    <Text size="s" weight={500} color="#000">
-                                        {title}
-                                    </Text>
-                                </h2>
-                            );
-                        })}
+                        <h2>
+                            <Text size="s" weight={500} color="#000">
+                                {props.projectThumbnailTitle}
+                            </Text>
+                        </h2>
                     </ProfileDetailStyles.ProjectTitle>
                 </ProfileDetailStyles.Project>
             </ProfileDetailStyles.Info>

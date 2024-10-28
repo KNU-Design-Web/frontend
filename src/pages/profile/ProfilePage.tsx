@@ -24,7 +24,7 @@ export default function ProfilePage() {
                                 link={item.author.link}
                                 profileImg={`https://images.knud2024.com/profile-webp-resized/${item.id}_780x1000.webp`}
                                 projectImg={`https://images.knud2024.com/project-card-thumbnail/thumbnail${item.id}_980x980.webp`}
-                                projectTitle={item.project.title}
+                                projectThumbnailTitle={item.project.thumbnailTitle}
                             />
                         );
                     })}
