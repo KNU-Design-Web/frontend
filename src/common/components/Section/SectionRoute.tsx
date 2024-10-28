@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
 import { Footer } from "../Footer/Footer";
-import { Grid } from "../Grid/Grid";
+// import { Grid } from "../Grid/Grid";
 import { NavItem } from "../NavBar/NavItem";
 import * as SectionRouteStyles from "./SectionRoute.style";
 
