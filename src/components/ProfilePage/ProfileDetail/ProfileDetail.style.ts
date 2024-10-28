@@ -35,11 +35,20 @@ export const Info = styled.div`
     }
 `;
 
+export const AuthorContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 50%;
+`;
+
 export const Author = styled.div`
     p span {
         display: block;
         margin: 2px 0px;
     }
+
     ${BREAKPOINT.MOBILE} {
         h1 span {
             font-size: 24px;
@@ -49,6 +58,20 @@ export const Author = styled.div`
         }
         p span {
             font-size: 12px;
+        }
+    }
+`;
+
+export const MobileProjectTitle = styled.div`
+    display: none;
+
+    ${BREAKPOINT.MOBILE} {
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        span {
         }
     }
 `;
@@ -121,6 +144,8 @@ export const Profile = styled.img`
     max-width: 390px;
     object-fit: cover;
     height: 500px;
+
+    margin-top: 20px;
 
     ${BREAKPOINT.MOBILE} {
         max-width: 100%;

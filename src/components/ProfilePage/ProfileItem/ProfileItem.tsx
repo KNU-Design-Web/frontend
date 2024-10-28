@@ -19,7 +19,7 @@ export interface ProfileItemProps {
     profileImg: string;
     projectImg: string;
 
-    projectTitle: string[];
+    projectThumbnailTitle: string;
 }
 
 export const ProfileItem = (props: ProfileItemProps) => {
