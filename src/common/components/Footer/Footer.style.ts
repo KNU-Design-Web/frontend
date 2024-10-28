@@ -21,6 +21,8 @@ export const Wrapper = styled.footer`
 
     ${BREAKPOINT.MOBILE} {
         height: 500px;
+        padding: 50px 0 80px 0;
+        align-items: center;
     }
 `;
 
