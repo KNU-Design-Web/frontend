@@ -2,6 +2,9 @@ import { navItems } from "@/apps/constants/navItems";
 import styled from "@emotion/styled";
 
 export const Item = styled.li<{ index: number; active: boolean }>`
+    position: relative;
+    z-index: 50;
+
     display: flex;
     width: 100%;
     height: 100%;

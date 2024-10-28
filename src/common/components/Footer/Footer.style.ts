@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 export const Wrapper = styled.footer`
     position: relative;
-    z-index: 100;
+    z-index: 40;
 
     display: flex;
     flex-direction: column;
