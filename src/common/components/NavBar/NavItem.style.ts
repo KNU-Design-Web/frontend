@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 
 export const Wrapper = styled(NavLink)<{ active: boolean }>`
     position: relative;
+    z-index: 3;
 
     display: flex;
     align-items: center;
@@ -18,7 +19,7 @@ export const Wrapper = styled(NavLink)<{ active: boolean }>`
     writing-mode: vertical-rl;
     text-decoration: none;
 
-    background-color: ${(props) => (props.active ? "var(--color-light-green)" : "transparent")};
+    background-color: ${(props) => (props.active ? "var(--color-light-green)" : "#fff")};
 
     &::before {
         position: absolute;

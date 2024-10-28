@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
 export const GridContainer = styled.div<{ rows: number; cols: number }>`
-    position: sticky;
-    z-index: -1;
+    position: fixed;
+    z-index: -10;
     inset: 0;
 
     width: 100%;
@@ -14,6 +14,7 @@ export const GridContainer = styled.div<{ rows: number; cols: number }>`
 
     /* overflow: hidden; */
     pointer-events: none;
+
     & > * {
         pointer-events: auto;
     }
