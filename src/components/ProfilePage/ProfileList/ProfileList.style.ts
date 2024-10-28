@@ -12,4 +12,7 @@ export const Container = styled.ul`
     ${BREAKPOINT.TABLET} {
         margin-top: 60px;
     }
+    ${BREAKPOINT.MOBILE} {
+        margin-top: 60px;
+    }
 `;
