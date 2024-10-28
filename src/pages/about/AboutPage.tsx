@@ -620,7 +620,7 @@ const TeamImg = styled.img`
 
     @media (max-width: 430px) {
         width: 100%;
-        height: 270px;
+        height: auto;
     }
 `;
 
