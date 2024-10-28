@@ -25,7 +25,7 @@ export const SectionRoute = (props: SectionRouteProps) => {
                 <SectionWrapper>
                     <SectionContainer>
                         {props.element}
-                        <Grid rows={28} cols={18} />
+                        {/* <Grid rows={28} cols={18} /> */}
                     </SectionContainer>
                     <Footer />
                 </SectionWrapper>
