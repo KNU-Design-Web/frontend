@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const GridContainer = styled.div<{ rows: number; cols: number }>`
-    position: fixed;
+    position: absolute;
     z-index: -10;
     inset: 0;
 

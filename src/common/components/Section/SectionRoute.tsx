@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
 import { Footer } from "../Footer/Footer";
+import { Grid } from "../Grid/Grid";
 // import { Grid } from "../Grid/Grid";
 import { NavItem } from "../NavBar/NavItem";
 import * as SectionRouteStyles from "./SectionRoute.style";
@@ -25,7 +26,7 @@ export const SectionRoute = (props: SectionRouteProps) => {
                 <SectionWrapper>
                     <SectionContainer>
                         {props.element}
-                        {/* <Grid rows={28} cols={18} /> */}
+                        {searchParams.get("section") !== "about" && <Grid rows={28} cols={18} />}
                     </SectionContainer>
                     <Footer />
                 </SectionWrapper>
