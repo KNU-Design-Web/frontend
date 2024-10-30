@@ -11,4 +11,7 @@ export const Container = styled.div`
     ${BREAKPOINT.MOBILE} {
         grid-template-columns: repeat(2, 1fr);
     }
+    ${BREAKPOINT.MOBILE_SMALL} {
+        grid-template-columns: repeat(1, 1fr);
+    }
 `;
