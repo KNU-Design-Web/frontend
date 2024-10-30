@@ -95,6 +95,9 @@ export const useGuestBook = (take = 10) => {
             },
             ...guestBookData,
         ]);
+        setTo("");
+        setFrom("");
+        setContent("");
     }, [content, from, to]);
 
     return {
