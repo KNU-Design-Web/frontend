@@ -159,7 +159,7 @@ export default function AboutPage() {
                             <InfoSection>
                                 <InfoTitle>디자인학과장</InfoTitle>
                                 <InfoContent>이재민</InfoContent>
-                                <InfoDate>2004년 10월</InfoDate>
+                                <InfoDate>2024년 10월</InfoDate>
                             </InfoSection>
                         </SectionContent>
                     </Section>
@@ -225,7 +225,7 @@ export default function AboutPage() {
                                     위원장
                                 </InfoTitle>
                                 <InfoContent>구지원</InfoContent>
-                                <InfoDate>2004년 10월</InfoDate>
+                                <InfoDate>2024년 10월</InfoDate>
                             </InfoSection>
                         </SectionContent>
                     </Section>
@@ -263,7 +263,7 @@ export default function AboutPage() {
                                     <TeamImg src={manage} loading="lazy" />
                                     <TeamInfo>
                                         <TeamInfoTitle>기획팀</TeamInfoTitle>
-                                        <TeamInfoMemeber>구지원 황수정 문예림 정유정 김은정 손희주</TeamInfoMemeber>
+                                        <TeamInfoMemeber>구지원 황수정 문예림 정유정 김정은 손희주</TeamInfoMemeber>
                                     </TeamInfo>
                                 </TeamCard>
                                 <TeamCard>
