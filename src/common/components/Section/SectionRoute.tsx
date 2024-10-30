@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
@@ -18,6 +18,10 @@ export const SectionRoute = (props: SectionRouteProps) => {
     const [searchParams] = useSearchParams();
     const isActive = searchParams.get("section") === props.param;
 
+    const shouldGridDisplay = useMemo(() => {
+        return !["home", "about"].includes(searchParams.get("section") as string);
+    }, [searchParams]);
+
     return (
         <>
             <NavItem to={props.param}>{props.navContent}</NavItem>
@@ -26,7 +30,7 @@ export const SectionRoute = (props: SectionRouteProps) => {
                 <SectionWrapper>
                     <SectionContainer>
                         {props.element}
-                        {searchParams.get("section") !== "about" && <Grid rows={28} cols={18} />}
+                        {shouldGridDisplay && <Grid rows={28} cols={18} />}
                     </SectionContainer>
                     <Footer />
                 </SectionWrapper>
