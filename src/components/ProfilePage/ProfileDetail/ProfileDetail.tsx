@@ -58,7 +58,7 @@ export const ProfileDetail = (props: ProfileDetailProps) => {
 
                 <ProfileDetailStyles.Project>
                     <ProfileDetailStyles.ProjectImgContianer
-                        onClick={() => navigate(`/?section=project&id=${props.projectId - 1}`)}
+                        onClick={() => navigate(`/?section=project&id=${props.projectId}`)}
                     >
                         <ProfileDetailStyles.ProjectImg src={props.projectImg} />
                         <ProfileDetailStyles.ProjectLink>
