@@ -9,6 +9,8 @@ export const globalStyles = css`
         border: 0;
 
         box-sizing: border-box;
+
+        font-family: "SUIT";
     }
 
     #root {
