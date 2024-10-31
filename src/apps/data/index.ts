@@ -174,9 +174,9 @@ export const data: DataItem[] = [
             thumbnail: "https://images.knud2024.com/project-individual-thumbnail/Jungeun-Kim_1960x1000.webp",
             thumbnailTitle: "PINGER",
             title: ["PINGER."],
-            hashtags: ["#UXUI", "#디지털디톡스"],
+            hashtags: ["#UI/UX", "#APP", "#CONCEPT_SOLUTION", "#건강Insight", "#FINGER-CHECK", "#의료시스템개선"],
             description: [
-                "여러분은 효율적이고 적절한 의료 서비스를 받고 있나요?",
+                "여러분은 효율적이고 적절한 의료 서비스를 받고 있나요?\n\n",
                 "PINGER는 손끝을 이용해 자신의 상태에 대한 증상 신호를 보내고, 적합한 건강분석 결과를 얻을 수 있는 앱 서비스이다.",
                 "효과적인 네트워크 진단을 위해 핑(PING)을 쏘듯, PINGER를 통해 우리의 의료 시스템이 더욱 효율적인 환경으로 조성되길 바란다.",
             ],
@@ -255,7 +255,8 @@ export const data: DataItem[] = [
             title: ["別書別酒"],
             hashtags: ["#Branding", "#Package Design", "#Motion Graphic"],
             description: [
-                "문서(유언장)와 이별 주(술)를 통해 사람들에게 자신의 삶을 돌아보고 정리하는 경험을 선사한다.",
+                "삶을 더 의미있게 만드는 매듭, 별서별주\n",
+                "별서별주는 이별 준비 문서(유언장)와 이별 주(술)를 통해 사람들에게 자신의 삶을 돌아보고 정리하는 경험을 선사한다.",
                 "죽음을 인식하고 삶의 유한성을 깨닫게 함으로써, 죽음에 대비하고 죽음에 대한 두려움을 부드럽게 해소할 수 있도록 돕는다.",
             ],
             contents: [
