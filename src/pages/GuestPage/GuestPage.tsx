@@ -26,7 +26,7 @@ export default function GuestPage() {
     return (
         <>
             <GuestBookContainer>
-                <GuestBookForm>
+                {/* <GuestBookForm>
                     <GuestBookInput
                         name="receiver"
                         label="TO."
@@ -49,7 +49,7 @@ export default function GuestPage() {
                         onChange={handleFromChange}
                     />
                 </GuestBookForm>
-                <AddButton onClick={handleSubmit}>메시지 전송</AddButton>
+                <AddButton onClick={handleSubmit}>메시지 전송</AddButton> */}
                 <GuestBookCardContainer>
                     {guestBookData.map((guestBookMessage) => {
                         return (
