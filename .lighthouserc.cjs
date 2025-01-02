@@ -8,6 +8,7 @@ module.exports = {
                 "/?section=project",
                 "/?section=profile",
                 "/?section=guestbook",
+                "/?section=archive",
                 ...Array.from({ length: 22 }, (_, i) => `/?section=project&id=${i + 1}`),
             ],
             numberOfRuns: 3,
