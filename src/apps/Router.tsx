@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { TransitionGroup } from "react-transition-group";
 
 import AboutPage from "@/pages/AboutPage/AboutPage";
-// import ArchivePage from "@/pages/archive/ArchivePage";
+import ArchivePage from "@/pages/ArchivePage/ArchivePage";
 import GuestPage from "@/pages/GuestPage/GuestPage";
 import HomePage from "@/pages/HomePage/HomePage";
 import ProfilePage from "@/pages/ProfilePage/ProfilePage";
@@ -20,7 +20,7 @@ export const SectionRouter = () => {
             <SectionRoute param="project" navContent="PROJECT" element={<ProjectPage />} />
             <SectionRoute param="profile" navContent="PROFILE" element={<ProfilePage />} />
             <SectionRoute param="guest" navContent="GUEST BOOK" element={<GuestPage />} />
-            {/* <SectionRoute param="archive" navContent="ARCHIVE" element={<ArchivePage />} /> */}
+            <SectionRoute param="archive" navContent="ARCHIVE" element={<ArchivePage />} />
         </TransitionGroup>
     );
 };

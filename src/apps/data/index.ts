@@ -1,3 +1,13 @@
+const archiveImageUrlFactory = (id: number) => `https://images.knud2024.com/archive/archive${id}.webp`;
+
+export const archiveImagesBefore = Array.from({ length: 30 }, (_, i) => i + 1).map((id) => {
+    return archiveImageUrlFactory(id);
+});
+
+export const archiveImagesAfter = Array.from({ length: 30 }, (_, i) => i + 31).map((id) => {
+    return archiveImageUrlFactory(id);
+});
+
 type DataItem = {
     id: number;
     author: {
