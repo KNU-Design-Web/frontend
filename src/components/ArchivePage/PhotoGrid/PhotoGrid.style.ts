@@ -1,11 +1,13 @@
 import { BREAKPOINT } from "@/apps/styles/breakpoint";
 import styled from "@emotion/styled";
 
-export const Grid = styled.div<{ direction: "row" | "column" }>`
+export const Grid = styled.div<{ translateOffset?: number }>`
     display: flex;
-    flex-direction: ${(props) => props.direction};
+    flex-direction: column;
     align-items: center;
     gap: 10px;
+
+    height: fit-content;
 
     margin: 20px 0px;
     padding: 0px 22px;
