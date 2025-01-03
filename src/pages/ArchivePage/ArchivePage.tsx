@@ -10,15 +10,15 @@ export default function ArchivePage() {
         <>
             <Title>ARCHIVE</Title>
             <ArchivePageStyles.Layout>
-                <PhotoGrid direction="up" speed={5}>
+                <PhotoGrid direction="up" speed={2} id="left-photo-grid">
                     {archiveImagesBefore.map((imageUrl, index) => {
-                        return <PhotoCard key={index} src={imageUrl} />;
+                        return <PhotoCard key={index} src={imageUrl} scrollContainer="#left-photo-grid" />;
                     })}
                 </PhotoGrid>
 
-                <PhotoGrid direction="down" speed={5}>
+                <PhotoGrid direction="down" speed={2} id="left-photo-grid">
                     {archiveImagesAfter.map((imageUrl, index) => {
-                        return <PhotoCard key={index} src={imageUrl} />;
+                        return <PhotoCard key={index} src={imageUrl} scrollContainer="#left-photo-grid" />;
                     })}
                 </PhotoGrid>
             </ArchivePageStyles.Layout>

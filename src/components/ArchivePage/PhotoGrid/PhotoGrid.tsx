@@ -1,14 +1,18 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { forceCheck } from "react-lazyload";
+
+import { throttle } from "lodash";
 
 import * as PhotoGridStyles from "./PhotoGrid.style";
 
 export interface PhotoGridProps {
+    id?: string;
     direction: "up" | "down";
     speed: number;
     children?: React.ReactNode;
 }
 
-export const PhotoGrid = ({ direction, speed, children }: PhotoGridProps) => {
+export const PhotoGrid = ({ id, direction, speed, children }: PhotoGridProps) => {
     const ref = useRef<HTMLDivElement | null>(null);
     const requestAnimationFrameRef = useRef<number | null>(null);
 
@@ -16,27 +20,31 @@ export const PhotoGrid = ({ direction, speed, children }: PhotoGridProps) => {
     const [isHovered, setIsHovered] = useState(false);
     const [gridHeight, setGridHeight] = useState(0);
 
+    const throttledForceCheck = throttle(() => {
+        forceCheck();
+    }, 100);
+
     const animate = useCallback(() => {
         if (!ref.current) return;
+        if (isHovered) return;
 
-        if (!isHovered) {
-            if (direction === "up") {
-                translateY.current -= speed;
-                if (translateY.current <= -gridHeight) {
-                    translateY.current = 0;
-                }
-            } else {
-                translateY.current += speed;
-                if (translateY.current >= 0) {
-                    translateY.current = -gridHeight;
-                }
+        if (direction === "up") {
+            translateY.current -= speed;
+            if (translateY.current <= -gridHeight) {
+                translateY.current = 0;
             }
-
-            ref.current.style.transform = `translateY(${translateY.current}px)`;
+        } else {
+            translateY.current += speed;
+            if (translateY.current >= 0) {
+                translateY.current = -gridHeight;
+            }
         }
 
+        throttledForceCheck();
+        ref.current.style.transform = `translateY(${translateY.current}px)`;
+
         requestAnimationFrameRef.current = requestAnimationFrame(animate);
-    }, [direction, speed, isHovered, gridHeight]);
+    }, [isHovered, direction, throttledForceCheck, speed, gridHeight]);
 
     useEffect(() => {
         if (ref.current) {
@@ -62,7 +70,7 @@ export const PhotoGrid = ({ direction, speed, children }: PhotoGridProps) => {
     };
 
     return (
-        <PhotoGridStyles.Grid ref={ref} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <PhotoGridStyles.Grid id={id} ref={ref} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             {children}
             {children}
         </PhotoGridStyles.Grid>
