@@ -1,5 +1,6 @@
 export type CSSAbsoluteUnit = "cm" | "mm" | "Q" | "in" | "pc" | "pt" | "px";
 export type CSSRelativeUnit =
+    | "%"
     | "em"
     | "ex"
     | "ch"
