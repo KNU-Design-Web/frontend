@@ -96,6 +96,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.6
         version: 18.3.0
+      '@types/react-lazyload':
+        specifier: ^3.2.3
+        version: 3.2.3
       '@types/react-transition-group':
         specifier: ^4.4.11
         version: 4.4.11
@@ -1438,6 +1441,9 @@ packages:
 
   '@types/react-dom@18.3.0':
     resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
+
+  '@types/react-lazyload@3.2.3':
+    resolution: {integrity: sha512-s03gWlHXiFqZr7TEFDTx8Lkl+ZEYrwTkXP9MNZ3Z3blzsPrnkYjgeSK2tjfzVv/TYVCnDk6TZwNRDHQlHy/1Ug==}
 
   '@types/react-transition-group@4.4.11':
     resolution: {integrity: sha512-RM05tAniPZ5DZPzzNFP+DmrcOdD0efDUxMy3145oljWSl3x9ZV5vhme98gTxFrj2lhXvmGNnUiuDyJgY9IKkNA==}
@@ -5795,6 +5801,10 @@ snapshots:
   '@types/range-parser@1.2.7': {}
 
   '@types/react-dom@18.3.0':
+    dependencies:
+      '@types/react': 18.3.9
+
+  '@types/react-lazyload@3.2.3':
     dependencies:
       '@types/react': 18.3.9
 
