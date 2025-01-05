@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 import * as CardStyles from "./ProjectCard.style";
 import { Text } from "@/common/components/Text/Text";
+import { useProjectEvent } from "@/events/projectEvents";
 
 export interface ProjectCardProps {
     id: number;
@@ -13,8 +14,16 @@ export interface ProjectCardProps {
 export const ProjectCard = (props: ProjectCardProps) => {
     const navigate = useNavigate();
 
+    const { dispatchMouseOverEvent, dispatchMouseClickEvent } = useProjectEvent(props.id);
+
     return (
-        <CardStyles.Wrapper onClick={() => navigate(`?section=project&id=${props.id - 1}`)}>
+        <CardStyles.Wrapper
+            onMouseOver={dispatchMouseOverEvent}
+            onClick={() => {
+                navigate(`?section=project&id=${props.id - 1}`);
+                dispatchMouseClickEvent();
+            }}
+        >
             <CardStyles.Image src={props.imgSrc} />
 
             <CardStyles.Container>

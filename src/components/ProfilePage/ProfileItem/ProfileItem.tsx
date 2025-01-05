@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { ProfileDetail } from "../ProfileDetail/ProfileDetail";
 import { ProfileItemHeader } from "../ProfileItemHeader/ProfileItemHeader";
 import { useProfileToggle } from "@/contexts/useProfileToggle";
+import { useProfileEvent } from "@/events/profileEvents";
 
 export interface ProfileItemProps {
     id: number;
@@ -34,6 +35,8 @@ export const ProfileItem = (props: ProfileItemProps) => {
         return profileToggle.openId === props.id;
     }, [profileToggle.openId, props.id]);
 
+    const { dispatchMouseOverEvent, dispatchMouseClickEvent } = useProfileEvent(props.id);
+
     return (
         <TransitionGroup>
             <ProfileItemHeader
@@ -41,6 +44,8 @@ export const ProfileItem = (props: ProfileItemProps) => {
                 enName={props.enName}
                 isOpen={isOpen}
                 handleToggle={handleToggle}
+                onClick={dispatchMouseClickEvent}
+                onMouseOver={dispatchMouseOverEvent}
             />
             {isOpen && (
                 <CSSTransition timeout={200} classNames="profile">
