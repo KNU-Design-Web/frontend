@@ -1,6 +1,9 @@
 import { memo, useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { ProjectImage } from "@/components/ProjectPage/ProjectImage/ProjectImage";
+import { ProjectVideo } from "@/components/ProjectPage/ProjectVideo/ProjectVideo";
+
 import { useProjectId } from "@/hooks/ProjectPage/useProjectId";
 
 import { LeftArrow } from "@/assets/icons/LeftArrow";
@@ -91,9 +94,8 @@ export default memo(function ProjectDetailPage() {
                 </ProjectDetailStyles.ContentWrapper>
 
                 {data[projectId].project.contents.map((src) => {
-                    if (src.match(/\.(webp|gif)$/)) return <ProjectDetailStyles.Image src={src} />;
-                    else if (src.match(/\.(webm|mp4)$/))
-                        return <ProjectDetailStyles.Video src={src} autoPlay loop muted playsInline />;
+                    if (src.match(/\.(webp|gif)$/)) return <ProjectImage src={src} offset={400} />;
+                    else if (src.match(/\.(webm|mp4)$/)) return <ProjectVideo src={src} offset={800} />;
                 })}
             </ProjectDetailStyles.Body>
         </ProjectDetailStyles.PageWrapper>

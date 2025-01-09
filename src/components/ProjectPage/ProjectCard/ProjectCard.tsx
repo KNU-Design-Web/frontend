@@ -1,6 +1,10 @@
+import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { preloadImages } from "@/utils/preload";
+
 import * as CardStyles from "./ProjectCard.style";
+import { data } from "@/apps/data";
 import { Text } from "@/common/components/Text/Text";
 import { useProjectEvent } from "@/events/projectEvents";
 
@@ -16,9 +20,17 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
     const { dispatchMouseOverEvent, dispatchMouseClickEvent } = useProjectEvent(props.id);
 
+    const handleMouseOver = useCallback(() => {
+        const headerImage = data[props.id - 1].project.contents[0];
+        const firstProjectImage = data[props.id - 1].project.contents[1];
+
+        preloadImages([headerImage, firstProjectImage]);
+        dispatchMouseOverEvent();
+    }, [dispatchMouseOverEvent, props.id]);
+
     return (
         <CardStyles.Wrapper
-            onMouseOver={dispatchMouseOverEvent}
+            onMouseOver={handleMouseOver}
             onClick={() => {
                 navigate(`?section=project&id=${props.id - 1}`);
                 dispatchMouseClickEvent();
