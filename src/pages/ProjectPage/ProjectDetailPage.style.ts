@@ -75,6 +75,7 @@ export const Body = styled.div`
     display: block;
     width: 100%;
     max-width: 980px;
+    min-height: 100vh;
 
     margin: 0px auto;
     margin-top: 60px;
