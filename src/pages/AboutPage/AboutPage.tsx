@@ -8,6 +8,7 @@ import gB from "@/assets/img/gB.webp";
 import web from "@/assets/img/web.webp";
 
 import { HorizontalLine } from "./HorizontalLine";
+import { BREAKPOINT } from "@/apps/styles/breakpoint";
 import { Text } from "@/common/components/Text/Text";
 import { Title } from "@/common/components/Title/Title";
 import { useMediaQuery } from "@/common/hooks/useMediaQuery";
@@ -351,7 +352,8 @@ export default function AboutPage() {
                                 <ChartItem>
                                     <ChartItemTitle>장소</ChartItemTitle>
                                     <ChartItemMemebers>
-                                        북구 대학로 80 경북대학교 대구캠퍼스 스페이스 나인
+                                        <span>북구 대학로 80 경북대학교</span>
+                                        <span>대구캠퍼스 스페이스 나인</span>
                                     </ChartItemMemebers>
                                 </ChartItem>
                                 <ChartItem>
@@ -573,6 +575,11 @@ const ChartItemMemebers = styled(Text)`
     white-space: pre-wrap;
     width: 420px;
     line-height: 1.5;
+
+    ${BREAKPOINT.MOBILE_SMALL} {
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 const ScrollableContainer = styled.div`
