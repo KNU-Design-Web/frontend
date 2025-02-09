@@ -238,7 +238,7 @@ export const data: DataItem[] = [
                 "https://images.knud2024.com/project-individual/Hyeonmin-Kim/project4.webp",
                 "https://images.knud2024.com/project-individual/Hyeonmin-Kim/project5.webp",
                 "https://images.knud2024.com/project-individual/Hyeonmin-Kim/project6.webp",
-                "https://images.knud2024.com/project-individual/Hyeonmin-Kim/project7.webp",
+                "https://images.knud2024.com/project-individual/Hyeonmin-Kim/project7.webm",
                 "https://images.knud2024.com/project-individual/Hyeonmin-Kim/project8.webp",
                 "https://images.knud2024.com/project-individual/Hyeonmin-Kim/project9.webp",
                 "https://images.knud2024.com/project-individual/Hyeonmin-Kim/project10.webp",
