@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { forceCheck } from "react-lazyload";
 
-import { throttle } from "lodash";
+import { throttle } from "lodash-es";
 
 import * as PhotoGridStyles from "./PhotoGrid.style";
 
