@@ -1,12 +1,14 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { data } from "@/apps/data";
+
+import { Text } from "@/common/components/Text/Text";
+import { useProjectEvent } from "@/common/lib/google-analytics/projectEvents";
+
 import { preloadImages } from "@/utils/preload";
 
 import * as CardStyles from "./ProjectCard.style";
-import { data } from "@/apps/data";
-import { Text } from "@/common/components/Text/Text";
-import { useProjectEvent } from "@/common/lib/google-analytics/projectEvents";
 
 export interface ProjectCardProps {
     id: number;

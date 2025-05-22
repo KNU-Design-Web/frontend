@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
-import * as NavTopItemStyles from "./NavTopItem.style";
 import { Text } from "@/common/components/Text/Text";
+
+import * as NavTopItemStyles from "./NavTopItem.style";
 
 export interface NavTopItemProps {
     index: number;

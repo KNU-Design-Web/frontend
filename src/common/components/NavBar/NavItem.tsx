@@ -1,9 +1,10 @@
 import { memo } from "react";
 import { useSearchParams } from "react-router-dom";
 
-import * as NavItemStyles from "./NavItem.style";
 import { Text } from "@/common/components/Text/Text";
 import { useSectionEvent } from "@/common/lib/google-analytics/sectionEvent";
+
+import * as NavItemStyles from "./NavItem.style";
 
 export interface NavItemProps {
     to: string;

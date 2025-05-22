@@ -1,5 +1,6 @@
-import * as FooterStyles from "./Footer.style";
 import { Text as _Text } from "@/common/components/Text/Text";
+
+import * as FooterStyles from "./Footer.style";
 import styled from "@emotion/styled";
 
 export const Footer = () => {

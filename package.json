@@ -7,6 +7,7 @@
         "dev": "vite --host",
         "start": "tsc && vite build && serve -l 5173 dist",
         "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "prettier": "prettier --write .",
         "build": "tsc && vite build",
         "compile": "tsc --noEmit",
         "preview": "vite preview",

@@ -2,9 +2,10 @@ import { useNavigate } from "react-router-dom";
 
 import { RightArrow } from "@/assets/icons/RightArrow";
 
+import { Text } from "@/common/components/Text/Text";
+
 import { ProfileItemProps } from "../ProfileItem/ProfileItem";
 import * as ProfileDetailStyles from "./ProfileDetail.style";
-import { Text } from "@/common/components/Text/Text";
 
 export type ProfileDetailProps = ProfileItemProps;
 

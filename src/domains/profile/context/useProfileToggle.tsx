@@ -1,4 +1,5 @@
 import { useContext } from "react";
+
 import { ProfileToggleContext } from "./ProfileToggleContext";
 
 export const useProfileToggle = () => {

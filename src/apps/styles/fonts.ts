@@ -7,6 +7,7 @@ import SUIT_MEDIUM from "@/apps/fonts/suit/SUIT-Medium.woff2";
 import SUIT_REGULAR from "@/apps/fonts/suit/SUIT-Regular.woff2";
 import SUIT_SEMI_BOLD from "@/apps/fonts/suit/SUIT-SemiBold.woff2";
 import SUIT_THIN from "@/apps/fonts/suit/SUIT-Thin.woff2";
+
 import { css } from "@emotion/react";
 
 export const fontStyles = css`

@@ -1,10 +1,12 @@
 import { useCallback, useMemo } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
+import { useProfileEvent } from "@/common/lib/google-analytics/profileEvents";
+
+import { useProfileToggle } from "@/domains/profile/context/useProfileToggle";
+
 import { ProfileDetail } from "../ProfileDetail/ProfileDetail";
 import { ProfileItemHeader } from "../ProfileItemHeader/ProfileItemHeader";
-import { useProfileEvent } from "@/common/lib/google-analytics/profileEvents";
-import { useProfileToggle } from "@/domains/profile/context/useProfileToggle";
 
 export interface ProfileItemProps {
     id: number;

@@ -1,9 +1,11 @@
+import { archiveImagesBefore, archiveImagesAfter } from "@/apps/data";
+
+import { Title } from "@/common/components/Title/Title";
+
 import { PhotoCard } from "@/domains/archive/components/PhotoCard/PhotoCard";
 import { PhotoGrid } from "@/domains/archive/components/PhotoGrid/PhotoGrid";
 
 import * as ArchivePageStyles from "./ArchivePage.style";
-import { archiveImagesBefore, archiveImagesAfter } from "@/apps/data";
-import { Title } from "@/common/components/Title/Title";
 
 export default function ArchivePage() {
     return (

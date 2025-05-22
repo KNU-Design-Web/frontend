@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 
+import { BREAKPOINT } from "@/apps/styles/breakpoint";
+
 import map from "@/assets/img/MainMap.webp";
 import manage from "@/assets/img/Manage.webp";
 import editor from "@/assets/img/editor.webp";
@@ -7,11 +9,11 @@ import gA from "@/assets/img/gA.webp";
 import gB from "@/assets/img/gB.webp";
 import web from "@/assets/img/web.webp";
 
-import { HorizontalLine } from "./HorizontalLine";
-import { BREAKPOINT } from "@/apps/styles/breakpoint";
 import { Text } from "@/common/components/Text/Text";
 import { Title } from "@/common/components/Title/Title";
 import { useMediaQuery } from "@/common/hooks/useMediaQuery";
+
+import { HorizontalLine } from "./HorizontalLine";
 import styled from "@emotion/styled";
 
 export default function AboutPage() {
