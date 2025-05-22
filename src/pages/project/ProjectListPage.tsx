@@ -1,10 +1,11 @@
 import { memo } from "react";
 
+import { data } from "@/apps/data";
+
+import { Title } from "@/common/components/Title/Title";
+
 import { ProjectCard } from "@/domains/project/components/ProjectCard/ProjectCard";
 import { ProjectCardContainer } from "@/domains/project/components/ProjectCardContainer/ProjectCardContainer";
-
-import { data } from "@/apps/data";
-import { Title } from "@/common/components/Title/Title";
 
 export default memo(function ProjectListPage() {
     return (

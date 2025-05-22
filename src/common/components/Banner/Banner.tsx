@@ -1,5 +1,6 @@
-import * as BannerStyles from "./Banner.style";
 import { Text } from "@/common/components/Text/Text";
+
+import * as BannerStyles from "./Banner.style";
 
 const bannerText =
     "2024 KNUD GRADUATION EXHIBITION :합니다 디자인 2024 KNUD GRADUATION EXHIBITION :합니다 디자인2024 KNUD GRADUATION EXHIBITION :합니다 디자인 ";

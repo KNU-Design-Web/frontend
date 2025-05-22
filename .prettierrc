@@ -16,18 +16,12 @@
         "^react",
         "<THIRD_PARTY_MODULES>",
 
-        "^(@/components)(.*)$",
-        "^(@/layouts)(.*)$",
-        "^(@/pages)(.*)$",
-
-        "^(@/hooks)(.*)$",
-        "^(@/services)(.*)$",
-
+        "^(@/apps)(.*)$",
         "^(@/assets)(.*)$",
-        "^(@/constants)(.*)$",
-        "^(@/config)(.*)$",
+        "^(@/common)(.*)$",
+        "^(@/domains)(.*)$",
+        "^(@/pages)(.*)$",
         "^(@/utils)(.*)$",
-        "^(@/styles)(.*)$",
 
         "^(.*)/(.*)$"
     ],

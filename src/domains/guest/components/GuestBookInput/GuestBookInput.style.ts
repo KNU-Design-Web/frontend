@@ -1,5 +1,6 @@
-import { GuestBookInputProps } from "./GuestBookInput";
 import { BREAKPOINT } from "@/apps/styles/breakpoint";
+
+import { GuestBookInputProps } from "./GuestBookInput";
 import styled from "@emotion/styled";
 
 export const Container = styled.div`

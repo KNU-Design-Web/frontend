@@ -1,7 +1,8 @@
 import { memo } from "react";
 
-import * as ProfileItemHeaderStyles from "./ProfileItemHeader.style";
 import { Text } from "@/common/components/Text/Text";
+
+import * as ProfileItemHeaderStyles from "./ProfileItemHeader.style";
 
 export interface ProfileItemHeaderProps {
     koName: string;

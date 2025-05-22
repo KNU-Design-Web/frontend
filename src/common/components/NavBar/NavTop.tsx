@@ -1,11 +1,13 @@
 import { useState } from "react";
 
+import { navItems } from "@/apps/constants/navItems";
+
 import { RightArrow } from "@/assets/icons/RightArrow";
+
+import { Text } from "@/common/components/Text/Text";
 
 import * as NavTopStyles from "./NavTop.style";
 import { NavTopItem } from "./NavTopItem";
-import { navItems } from "@/apps/constants/navItems";
-import { Text } from "@/common/components/Text/Text";
 import { css } from "@emotion/react";
 
 export const NavTop = () => {

@@ -1,16 +1,17 @@
 import { memo, useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { ProjectImage } from "@/domains/project/components/ProjectImage/ProjectImage";
-import { ProjectVideo } from "@/domains/project/components/ProjectVideo/ProjectVideo";
-
-import { useProjectId } from "@/domains/project/hooks/useProjectId";
+import { data } from "@/apps/data";
 
 import { LeftArrow } from "@/assets/icons/LeftArrow";
 
-import * as ProjectDetailStyles from "./ProjectDetailPage.style";
-import { data } from "@/apps/data";
 import { Text } from "@/common/components/Text/Text";
+
+import { ProjectImage } from "@/domains/project/components/ProjectImage/ProjectImage";
+import { ProjectVideo } from "@/domains/project/components/ProjectVideo/ProjectVideo";
+import { useProjectId } from "@/domains/project/hooks/useProjectId";
+
+import * as ProjectDetailStyles from "./ProjectDetailPage.style";
 
 export default memo(function ProjectDetailPage() {
     const navigate = useNavigate();

@@ -1,11 +1,7 @@
 import styled from "@emotion/styled";
 
 export const HorizontalLine = () => {
-    return (
-        <>
-            <Line />
-        </>
-    );
+    return <Line />;
 };
 
 const Line = styled.div`

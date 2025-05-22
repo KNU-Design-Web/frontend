@@ -1,5 +1,7 @@
 import { data } from "@/apps/data";
+
 import { Title } from "@/common/components/Title/Title";
+
 import { ProfileItem } from "@/domains/profile/components/ProfileItem/ProfileItem";
 import { ProfileList } from "@/domains/profile/components/ProfileList/ProfileList";
 import { ProfileToggleProvider } from "@/domains/profile/context/ProfileToggleContext";

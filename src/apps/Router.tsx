@@ -1,15 +1,15 @@
 import { Fragment } from "react";
 import { TransitionGroup } from "react-transition-group";
 
+import { NavTop } from "@/common/components/NavBar/NavTop";
+import { SectionRoute } from "@/common/components/Section/SectionRoute";
+
 import AboutPage from "@/pages/about/AboutPage";
 import ArchivePage from "@/pages/archive/ArchivePage";
 import GuestPage from "@/pages/guest/GuestPage";
 import HomePage from "@/pages/home/HomePage";
 import ProfilePage from "@/pages/profile/ProfilePage";
 import ProjectPage from "@/pages/project/ProjectPage";
-
-import { NavTop } from "@/common/components/NavBar/NavTop";
-import { SectionRoute } from "@/common/components/Section/SectionRoute";
 
 export const SectionRouter = () => {
     return (

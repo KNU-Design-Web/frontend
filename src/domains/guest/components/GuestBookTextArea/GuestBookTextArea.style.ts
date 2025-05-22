@@ -24,15 +24,15 @@ export const TextArea = styled.textarea`
         text-align: center;
     }
     :-moz-placeholder {
-        widt100%h
+        width: 100%;
         text-align: center;
     }
     ::-moz-placeholder {
-        widt100%h
+        width: 100%;
         text-align: center;
     }
     :-ms-input-placeholder {
-        widt100%h
+        width: 100%;
         text-align: center;
     }
 `;
