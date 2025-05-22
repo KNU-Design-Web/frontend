@@ -3,7 +3,6 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-
     "scripts": {
         "dev": "vite --host",
         "start": "tsc && vite build && serve -l 5173 dist",
@@ -63,6 +62,7 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.1",
         "eslint-plugin-storybook": "^0.8.0",
+        "prettier": "^3.5.3",
         "rollup-plugin-visualizer": "^5.12.0",
         "storybook": "^8.3.2",
         "ts-node": "^10.9.2",

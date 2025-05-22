@@ -1,13 +1,12 @@
-import SUIT_BOLD from "@/assets/fonts/suit/SUIT-Bold.woff2";
-import SUIT_EXTRA_BOLD from "@/assets/fonts/suit/SUIT-ExtraBold.woff2";
-import SUIT_EXTRA_LIGHT from "@/assets/fonts/suit/SUIT-ExtraLight.woff2";
-import SUIT_HEAVY from "@/assets/fonts/suit/SUIT-Heavy.woff2";
-import SUIT_LIGHT from "@/assets/fonts/suit/SUIT-Light.woff2";
-import SUIT_MEDIUM from "@/assets/fonts/suit/SUIT-Medium.woff2";
-import SUIT_REGULAR from "@/assets/fonts/suit/SUIT-Regular.woff2";
-import SUIT_SEMI_BOLD from "@/assets/fonts/suit/SUIT-SemiBold.woff2";
-import SUIT_THIN from "@/assets/fonts/suit/SUIT-Thin.woff2";
-
+import SUIT_BOLD from "@/apps/fonts/suit/SUIT-Bold.woff2";
+import SUIT_EXTRA_BOLD from "@/apps/fonts/suit/SUIT-ExtraBold.woff2";
+import SUIT_EXTRA_LIGHT from "@/apps/fonts/suit/SUIT-ExtraLight.woff2";
+import SUIT_HEAVY from "@/apps/fonts/suit/SUIT-Heavy.woff2";
+import SUIT_LIGHT from "@/apps/fonts/suit/SUIT-Light.woff2";
+import SUIT_MEDIUM from "@/apps/fonts/suit/SUIT-Medium.woff2";
+import SUIT_REGULAR from "@/apps/fonts/suit/SUIT-Regular.woff2";
+import SUIT_SEMI_BOLD from "@/apps/fonts/suit/SUIT-SemiBold.woff2";
+import SUIT_THIN from "@/apps/fonts/suit/SUIT-Thin.woff2";
 import { css } from "@emotion/react";
 
 export const fontStyles = css`

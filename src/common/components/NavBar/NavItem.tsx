@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 
 import * as NavItemStyles from "./NavItem.style";
 import { Text } from "@/common/components/Text/Text";
-import { useSectionEvent } from "@/events/sectionEvent";
+import { useSectionEvent } from "@/common/lib/google-analytics/sectionEvent";
 
 export interface NavItemProps {
     to: string;

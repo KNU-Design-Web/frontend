@@ -1,12 +1,12 @@
 import { Fragment } from "react";
 import { TransitionGroup } from "react-transition-group";
 
-import AboutPage from "@/pages/AboutPage/AboutPage";
-import ArchivePage from "@/pages/ArchivePage/ArchivePage";
-import GuestPage from "@/pages/GuestPage/GuestPage";
-import HomePage from "@/pages/HomePage/HomePage";
-import ProfilePage from "@/pages/ProfilePage/ProfilePage";
-import ProjectPage from "@/pages/ProjectPage/ProjectPage";
+import AboutPage from "@/pages/about/AboutPage";
+import ArchivePage from "@/pages/archive/ArchivePage";
+import GuestPage from "@/pages/guest/GuestPage";
+import HomePage from "@/pages/home/HomePage";
+import ProfilePage from "@/pages/profile/ProfilePage";
+import ProjectPage from "@/pages/project/ProjectPage";
 
 import { NavTop } from "@/common/components/NavBar/NavTop";
 import { SectionRoute } from "@/common/components/Section/SectionRoute";
