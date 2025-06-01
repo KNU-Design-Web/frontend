@@ -1,4 +1,4 @@
-import { Text as _Text } from "@/common/components/Text/Text";
+import { Text } from "@/common/components/Text/Text";
 
 import * as FooterStyles from "./Footer.style";
 import styled from "@emotion/styled";
@@ -65,13 +65,13 @@ export const Footer = () => {
     );
 };
 
-const Ltext = styled(_Text)`
+const Ltext = styled(Text)`
     @media (max-width: 430px) {
         font-size: 20px;
     }
 `;
 
-const Stext = styled(_Text)`
+const Stext = styled(Text)`
     @media (max-width: 430px) {
         font-size: 16px;
     }

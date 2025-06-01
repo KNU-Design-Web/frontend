@@ -7,7 +7,7 @@ const bannerText =
 
 export const Banner = () => {
     return (
-        <BannerStyles.Wrapper>
+        <BannerStyles.Wrapper aria-label="2024 KNUD Graduation Exhibition : 합니다 디자인">
             <BannerStyles.Container>
                 <Text size="xl" weight={700} color="lightgreen">
                     {bannerText}
