@@ -2,7 +2,7 @@ import { BREAKPOINT } from "@/apps/styles/breakpoint";
 
 import styled from "@emotion/styled";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.article`
     position: relative;
 
     width: 100%;
@@ -18,7 +18,7 @@ export const Image = styled.img`
     object-fit: cover;
 `;
 
-export const Description = styled.div`
+export const Description = styled.p`
     display: flex;
     flex-direction: column;
     justify-content: center;

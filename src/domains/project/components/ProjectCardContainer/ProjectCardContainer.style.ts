@@ -3,7 +3,7 @@ import { BREAKPOINT } from "@/apps/styles/breakpoint";
 
 import styled from "@emotion/styled";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
     display: grid;
     gap: 10px;
 
