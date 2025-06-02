@@ -95,14 +95,7 @@ export const Image = styled.img`
     display: block;
     margin: 0px auto;
     width: 100%;
-`;
-
-export const Video = styled.video`
-    display: block;
-    margin: 0px auto;
-    border: 0;
-    padding: 0;
-    width: 100%;
+    aspect-ratio: 1920 / 1000;
 `;
 
 export const ContentWrapper = styled.div`
