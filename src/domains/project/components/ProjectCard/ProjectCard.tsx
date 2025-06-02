@@ -23,10 +23,10 @@ export const ProjectCard = (props: ProjectCardProps) => {
     const { dispatchMouseOverEvent, dispatchMouseClickEvent } = useProjectEvent(props.id);
 
     const handleMouseOver = useCallback(() => {
-        const headerImage = data[props.id - 1].project.contents[0];
-        const firstProjectImage = data[props.id - 1].project.contents[1];
+        const headerImage = data[props.id - 1].project.thumbnail;
+        const projectImage = [data[props.id - 1].project.contents[0], data[props.id - 1].project.contents[1]];
 
-        preloadImages([headerImage, firstProjectImage]);
+        preloadImages([headerImage, ...projectImage]);
         dispatchMouseOverEvent();
     }, [dispatchMouseOverEvent, props.id]);
 
