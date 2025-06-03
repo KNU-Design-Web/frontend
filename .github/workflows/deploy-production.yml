@@ -22,14 +22,14 @@ jobs:
             - name: Checkout Code
               uses: actions/checkout@v4
 
-            - name: Setup pnpm package manager
-              run: npm install -g pnpm
+            - name: Setup yarn package manager
+              run: npm install -g yarn
 
             - name: Install Dependencies
-              run: pnpm install
+              run: yarn install --frozen-lockfile
 
             - name: Build Production
-              run: pnpm run build
+              run: yarn run build
               env:
                   VITE_API_BASE_URL: ${{env.API_BASE_URL}}
 

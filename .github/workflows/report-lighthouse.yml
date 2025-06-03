@@ -16,23 +16,23 @@ jobs:
               with:
                   node-version: 22
 
-            - name: Setup pnpm package manager
-              run: npm install -g pnpm
+            - name: Setup yarn package manager
+              run: npm install -g yarn
 
             - name: Install dependencies
-              run: pnpm install
+              run: yarn install --frozen-lockfile
 
             - name: Build Production
-              run: pnpm run build
+              run: yarn run build
 
             - name: Create Lighthouse Report
-              run: pnpm run lighthouse
+              run: yarn run lighthouse
 
             - name: Summarize Lighthouse Report
-              run: pnpm run lighthouse:summary
+              run: yarn run lighthouse:summary
 
             - name: Upload Report to S3
-              run: pnpm run lighthouse:save
+              run: yarn run lighthouse:save
               env:
                   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
                   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
