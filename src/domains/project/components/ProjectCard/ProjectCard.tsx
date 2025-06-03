@@ -38,7 +38,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
                 dispatchMouseClickEvent();
             }}
         >
-            <CardStyles.Image src={props.imgSrc} />
+            <CardStyles.Image src={props.imgSrc} alt={data[props.id - 1].project.thumbnailTitle} />
 
             <CardStyles.Container>
                 <CardStyles.Description>
