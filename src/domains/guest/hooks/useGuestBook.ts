@@ -22,8 +22,8 @@ export const useGuestBook = (take = 10) => {
             const response = await readGuestBookMessage(lastSortKey, take);
 
             setGuestBookData((prevData) => [...prevData, ...response.data.items]);
-            setLastSortKey(response.data.lastEvaluatedSK);
-            setIsLastPage(!response.data.lastEvaluatedSK);
+            setLastSortKey(response.data.lastSK);
+            setIsLastPage(!response.data.lastSK);
         } catch (error) {
             console.error("메시지를 불러오는 데 실패했습니다:", error);
         } finally {

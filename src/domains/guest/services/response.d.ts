@@ -10,5 +10,5 @@ declare interface GuestBookMessage {
 
 declare interface GuestBookResponse {
     items: GuestBookMessage[];
-    lastEvaluatedSK: string;
+    lastSK: string;
 }
