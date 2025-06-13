@@ -1,39 +1,36 @@
-import { Text } from "@/common/components/Text/Text";
-
 import * as FooterStyles from "./Footer.style";
-import styled from "@emotion/styled";
 
 export const Footer = () => {
     return (
         <FooterStyles.Wrapper>
-            <Wrapper>
-                <FooterStyles.Container>
+            <FooterStyles.Container>
+                <FooterStyles.LeftContainer>
                     <FooterStyles.Item>
-                        <Ltext size="m" weight={700}>
+                        <FooterStyles.Ltext size="m" weight={700}>
                             40th Graduation Exhibition
-                        </Ltext>
-                        <Ltext size="m" weight={700}>
+                        </FooterStyles.Ltext>
+                        <FooterStyles.Ltext size="m" weight={700}>
                             2024 Kyungpook National University
-                        </Ltext>
-                        <Ltext size="m" weight={700}>
+                        </FooterStyles.Ltext>
+                        <FooterStyles.Ltext size="m" weight={700}>
                             합니다. 디자인
-                        </Ltext>
+                        </FooterStyles.Ltext>
                     </FooterStyles.Item>
 
                     <FooterStyles.Item>
-                        <Stext size="s" weight={500} color="#909090">
+                        <FooterStyles.Stext size="s" weight={500} color="#909090">
                             Instagram @knu_design_
-                        </Stext>
-                        <Stext size="s" weight={500} color="#909090">
+                        </FooterStyles.Stext>
+                        <FooterStyles.Stext size="s" weight={500} color="#909090">
                             T. 053-950-5694
-                        </Stext>
-                        <Stext size="s" weight={500} color="#909090">
+                        </FooterStyles.Stext>
+                        <FooterStyles.Stext size="s" weight={500} color="#909090">
                             https://vcd.knu.ac.kr
-                        </Stext>
+                        </FooterStyles.Stext>
                     </FooterStyles.Item>
-                </FooterStyles.Container>
+                </FooterStyles.LeftContainer>
 
-                <FooterStyles.InfoContainer>
+                <FooterStyles.RightContainer>
                     <FooterStyles.InfoItem>
                         <Stext size="s" weight={700}>
                             장소
@@ -59,26 +56,8 @@ export const Footer = () => {
                             2024. 10. 29 TUE
                         </Stext>
                     </FooterStyles.InfoItem>
-                </FooterStyles.InfoContainer>
-            </Wrapper>
+                </FooterStyles.RightContainer>
+            </FooterStyles.Container>
         </FooterStyles.Wrapper>
     );
 };
-
-const Ltext = styled(Text)`
-    @media (max-width: 430px) {
-        font-size: 20px;
-    }
-`;
-
-const Stext = styled(Text)`
-    @media (max-width: 430px) {
-        font-size: 16px;
-    }
-`;
-
-const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-`;

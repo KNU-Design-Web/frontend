@@ -1,5 +1,6 @@
 import { BREAKPOINT } from "@/apps/styles/breakpoint";
 
+import { Text } from "../Text/Text";
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.footer`
@@ -28,6 +29,12 @@ export const Wrapper = styled.footer`
 `;
 
 export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+`;
+
+export const LeftContainer = styled.div`
     display: flex;
     justify-content: space-between;
 
@@ -61,7 +68,7 @@ export const Item = styled.div`
     }
 `;
 
-export const InfoContainer = styled.div`
+export const RightContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -81,5 +88,17 @@ export const InfoItem = styled.div`
                 display: block;
             }
         }
+    }
+`;
+
+export const Ltext = styled(Text)`
+    @media (max-width: 430px) {
+        font-size: 20px;
+    }
+`;
+
+export const Stext = styled(Text)`
+    @media (max-width: 430px) {
+        font-size: 16px;
     }
 `;
