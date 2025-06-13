@@ -32,29 +32,29 @@ export const Footer = () => {
 
                 <FooterStyles.RightContainer>
                     <FooterStyles.InfoItem>
-                        <Stext size="s" weight={700}>
+                        <FooterStyles.Stext size="s" weight={700}>
                             장소
-                        </Stext>
-                        <Stext size="s" weight={500}>
+                        </FooterStyles.Stext>
+                        <FooterStyles.Stext size="s" weight={500}>
                             <span>북구 대학로 80 경북대학교</span> <span>대구캠퍼스 스페이스 나인</span>
-                        </Stext>
+                        </FooterStyles.Stext>
                     </FooterStyles.InfoItem>
                     <FooterStyles.InfoItem>
-                        <Stext size="s" weight={700}>
+                        <FooterStyles.Stext size="s" weight={700}>
                             일시
-                        </Stext>
-                        <Stext size="s" weight={500}>
+                        </FooterStyles.Stext>
+                        <FooterStyles.Stext size="s" weight={500}>
                             <span>2024. 10. 29 TUE - </span>
                             <span>2024.11.08 SAT</span>
-                        </Stext>
+                        </FooterStyles.Stext>
                     </FooterStyles.InfoItem>
                     <FooterStyles.InfoItem>
-                        <Stext size="s" weight={700}>
+                        <FooterStyles.Stext size="s" weight={700}>
                             오프닝
-                        </Stext>
-                        <Stext size="s" weight={500}>
+                        </FooterStyles.Stext>
+                        <FooterStyles.Stext size="s" weight={500}>
                             2024. 10. 29 TUE
-                        </Stext>
+                        </FooterStyles.Stext>
                     </FooterStyles.InfoItem>
                 </FooterStyles.RightContainer>
             </FooterStyles.Container>
