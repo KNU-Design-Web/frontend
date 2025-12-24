@@ -11,7 +11,8 @@
         "setup:vscode": "yarn dlx @yarnpkg/sdks vscode",
         "sync:list": "yarn dlx syncpack list-mismatches",
         "sync:fix": "yarn dlx syncpack fix-mismatches",
-        "client": "yarn workspace @knud2024/client"
+        "client": "yarn workspace @knud2024/client",
+        "server": "yarn workspace @knud2024/server"
     },
     "dependencies": {
         "@lhci/cli": "^0.14.0"
