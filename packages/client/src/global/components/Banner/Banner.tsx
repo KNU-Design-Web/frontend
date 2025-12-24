@@ -1,0 +1,21 @@
+import { Text } from "@/global/components/Text/Text";
+
+import * as BannerStyles from "./Banner.style";
+
+const bannerText =
+    "2024 KNUD GRADUATION EXHIBITION :합니다 디자인 2024 KNUD GRADUATION EXHIBITION :합니다 디자인2024 KNUD GRADUATION EXHIBITION :합니다 디자인 ";
+
+export const Banner = () => {
+    return (
+        <BannerStyles.Wrapper aria-label="2024 KNUD Graduation Exhibition : 합니다 디자인">
+            <BannerStyles.Container>
+                <Text size="xl" weight={700} color="lightgreen">
+                    {bannerText}
+                </Text>
+                <Text size="xl" weight={700} color="lightgreen">
+                    {bannerText}
+                </Text>
+            </BannerStyles.Container>
+        </BannerStyles.Wrapper>
+    );
+};
