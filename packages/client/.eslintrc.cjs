@@ -45,8 +45,10 @@ module.exports = {
         "*.config.ts",
         "*.config.js",
         "*.config.mjs",
+        "*.config.cjs",
         "lighthouse-analysis.mjs",
         "*.js",
         "*.mjs",
+        "*.cjs",
     ],
 };
